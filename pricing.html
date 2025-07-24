@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aimze Studio Pricing</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: white;
+            color: #333;
+        }
+
+        h2 {
+            color: #6b157a;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .accordion {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            background: #ffffff;
+            font-size: 1.4rem;
+            border-radius: 10px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            border-left: 4px solid #6b157a;
+        }
+
+        .accordion-header {
+            padding: 24px 24px;
+            font-weight: bold;
+            background-color: #f2e6ff;
+            color: #6b157a;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .accordion-header::after {
+            content: '+';
+            position: absolute;
+            right: 28px;
+            font-size: 1.4rem;
+            transition: transform 0.3s;
+        }
+
+        .accordion-header.active::after {
+            content: '-';
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 10px 20px 20px;
+            background-color: #fff;
+        }
+
+        .subheading {
+            font-weight: 600;
+            color: #333;
+            margin-top: 16px;
+            margin-bottom: 6px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 6px;
+        }
+
+        .price-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .price-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .price-list li:last-child {
+            border-bottom: none;
+        }
+
+        .note-highlight {
+            margin: 48px auto 12px;
+            padding: 16px 16px;
+            background: linear-gradient(to right, #fff1e5, #fbe5ff);
+            border-radius: 8px;
+            border: 2px solid #d4af37;
+            /* Gold border */
+            max-width: 800px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+            /* Plum text color for branding */
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
+            /* Soft gold glow */
+            font-family: 'IBM Plex Serif', serif;
+        }
+
+        @media (max-width: 600px) {
+
+            h2 {
+                font-size: 1.6rem;
+                line-height: 1.3;
+                margin-bottom: 1rem;
+            }
+
+            .accordion-item {
+                font-size: 1rem;
+                margin-bottom: 16px;
+            }
+
+            .accordion-header {
+                padding: 16px 20px;
+                font-size: 1rem;
+            }
+
+            .accordion-header::after {
+                font-size: 1rem;
+                right: 20px;
+            }
+
+            .accordion-content {
+                padding: 10px 16px 16px;
+            }
+
+            .subheading {
+                font-size: 0.95rem;
+            }
+
+            .price-list li {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.95rem;
+                gap: 10px;
+                padding: 6px 0;
+            }
+
+            .note-highlight {
+                margin: 24px auto 12px;
+                font-size: 1rem;
+                padding: 12px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordion">
+
+        <!-- AESTHETIC SERVICES -->
+        <div class="accordion-item">
+            <div class="accordion-header">Aesthetic Services</div>
+            <div class="accordion-content">
+                <div class="subheading">Hand and Foot Treatments</div>
+                <ul class="price-list">
+                    <li><span>Regular Manicure</span><span>$20.00</span></li>
+                    <li><span>Regular Pedicure</span><span>$30.00</span></li>
+                    <li><span>Shellac Manicure</span><span>$35.00</span></li>
+                    <li><span>Shellac Pedicure</span><span>$45.00</span></li>
+                    <li><span>Acrylic Nails</span><span>$55.00</span></li>
+                    <li><span>Gel Nails</span><span>$60.00</span></li>
+                </ul>
+
+                <div class="subheading">Waxing</div>
+                <ul class="price-list">
+                    <li><span>Upper Lips</span><span>$5.00</span></li>
+                    <li><span>Eyebrows</span><span>$10.00</span></li>
+                    <li><span>Underarms</span><span>$15.00</span></li>
+                    <li><span>Bikini Line</span><span>$20.00</span></li>
+                    <li><span>Full Face</span><span>$30.00</span></li>
+                    <li><span>Full Arms</span><span>$35.00</span></li>
+                    <li><span>Stomach</span><span>$30.00</span></li>
+                    <li><span>Full Back</span><span>$40.00</span></li>
+                    <li><span>Full Legs</span><span>$45.00</span></li>
+                    <li><span>Brazilian</span><span>$50.00</span></li>
+                </ul>
+
+                <div class="subheading">Facial Treatments</div>
+                <ul class="price-list">
+                    <li><span>Ombre Eyebrow</span><span>$250.00</span></li>
+                    <li><span>Shiro Dhara</span><span>$125.00</span></li>
+                    <li><span>Stress Relief Spa Facial</span><span>$65.00</span></li>
+                    <li><span>Hydra Facial</span><span>$80.00</span></li>
+                    <li><span>Bioline Facial</span><span>$90.00</span></li>
+                    <li><span>Casmara Facial</span><span>$90.00</span></li>
+                    <li><span>Gold Facial</span><span>$75.00</span></li>
+                    <li><span>Body Detox</span><span>$80.00</span></li>
+                    <li><span>Eyebrow Lamination</span><span>$50.00</span></li>
+                    <li><span>Lash Lamination</span><span>$60.00</span></li>
+                    <li><span>Eyebrow Tinting</span><span>$20.00</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- LASER SERVICES -->
+        <div class="accordion-item">
+            <div class="accordion-header">Laser Services</div>
+            <div class="accordion-content">
+                <div class="subheading">Hair Removal</div>
+                <ul class="price-list">
+                    <li><span>Full Legs</span><span>$100.00</span></li>
+                    <li><span>Full Face & Neck</span><span>$90.00</span></li>
+                    <li><span>Full Arms</span><span>$80.00</span></li>
+                    <li><span>Brazilian</span><span>$75.00</span></li>
+                    <li><span>Underarms</span><span>$30.00</span></li>
+                    <li><span>Upper Lips & Chin</span><span>$25.00</span></li>
+                    <li><span>Stomach</span><span>$40.00</span></li>
+                    <li><span>Lower Back</span><span>$35.00</span></li>
+                    <li><span>Bikini Line</span><span>$25.00</span></li>
+                </ul>
+
+                <div class="subheading">Laser Photo Facial</div>
+                <ul class="price-list">
+                    <li><span>Prepaid Package of 5 Treatments</span><span>$450.00</span></li>
+                    <li><span>Individual Treatments</span><span>$100.00</span></li>
+                    <li><span>Follow-Up Treatments</span><span>$75.00</span></li>
+                </ul>
+
+                <div class="subheading">Nufree Wax</div>
+                <ul class="price-list">
+                    <li><span>Eyebrows</span><span>$20.00</span></li>
+                    <li><span>Upper Lips</span><span>$20.00</span></li>
+                    <li><span>Underarms</span><span>$25.00</span></li>
+                    <li><span>Bikini Line</span><span>$25.00</span></li>
+                    <li><span>Full Face</span><span>$50.00</span></li>
+                    <li><span>Full Arms</span><span>$55.00</span></li>
+                    <li><span>Full Legs</span><span>$70.00</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Hair Services -->
+        <div class="accordion-item">
+            <div class="accordion-header">Hair Styling & Color</div>
+            <div class="accordion-content">
+                <ul class="price-list">
+                    <li><span>Any Cut & Style</span><span>$75.00</span></li>
+                    <li><span>Women’s Stylish Hair Cut</span><span>$65.00</span></li>
+                    <li><span>Women’s Simple Hair Cut</span><span>$50.00</span></li>
+                    <li><span>Men’s Hair Cut with Fades</span><span>$35.00</span></li>
+                    <li><span>Hair Wash</span><span>$20.00</span></li>
+                    <li><span>Kids & Senior Men’s Hair Cut</span><span>$15.00</span></li>
+                    <li><span>Full Highlights Full Head</span><span>$125.00</span></li>
+                    <li><span>Color Change Shoulder Length</span><span>$95.00</span></li>
+                    <li><span>Cap Highlights</span><span>$60.00</span></li>
+                    <li><span>Color full head short length</span><span>$80.00</span></li>
+                    <li><span>Color & Style short length</span><span>$100.00</span></li>
+                    <li><span>Colors Re-touch</span><span>$60.00</span></li>
+                    <li><span>Toner</span><span>$45.00</span></li>
+                    <li><span>Hair & Scalp Treatment</span><span>$40.00</span></li>
+                    <li><span>Blow Dry</span><span>$30.00</span></li>
+                    <li><span>Flat Iron</span><span>$30.00</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Massage -->
+        <div class="accordion-item">
+            <div class="accordion-header">Massage Therapy</div>
+            <div class="accordion-content">
+                <ul class="price-list">
+                    <li><span>20 Min Massage</span><span>$40.00</span></li>
+                    <li><span>30 Min Massage</span><span>$60.00</span></li>
+                    <li><span>45 Min Massage</span><span>$75.00</span></li>
+                    <li><span>60 Min Massage</span><span>$90.00</span></li>
+                    <li><span>90 Min Massage</span><span>$135.00</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Physio -->
+        <div class="accordion-item">
+            <div class="accordion-header">Chiropractor & Physiotherapy</div>
+            <div class="accordion-content">
+                <ul class="price-list">
+                    <li><span>Initial Assessment</span><span>$130.00</span></li>
+                    <li><span>60 Min Follow-Up</span><span>$115.00</span></li>
+                    <li><span>45 Min Follow-Up</span><span>$100.00</span></li>
+                    <li><span>30 Min Follow-Up</span><span>$80.00</span></li>
+                    <li><span>20 Min Follow-Up</span><span>$60.00</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="note-highlight">
+            ✨ Ear Piercing & Party Makeup Also Available ✨
+        </div>
+    </div>
+
+    <script>
+        const headers = document.querySelectorAll('.accordion-header');
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                const isActive = header.classList.contains('active');
+                headers.forEach(h => {
+                    h.classList.remove('active');
+                    h.nextElementSibling.style.display = 'none';
+                });
+                if (!isActive) {
+                    header.classList.add('active');
+                    header.nextElementSibling.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
