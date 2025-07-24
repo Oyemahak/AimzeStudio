@@ -55,8 +55,10 @@
         }
 
         .accordion-content {
-            display: none;
-            padding: 10px 20px 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
             background-color: #fff;
         }
 
@@ -297,18 +299,38 @@
     </div>
 
     <script>
-        const headers = document.querySelectorAll('.accordion-header');
-        headers.forEach(header => {
-            header.addEventListener('click', () => {
-                const isActive = header.classList.contains('active');
-                headers.forEach(h => {
-                    h.classList.remove('active');
-                    h.nextElementSibling.style.display = 'none';
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordions = document.querySelectorAll('.accordion-item');
+
+            accordions.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+
+                header.addEventListener('click', () => {
+                    // Close other accordions
+                    accordions.forEach(i => {
+                        if (i !== item) {
+                            i.classList.remove('active');
+                            i.querySelector('.accordion-content').style.maxHeight = null;
+                        }
+                    });
+
+                    const isOpen = item.classList.contains('active');
+
+                    // Toggle current
+                    if (isOpen) {
+                        item.classList.remove('active');
+                        content.style.maxHeight = null;
+                    } else {
+                        item.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + "px";
+
+                        // Scroll to header smoothly
+                        setTimeout(() => {
+                            header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 300); // Delay to wait for animation
+                    }
                 });
-                if (!isActive) {
-                    header.classList.add('active');
-                    header.nextElementSibling.style.display = 'block';
-                }
             });
         });
     </script>
