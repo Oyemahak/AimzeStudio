@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aimze Studio Workshops</title>
+
+  <style>
+    :root {
+      --plum: #6b157a;
+      --gold: #d4af37;
+      --ink: #222;
+      --muted: #6b6b6b;
+      --bg: #fffaf7;
+      --card: #ffffff;
+      --ring: rgba(212, 175, 55, .45);
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      line-height: 28px;
+      background: var(--bg)
+    }
+
+    .section {
+      max-width: 1200px;
+    }
+
+    h2 {
+      color: var(--plum);
+      margin: 18px 0 8px
+    }
+
+    .badge {
+      display: inline-block;
+      background: #f4eaff;
+      color: var(--plum);
+      border: 1px solid #e6d8ff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: .92rem;
+      margin: 8px 0 18px;
+      text-align: center;
+    }
+
+    .subnote {
+      color: var(--muted);
+      margin: 0 0 12px;
+      font-size: .98rem
+    }
+
+    /* —— Card (button) view —— */
+    .workshop-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 24px
+    }
+
+    @media (max-width:980px) {
+      .workshop-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media (max-width:640px) {
+      .workshop-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .workshop-card {
+      position: relative;
+      background: radial-gradient(120% 120% at 10% 0%, #fff6ef 0%, #ffffff 45%);
+      border: 1px solid #eadcf5;
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, .08);
+      padding: 18px 16px;
+      text-align: center;
+      transition: transform .2s ease, box-shadow .25s ease, border-color .25s ease;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .workshop-card::before {
+      /* gold shimmer border on hover */
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      pointer-events: none;
+      border-left: 4px solid var(--plum);
+    }
+
+    .workshop-card:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, .12), 0 0 0 6px var(--ring)
+    }
+
+    .workshop-card:focus-visible {
+      box-shadow: 0 0 0 6px var(--ring)
+    }
+
+    .workshop-card .pill {
+      display: inline-block;
+      margin: -6px auto 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f7eefe;
+      color: var(--plum);
+      font-weight: 700;
+      font-size: .8rem;
+      border: 1px solid #ecd8ff;
+    }
+
+    .workshop-card h3 {
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 1.15rem;
+      color: var(--plum);
+      margin: 6px 0 6px;
+      font-weight: 700;
+    }
+
+    .workshop-card p {
+      margin: 0 auto;
+      color: #4b4b4b;
+      font-size: .98rem
+    }
+
+    /* soft gold highlight on hover */
+    .workshop-card:hover {
+      border-color: #ead273
+    }
+
+    .workshop-card:hover .pill {
+      background: #fff8e6;
+      border-color: #fde6a9
+    }
+
+    /* —— Table view (desktop quick scan) —— */
+    .workshop-table-wrapper {
+      overflow: hidden;
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid #B58E41;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+      margin-bottom: 32px;
+      background: #fff
+    }
+
+    .workshop-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0
+    }
+
+    .workshop-table th {
+      background: #f9f5ff;
+      color: var(--plum);
+      padding: 1rem;
+      text-align: left;
+      font-size: 1.06rem
+    }
+
+    .workshop-table td {
+      padding: 1rem;
+      text-align: left;
+      font-size: 1rem;
+      color: #3e3e3e
+    }
+
+    .workshop-table tr:hover td {
+      background-color: #fff8fb
+    }
+
+    .workshop-table td strong {
+      font-family: 'IBM Plex Serif', serif;
+      color: var(--plum)
+    }
+
+    /* Compliance + hours */
+    .hours {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 8px 0 24px;
+      color: #444;
+      font-size: .98rem
+    }
+
+    .hours b {
+      color: var(--plum)
+    }
+
+    .compliance {
+      background: #ffffff;
+      border-left: 5px solid var(--plum);
+      padding: 1.5rem;
+      margin-top: 8px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .05)
+    }
+
+    .compliance-header {
+      color: var(--plum);
+      font-size: 1.06rem;
+      font-weight: 700;
+      margin-bottom: .5rem
+    }
+
+    .compliance-text {
+      font-style: italic;
+      color: #333
+    }
+
+    /* Responsive switches */
+    @media (min-width:768px) {
+      .desktop-only {
+        display: block
+      }
+
+      .mobile-only {
+        display: none
+      }
+    }
+
+    @media (max-width:767px) {
+      h2 {
+        font-size: 1.35rem
+      }
+
+      .desktop-only {
+        display: none
+      }
+
+      .mobile-only {
+        display: block
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="section">
+
+    <!-- AESTHETICS -->
+    <h2>Aesthetics Certificate Workshops</h2>
+    <p class="subnote">Hands‑on beauty training in Brampton, Ontario. Beginner‑friendly certificate modules taught with
+      professional products and clinic‑style standards.</p>
+
+    <!-- Button cards (mobile + tablet + desktop) -->
+    <div class="workshop-grid mobile-only">
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Skin</span>
+        <h3><strong>Skin Care</strong></h3>
+        <p>Certificate training in cleansing, exfoliation, masking, moisturising and **skin analysis** to prepare for
+          spa/clinic roles.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Nails</span>
+        <h3><strong>Nail Care</strong></h3>
+        <p>Professional **manicure & pedicure** hygiene, shaping, polishing and client sanitation for salon‑ready
+          service.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Wax & Art</span>
+        <h3><strong>Waxing / Mehndi</strong></h3>
+        <p>Body & facial **waxing fundamentals** (soft/hard wax) plus creative **henna (mehndi)** design and aftercare.
+        </p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Facial</span>
+        <h3><strong>Photo Facial</strong></h3>
+        <p>Intro to **photo‑facial protocols**, consultation, safety and post‑care best practices.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Makeup</span>
+        <h3><strong>Make‑Up Artistry</strong></h3>
+        <p>Day, party & bridal **makeup** with color theory, hygiene, skin prep, lashes and **long‑wear finishing**.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Brows</span>
+        <h3><strong>Threading</strong></h3>
+        <p>Precision **eyebrow threading**, brow mapping, sanitation and speed control for clean results.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Laser</span>
+        <h3><strong>Laser Hair Removal</strong></h3>
+        <p>Overview of **laser hair removal** theory, Fitzpatrick scale, contraindications, client consultation and
+          care.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Hydra</span>
+        <h3><strong>Hydra Facial</strong></h3>
+        <p>Multi‑step **hydra facial** techniques—cleanse, extract, infuse & hydrate—using professional devices.</p>
+      </div>
+    </div>
+
+    <!-- Desktop quick-scan table -->
+    <div class="workshop-table-wrapper desktop-only">
+      <table class="workshop-table" aria-label="Aesthetics Certificate Workshops">
+        <thead>
+          <tr>
+            <th style="width:32%">Program</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Skin Care</strong></td>
+            <td>Certificate training in cleansing, exfoliation, masking, moisturising and <em>skin analysis</em> to
+              prepare for spa/clinic roles.</td>
+          </tr>
+          <tr>
+            <td><strong>Nail Care</strong></td>
+            <td>Professional <em>manicure &amp; pedicure</em> hygiene, shaping, polishing and client sanitation for
+              salon‑ready service.</td>
+          </tr>
+          <tr>
+            <td><strong>Waxing / Mehndi</strong></td>
+            <td>Body &amp; facial <em>waxing fundamentals</em> (soft/hard wax) plus creative <em>henna (mehndi)</em>
+              design and aftercare.</td>
+          </tr>
+          <tr>
+            <td><strong>Photo Facial</strong></td>
+            <td>Intro to <em>photo‑facial</em> protocols, consultation, safety and post‑care best practices.</td>
+          </tr>
+          <tr>
+            <td><strong>Make‑Up Artistry</strong></td>
+            <td>Day, party &amp; bridal <em>makeup</em> with color theory, hygiene, skin prep, lashes and <em>long‑wear
+                finishing</em>.</td>
+          </tr>
+          <tr>
+            <td><strong>Threading</strong></td>
+            <td>Precision <em>eyebrow threading</em>, brow mapping, sanitation and speed control for clean results.</td>
+          </tr>
+          <tr>
+            <td><strong>Laser Hair Removal</strong></td>
+            <td>Overview of <em>laser hair removal</em> theory, Fitzpatrick scale, contraindications, client
+              consultation and care.</td>
+          </tr>
+          <tr>
+            <td><strong>Hydra Facial</strong></td>
+            <td>Multi‑step <em>hydra facial</em> techniques—cleanse, extract, infuse &amp; hydrate—using professional
+              devices.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- HAIRDRESSING -->
+    <h2>Hairdressing Certificate</h2>
+    <p class="subnote">Salon‑standard hair education: cutting, styling and colour modules designed to build real service
+      confidence.</p>
+
+    <div class="workshop-grid mobile-only">
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Cut</span>
+        <h3><strong>Cutting</strong></h3>
+        <p>Foundations of sectioning, elevation, layering and precision lines for modern **haircuts**.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Style</span>
+        <h3><strong>Styling</strong></h3>
+        <p>Blow‑dry, heat tools and finishing for every day and **special‑event** styles.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Barber</span>
+        <h3><strong>Barber Cut</strong></h3>
+        <p>Clipper‑over‑comb, fades, tapers and clean line work, including **beard** finishing basics.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Brows</span>
+        <h3><strong>Eyebrow Tinting</strong></h3>
+        <p>Safe brow tint selection, application and shape synergy to enhance **brow definition**.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Colour</span>
+        <h3><strong>Colouring</strong></h3>
+        <p>Formulation, developer ratios, all‑over color, foils and **highlights/balayage** basics.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Updo</span>
+        <h3><strong>Hair Updos</strong></h3>
+        <p>Classic and modern up‑styles with secure pinning, balance and **bridal** finishing.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Repair</span>
+        <h3><strong>Hair Treatments</strong></h3>
+        <p>Scalp therapy, deep conditioning and **bond‑building** rituals for healthier hair.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Brow Lift</span>
+        <h3><strong>Eyebrow Lamination</strong></h3>
+        <p>Set, smooth and style brows for a fuller, lifted effect with proper **aftercare**.</p>
+      </div>
+    </div>
+
+    <div class="workshop-table-wrapper desktop-only">
+      <table class="workshop-table" aria-label="Hairdressing Certificate">
+        <thead>
+          <tr>
+            <th style="width:32%">Program</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Cutting</strong></td>
+            <td>Foundations of sectioning, elevation, layering and precision lines for modern <em>haircuts</em>.</td>
+          </tr>
+          <tr>
+            <td><strong>Styling</strong></td>
+            <td>Blow‑dry, heat tools and finishing for every day and <em>special‑event</em> styles.</td>
+          </tr>
+          <tr>
+            <td><strong>Barber Cut</strong></td>
+            <td>Clipper‑over‑comb, fades, tapers and clean line work, including <em>beard</em> finishing basics.</td>
+          </tr>
+          <tr>
+            <td><strong>Eyebrow Tinting</strong></td>
+            <td>Safe brow tint selection, application and shape synergy to enhance <em>brow definition</em>.</td>
+          </tr>
+          <tr>
+            <td><strong>Colouring</strong></td>
+            <td>Formulation, developer ratios, all‑over color, foils and <em>highlights/balayage</em> basics.</td>
+          </tr>
+          <tr>
+            <td><strong>Hair Updos</strong></td>
+            <td>Classic and modern up‑styles with secure pinning, balance and <em>bridal</em> finishing.</td>
+          </tr>
+          <tr>
+            <td><strong>Hair Treatments</strong></td>
+            <td>Scalp therapy, deep conditioning and <em>bond‑building</em> rituals for healthier hair.</td>
+          </tr>
+          <tr>
+            <td><strong>Eyebrow Lamination</strong></td>
+            <td>Set, smooth and style brows for a fuller, lifted effect with proper <em>aftercare</em>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- BUSINESS BASICS -->
+    <h2>Business Basics &amp; Exam Prep Courses</h2>
+    <p class="subnote">Career‑ready skills to support your beauty or salon business—customer service, admin and exam
+      preparation.</p>
+
+    <div class="workshop-grid mobile-only">
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Exam</span>
+        <h3><strong>LLOP License Exam Preparation</strong></h3>
+        <p>Structured review, practice questions and exam tips to help you pass your **license exam** with confidence.
+        </p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Real Estate</span>
+        <h3><strong>Real Estate Exam Preparation</strong></h3>
+        <p>High‑yield concepts, mock tests and study plans to boost your **real estate exam** score.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Hair License</span>
+        <h3><strong>Hair License Exam Preparation</strong></h3>
+        <p>Theory refresh and **practical checklists** for provincial licensing requirements.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Finance</span>
+        <h3><strong>Intro to Bookkeeping</strong></h3>
+        <p>Income/expense tracking, ledgers and simple reporting for **small salon businesses**.</p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Front Desk</span>
+        <h3><strong>Front Desk Skills &amp; Phone Etiquette</strong></h3>
+        <p>Professional **customer service**, booking management and call handling that converts inquiries to bookings.
+        </p>
+      </div>
+      <div class="workshop-card" tabindex="0" role="button">
+        <span class="pill">Experience</span>
+        <h3><strong>Work Experience in Multiple Industries</strong></h3>
+        <p>Guided placements to build **real‑world confidence** and a stronger resume.</p>
+      </div>
+    </div>
+
+    <div class="workshop-table-wrapper desktop-only">
+      <table class="workshop-table" aria-label="Business Basics & Exam Prep">
+        <thead>
+          <tr>
+            <th style="width:38%">Program</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>LLOP License Exam Preparation</strong></td>
+            <td>Structured review, practice questions and exam tips to help you pass your <em>license exam</em> with
+              confidence.</td>
+          </tr>
+          <tr>
+            <td><strong>Real Estate Exam Preparation</strong></td>
+            <td>High‑yield concepts, mock tests and study plans to boost your <em>real estate exam</em> score.</td>
+          </tr>
+          <tr>
+            <td><strong>Hair License Exam Preparation</strong></td>
+            <td>Theory refresh and <em>practical checklists</em> for provincial licensing requirements.</td>
+          </tr>
+          <tr>
+            <td><strong>Intro to Bookkeeping</strong></td>
+            <td>Income/expense tracking, ledgers and simple reporting for <em>small salon businesses</em>.</td>
+          </tr>
+          <tr>
+            <td><strong>Front Desk Skills &amp; Phone Etiquette</strong></td>
+            <td>Professional <em>customer service</em>, booking management and call handling that converts inquiries to
+              bookings.</td>
+          </tr>
+          <tr>
+            <td><strong>Work Experience in Multiple Industries</strong></td>
+            <td>Guided placements to build <em>real‑world confidence</em> and a stronger resume.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+<div class="badge">Inquire for upcoming classes</div>
+
+    <div class="compliance">
+      <div class="compliance-header">Important Compliance Notice</div>
+      <div class="compliance-text">
+        These workshops are for personal interest and skill enhancement only. They are not vocational programs under the
+        Private Career Colleges Act, 2005.
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

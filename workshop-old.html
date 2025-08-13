@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aimze Studio Workshops</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 28px;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .workshop-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s;
+            border-left: 4px solid #6b157a;
+        }
+
+        .workshop-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .workshop-card h3 {
+            color: #6b157a;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .workshop-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .workshop-list li {
+            padding: 0.4rem 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.4rem;
+        }
+
+        .workshop-list li::before {
+            content: "\2713";
+            color: #6b157a;
+        }
+
+        .workshop-table-wrapper {
+            overflow: hidden;
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid #B58E41;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .workshop-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .workshop-table th {
+            background: #f9f9f9;
+            color: #6b157a;
+            padding: 1rem;
+            text-align: left;
+            font-size: 1.2rem;
+        }
+
+        .workshop-table td {
+            padding: 1rem;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .workshop-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .workshop-table tr:hover td {
+            background-color: #fdf5ff;
+        }
+
+        .compliance {
+            background: #ffffff;
+            border-left: 5px solid #6b157a;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .compliance-header {
+            color: #6b157a;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.6rem;
+        }
+
+        .compliance-text {
+            font-style: italic;
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        @media screen and (min-width: 768px) {
+            .desktop-only {
+                display: table;
+            }
+
+            .mobile-only {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            h2 {
+                color: #333;
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+
+            .desktop-only {
+                display: none;
+            }
+
+            .workshop-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .workshop-list li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <h2>Aesthetics Certificate Workshops</h2>
+        <!-- Mobile view for Aesthetics -->
+        <div class="mobile-only">
+            <div class="workshop-card">
+                <h3>Laser Technology</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 4 Weeks</p>
+                <p><strong>Fee:</strong> $799</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Makeup Artistry</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 3 Weeks</p>
+                <p><strong>Fee:</strong> $599</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Artificial Nails</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 2 Weeks</p>
+                <p><strong>Fee:</strong> $499</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Reflexology</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 2 Weeks</p>
+                <p><strong>Fee:</strong> $399</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Threading</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 1 Week</p>
+                <p><strong>Fee:</strong> $199</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Body Care</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 3 Weeks</p>
+                <p><strong>Fee:</strong> $499</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Skin Care</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 3 Weeks</p>
+                <p><strong>Fee:</strong> $599</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Reiki Healing</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 2 Weeks</p>
+                <p><strong>Fee:</strong> $449</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Nail Care</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 2 Weeks</p>
+                <p><strong>Fee:</strong> $349</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Waxing</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 1 Week</p>
+                <p><strong>Fee:</strong> $199</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Mehndi</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 1 Week</p>
+                <p><strong>Fee:</strong> $149</p>
+            </div>
+        </div>
+
+        <!-- Desktop view -->
+        <div class="workshop-table-wrapper desktop-only">
+            <table class="workshop-table">
+                <thead>
+                    <tr>
+                        <th>Program</th>
+                        <th>Trainer</th>
+                        <th>Duration</th>
+                        <th>Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laser Technology</td>
+                        <td>To be announced</td>
+                        <td>4 Weeks</td>
+                        <td>$799</td>
+                    </tr>
+                    <tr>
+                        <td>Makeup Artistry</td>
+                        <td>To be announced</td>
+                        <td>3 Weeks</td>
+                        <td>$599</td>
+                    </tr>
+                    <tr>
+                        <td>Artificial Nails</td>
+                        <td>To be announced</td>
+                        <td>2 Weeks</td>
+                        <td>$499</td>
+                    </tr>
+                    <tr>
+                        <td>Reflexology</td>
+                        <td>To be announced</td>
+                        <td>2 Weeks</td>
+                        <td>$399</td>
+                    </tr>
+                    <tr>
+                        <td>Threading</td>
+                        <td>To be announced</td>
+                        <td>1 Week</td>
+                        <td>$199</td>
+                    </tr>
+                    <tr>
+                        <td>Body Care</td>
+                        <td>To be announced</td>
+                        <td>3 Weeks</td>
+                        <td>$499</td>
+                    </tr>
+                    <tr>
+                        <td>Skin Care</td>
+                        <td>To be announced</td>
+                        <td>3 Weeks</td>
+                        <td>$599</td>
+                    </tr>
+                    <tr>
+                        <td>Reiki Healing</td>
+                        <td>To be announced</td>
+                        <td>2 Weeks</td>
+                        <td>$449</td>
+                    </tr>
+                    <tr>
+                        <td>Nail Care</td>
+                        <td>To be announced</td>
+                        <td>2 Weeks</td>
+                        <td>$349</td>
+                    </tr>
+                    <tr>
+                        <td>Waxing</td>
+                        <td>To be announced</td>
+                        <td>1 Week</td>
+                        <td>$199</td>
+                    </tr>
+                    <tr>
+                        <td>Mehndi</td>
+                        <td>To be announced</td>
+                        <td>1 Week</td>
+                        <td>$149</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Hairdressing Certificate Workshops</h2>
+
+        <!-- Mobile view for Hairdressing -->
+        <div class="mobile-only">
+            <div class="workshop-card">
+                <h3>Scalp & Hair Treatments</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 2 Weeks</p>
+                <p><strong>Fee:</strong> $399</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Hair Cutting</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 3 Weeks</p>
+                <p><strong>Fee:</strong> $499</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Hair Coloring</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 3 Weeks</p>
+                <p><strong>Fee:</strong> $499</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Barber Cutting</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 2 Weeks</p>
+                <p><strong>Fee:</strong> $449</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Head Massage</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 1 Week</p>
+                <p><strong>Fee:</strong> $149</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Hair Styling</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 2 Weeks</p>
+                <p><strong>Fee:</strong> $349</p>
+            </div>
+            <div class="workshop-card">
+                <h3>Hair Up-Do’s</h3>
+                <p><strong>Trainer:</strong> To be announced</p>
+                <p><strong>Duration:</strong> 1 Week</p>
+                <p><strong>Fee:</strong> $199</p>
+            </div>
+        </div>
+
+        <div class="workshop-table-wrapper desktop-only">
+            <table class="workshop-table">
+                <thead>
+                    <tr>
+                        <th>Program</th>
+                        <th>Trainer</th>
+                        <th>Duration</th>
+                        <th>Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Scalp & Hair Treatments</td>
+                        <td>To be announced</td>
+                        <td>2 Weeks</td>
+                        <td>$399</td>
+                    </tr>
+                    <tr>
+                        <td>Hair Cutting</td>
+                        <td>To be announced</td>
+                        <td>3 Weeks</td>
+                        <td>$499</td>
+                    </tr>
+                    <tr>
+                        <td>Hair Coloring</td>
+                        <td>To be announced</td>
+                        <td>3 Weeks</td>
+                        <td>$499</td>
+                    </tr>
+                    <tr>
+                        <td>Barber Cutting</td>
+                        <td>To be announced</td>
+                        <td>2 Weeks</td>
+                        <td>$449</td>
+                    </tr>
+                    <tr>
+                        <td>Head Massage</td>
+                        <td>To be announced</td>
+                        <td>1 Week</td>
+                        <td>$149</td>
+                    </tr>
+                    <tr>
+                        <td>Hair Styling</td>
+                        <td>To be announced</td>
+                        <td>2 Weeks</td>
+                        <td>$349</td>
+                    </tr>
+                    <tr>
+                        <td>Hair Up-Do’s</td>
+                        <td>To be announced</td>
+                        <td>1 Week</td>
+                        <td>$199</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="compliance">
+            <div class="compliance-header">Important Compliance Notice:</div>
+            <div class="compliance-text">
+                These workshops are for personal interest and skill enhancement only. They are not vocational programs
+                under
+                the Private Career Colleges Act, 2005.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
