@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aimze Studio — Hairstylist Exam Preparation Poster</title>
+
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --gold:#B99247;
+    --plum:#412259;
+    --berry:#512441;
+    --ink:#1b1b1f;
+    --muted:#616372;
+    --panel:#ffffff;
+    --bg:#faf9fb;
+    --radius:28px;
+    --shadow:0 16px 44px rgba(12,5,22,.14);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"Open Sans",sans-serif}
+
+  @media print {
+    @page { size: A4; margin: 12mm; }
+    body{background:#fff}
+    .poster-wrap{margin:0 auto;max-width:none;padding:0}
+    .poster{box-shadow:none}
+    .board{box-shadow:none}
+    .logo{box-shadow:none}
+    #download-btn{display:none}
+  }
+
+  .poster-wrap{
+    width:794px;          /* A4 width at 96dpi */
+    height:auto;
+    margin:40px auto;
+    padding:18px;
+  }
+  .poster{
+    position:relative;
+    background:
+      radial-gradient(1200px 520px at 100% -20%, rgba(185,146,71,.22), transparent 60%),
+      radial-gradient(1000px 520px at 0% -10%, rgba(81,36,65,.22), transparent 55%),
+      linear-gradient(135deg, var(--plum), var(--berry));
+    border-radius:var(--radius);
+    padding:26px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .poster::before,
+  .poster::after{
+    content:"";
+    position:absolute;border-radius:50%;opacity:.15;filter:blur(2px);
+  }
+  .poster::before{width:420px;height:420px;top:-130px;left:-130px;background:var(--gold)}
+  .poster::after{width:560px;height:560px;bottom:-180px;right:-180px;background:#fff}
+
+  .board{
+    position:relative;z-index:1;
+    background:var(--panel);
+    border-radius:24px;
+    padding:32px 26px;
+    border:1px solid rgba(31,17,40,.08);
+    box-shadow:0 10px 28px rgba(12,5,22,.10);
+    line-height:1.65;
+  }
+
+  .head{text-align:center;margin-bottom:18px;color:var(--plum)}
+  .logo{
+    margin:0 auto 10px;
+    height:110px;width:auto;
+    background:#fff;border-radius:14px;padding:8px;
+    box-shadow:0 6px 20px rgba(0,0,0,.12);
+  }
+  .brand-line{font-family:"IBM Plex Sans";font-weight:800;font-size:22px}
+  .motto{
+    font-family:"IBM Plex Sans";font-weight:700;
+    color:#3a250d;background:var(--gold);
+    display:inline-block;padding:8px 12px;border-radius:12px;margin-top:8px;
+  }
+
+  .title{
+    font-family:"IBM Plex Sans";font-weight:800;
+    color:var(--plum);font-size:36px;text-align:center;margin:16px 0 6px
+  }
+  .start{text-align:center;font-family:"IBM Plex Sans";font-weight:800;color:var(--berry);margin:0 0 18px}
+
+  .sep{height:22px;position:relative;margin:16px 0 10px}
+  .sep::before{
+    content:"";position:absolute;left:0;right:0;bottom:9px;height:2px;border-radius:6px;
+    background:linear-gradient(90deg, rgba(185,146,71,0), rgba(185,146,71,.85), rgba(185,146,71,0));
+  }
+  .sep::after{
+    content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:0;
+    width:86px;height:6px;border-radius:999px;background:rgba(81,36,65,.12);
+  }
+
+  .block{margin:14px 0}
+  .label{font-family:"IBM Plex Sans";font-weight:800;color:var(--berry);margin:0 0 8px}
+  .para{margin:0 0 6px}
+
+  .list{display:grid;gap:10px;margin:8px 0 2px}
+  .chip{
+    display:flex;gap:10px;align-items:flex-start;
+    background:#fff;border:1.5px dashed rgba(185,146,71,.65);
+    border-radius:14px;padding:10px 12px
+  }
+  .chip .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);margin-top:8px}
+
+  .contact{margin-top:16px;padding:14px;border-radius:16px;
+    background:linear-gradient(135deg, rgba(185,146,71,.12), rgba(81,36,65,.06));
+    border:1px solid rgba(31,17,40,.06);display:grid;gap:10px}
+  .row{display:flex;gap:10px;align-items:flex-start}
+  .row b{font-family:"IBM Plex Sans";color:var(--berry)}
+  .site{font-family:"IBM Plex Sans";font-weight:800;color:var(--plum)}
+
+  .note{margin-top:14px;font-family:"IBM Plex Sans";font-weight:800;color:var(--plum)}
+
+  /* Download button */
+  #download-btn{
+    display:block;margin:20px auto;
+    background:var(--gold);color:#3a250d;
+    border:none;padding:12px 22px;
+    border-radius:999px;cursor:pointer;
+    font-family:"IBM Plex Sans";font-weight:700;font-size:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+  }
+  #download-btn:hover{background:#e2bb66}
+</style>
+</head>
+<body>
+
+<div class="poster-wrap" id="poster">
+  <div class="poster">
+    <div class="board">
+
+      <header class="head">
+        <img class="logo" src="https://www.aimzestudio.com/wp-content/uploads/2025/09/Aimze-Studio-Transparent-Logo-Work.png" alt="Aimze Studio logo">
+        <div class="brand-line">Aimze Studio – School of Excellence</div>
+        <div class="motto">Where Beauty Meets Brilliance</div>
+      </header>
+
+      <h1 class="title">Hairstylist Exam Preparation</h1>
+      <p class="start">New Session Starts: September 23, 2025</p>
+
+      <div class="sep"></div>
+
+      <section class="block">
+        <p class="para">
+          Ready to clear your Hairstylist License Exam with confidence?<br>
+          Our Exam Prep Program focuses on theory, written exam practice, and essential<br>
+          knowledge review to help you succeed.
+        </p>
+      </section>
+
+      <section class="block">
+        <p class="label">Program Highlights:</p>
+        <div class="list">
+          <div class="chip"><span class="dot"></span>• Complete exam theory review</div>
+          <div class="chip"><span class="dot"></span>• Written test preparation &amp; practice</div>
+          <div class="chip"><span class="dot"></span>• Mock exam simulations</div>
+          <div class="chip"><span class="dot"></span>• Key exam tips &amp; strategies</div>
+          <div class="chip"><span class="dot"></span>• Guidance from experienced instructors</div>
+        </div>
+      </section>
+
+      <section class="block">
+        <p class="label">Who Can Join:</p>
+        <div class="list">
+          <div class="chip"><span class="dot"></span>• Students preparing for the Hairstylist License Exam</div>
+          <div class="chip"><span class="dot"></span>• Recent graduates from hairstyling programs</div>
+          <div class="chip"><span class="dot"></span>• Hairstylists needing a theory refresher</div>
+        </div>
+      </section>
+
+      <section class="block">
+        <p class="label">Location:</p>
+        <div class="contact">
+          <div class="row">📍 50 Kennedy Rd S, Brampton, ON L6W 3R7</div>
+          <div class="row"><b>📞 Call/WhatsApp:</b> +1 (905) 863-5955</div>
+          <div class="row"><b>✉ Email:</b> aimzestudio@gmail.com</div>
+          <div class="row"><b>🌐 Website:</b> <span class="site">www.aimzestudio.com</span></div>
+        </div>
+      </section>
+
+      <section class="block">
+        <p class="label">Session Date:</p>
+        <p class="para">Starts September 23, 2025</p>
+      </section>
+
+      <section class="block">
+        <p class="label">Registration:</p>
+        <p class="para">Limited seats available – Secure your spot today!</p>
+      </section>
+
+      <section class="block">
+        <p class="note">Turn your vision into victory — Get licensed with confidence!</p>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<button id="download-btn">⬇ Download Poster</button>
+
+<!-- html2canvas script -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script>
+  document.getElementById("download-btn").addEventListener("click", () => {
+    const poster = document.getElementById("poster");
+    html2canvas(poster, {scale:2}).then(canvas => {
+      const link = document.createElement("a");
+      link.download = "AimzeStudio-Hairstylist-Exam-Poster.png";
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    });
+  });
+</script>
+
+</body>
+</html>
