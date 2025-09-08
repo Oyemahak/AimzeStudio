@@ -1,0 +1,284 @@
+<!-- SPECIAL OFFERS : drop-in section (no logo/header) -->
+<link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+<style>
+    /* ===== Scoped styles for Special Offers only ===== */
+    :root {
+        --gold: #B99247;
+        /* brand gold */
+        --plum: #412259;
+        /* brand plum */
+        --berry: #512441;
+        /* brand berry */
+        --ink: #1b1b1f;
+        --muted: #5d5d66;
+        --panel: #ffffff;
+        --bg: #faf9fb;
+        --radius: 18px;
+        --shadow: 0 10px 30px rgba(12, 5, 22, .12);
+    }
+
+    #special-offers {
+        margin: 60px auto;
+        /* top/bottom spacing requested */
+        padding: 0 18px;
+        max-width: 1200px;
+        font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        color: var(--ink);
+    }
+
+    #special-offers .so-title {
+        font-family: "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        font-weight: 800;
+        font-size: clamp(28px, 3.5vw, 44px);
+        line-height: 1.15;
+        margin: 0 0 18px;
+        letter-spacing: .2px;
+    }
+
+    #special-offers .so-sub {
+        display: inline-block;
+        background: var(--gold);
+        color: #3a250d;
+        font-family: "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        font-weight: 800;
+        padding: 10px 16px;
+        border-radius: 12px;
+        margin: 8px 0 22px;
+    }
+
+    #special-offers .so-note {
+        font-family: "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        font-weight: 700;
+        color: var(--plum);
+        margin-bottom: 22px;
+    }
+
+    /* Category headings */
+    #special-offers .section-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 34px 0 14px;
+        color: var(--plum);
+        font-family: "IBM Plex Sans";
+        font-weight: 800;
+        letter-spacing: .2px;
+    }
+
+    #special-offers .section-title::before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        background: var(--gold);
+        box-shadow: 0 0 0 3px rgba(185, 146, 71, .18);
+    }
+
+    /* Grid */
+    #special-offers .grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #special-offers .card {
+        grid-column: span 12;
+        background: var(--panel);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(31, 17, 40, .06);
+        padding: 18px;
+    }
+
+    #special-offers .card h3 {
+        font-family: "IBM Plex Sans";
+        font-weight: 700;
+        margin: 0 0 6px;
+        font-size: 1.05rem;
+    }
+
+    #special-offers .price {
+        font-weight: 800;
+        color: var(--berry)
+    }
+
+    #special-offers .muted {
+        color: var(--muted);
+        font-size: .94rem
+    }
+
+    /* Responsive columns */
+    @media (min-width:600px) {
+        #special-offers .card {
+            grid-column: span 6
+        }
+    }
+
+    @media (min-width:900px) {
+        #special-offers .card {
+            grid-column: span 4
+        }
+    }
+
+    /* CTA strip */
+    #special-offers .cta {
+        margin: 34px 0 0;
+        border-radius: 20px;
+        padding: 18px;
+        background: linear-gradient(135deg, var(--berry), var(--plum));
+        color: #fff;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center
+    }
+
+    #special-offers .cta b {
+        white-space: nowrap;
+        font-family: "IBM Plex Sans"
+    }
+
+    #special-offers .btn {
+        background: #fff;
+        color: var(--berry);
+        border: none;
+        border-radius: 999px;
+        padding: 12px 18px;
+        font-weight: 800;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+        font-family: "IBM Plex Sans"
+    }
+
+    #special-offers .btn:focus-visible {
+        outline: 3px solid var(--gold);
+        outline-offset: 2px
+    }
+</style>
+
+<section id="special-offers" aria-label="Grand Opening Specials">
+    <!-- Headings (use your own page header above; this block excludes logos) -->
+    <h1 class="so-title">Grand Opening Specials</h1>
+    <span class="so-sub">We Are Open Now</span>
+    <div class="so-note">20% Off on All Services</div>
+
+    <!-- FACIALS & SKIN -->
+    <h2 class="section-title">Facials &amp; Skin</h2>
+    <div class="grid" role="list">
+        <article class="card" role="listitem">
+            <h3>Hydra Facial</h3>
+            <div class="price">$ 85.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>European Facial</h3>
+            <div class="price">$ 85.00</div>
+            <div class="muted">Deep Pore Cleanse Facial &nbsp; $ 50.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Stress Relief Spa Facial<br>With Head Massage</h3>
+            <div class="price">$ 125.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Anti Aging Facial</h3>
+            <div class="price">$ 85.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Laser Photo Facial/Skin Rejuvenation</h3>
+            <div class="price">$ 100.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Body Detox</h3>
+            <div class="price">$ 50.00</div>
+        </article>
+    </div>
+
+    <!-- HAIRCUTS & STYLING -->
+    <h2 class="section-title">Haircuts &amp; Styling</h2>
+    <div class="grid" role="list">
+        <article class="card" role="listitem">
+            <h3>Senior Men’s Haircut</h3>
+            <div class="price">$ 15.00</div>
+            <div class="muted">Men’s Hair Cut &nbsp; $ 25.00 &nbsp; | &nbsp; Ladies Hair Cut &nbsp; $ 50.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Shampoo, Cut &amp; Blow Dry</h3>
+            <div class="price">$ 75.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Full Head Hi-Lites</h3>
+            <div class="price">$ 125.00</div>
+            <div class="muted">Color Change Shoulder Length &nbsp; $ 100.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Hi-Lites Shoulder Length Hair</h3>
+            <div class="price">$ 75.00</div>
+            <div class="muted">Root Touch Up &nbsp; $ 50.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Scalp Treatment</h3>
+            <div class="price">$ 50.00</div>
+        </article>
+    </div>
+
+    <!-- WAXING & LASER -->
+    <h2 class="section-title">Waxing &amp; Laser</h2>
+    <div class="grid" role="list">
+        <article class="card" role="listitem">
+            <h3>Nufree Full Face Wax</h3>
+            <div class="price">$ 50.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Full Face &amp; Neck Laser Hair Removal</h3>
+            <div class="price">$ 80.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Under Arms Laser Hair Removal</h3>
+            <div class="price">$ 70.00</div>
+            <div class="muted">Chin &amp; Upper Lips &nbsp; $ 60.00</div>
+        </article>
+    </div>
+
+    <!-- NAILS -->
+    <h2 class="section-title">Nails</h2>
+    <div class="grid" role="list">
+        <article class="card" role="listitem">
+            <h3>Manicure &amp; Pedicure</h3>
+            <div class="price">$ 50.00</div>
+            <div class="muted">Shellac Manicure &nbsp; $ 30.00 &nbsp; | &nbsp; Shellac Pedicure &nbsp; $ 35.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Acrylic Nails</h3>
+            <div class="price">$ 55.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Gel Nails</h3>
+            <div class="price">$ 65.00</div>
+        </article>
+        <article class="card" role="listitem">
+            <h3>Eyebrow Tinting</h3>
+            <div class="price">$ 20.00</div>
+        </article>
+    </div>
+
+    <!-- MASSAGE -->
+    <h2 class="section-title">Massage</h2>
+    <div class="grid" role="list">
+        <article class="card" role="listitem">
+            <h3>Full Body Massage RMT (1hrs)</h3>
+            <div class="price">$ 100.00</div>
+        </article>
+    </div>
+
+    <!-- CTA (optional) -->
+    <div class="cta" aria-label="Book now">
+        <div><b>20% Off on All Services</b> — Grand Opening Specials</div>
+        <!-- Replace hrefs if you already have site-wide CTAs -->
+        <a class="btn" href="tel:19058635955">Call 905-863-5955</a>
+        <a class="btn" href="mailto:aimzestudio@gmail.com">Email Us</a>
+    </div>
+</section>

@@ -1,0 +1,90 @@
+<!-- ===== Special Offers Cover Section ===== -->
+<section id="special-offers-cover">
+  <div class="cover-inner">
+    <div class="cover-title">Grand Opening Specials</div>
+    <p class="cover-sub">✨ We Are Open Now — Enjoy <b>20% Off</b> on All Services ✨</p>
+    <a href="https://www.aimzestudio.com/special-offers/" class="btn">View All Offers</a>
+  </div>
+</section>
+
+<style>
+  :root {
+    --gold: #B99247;
+    --plum: #412259;
+    --berry: #512441;
+    --ink: #ffffff;
+    --bg: #faf9fb;
+    --radius: 16px;
+    --shadow: 0 14px 38px rgba(12,5,22,.12);
+  }
+
+  #special-offers-cover {
+    position: relative;
+    background: linear-gradient(135deg, var(--plum), var(--berry));
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: var(--radius);
+    margin: 0px auto;
+    max-width: 1200px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  /* Decorative gradient circles */
+  #special-offers-cover::before,
+  #special-offers-cover::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+  }
+  #special-offers-cover::before {
+    width: 300px; height: 300px;
+    top: -120px; left: -120px;
+    background: var(--gold);
+  }
+  #special-offers-cover::after {
+    width: 300px; height: 300px;
+    bottom: -120px; right: -120px;
+    background: #fff;
+  }
+
+  .cover-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .cover-title {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .cover-sub {
+    font-size: clamp(16px, 2vw, 22px);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #000000;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease;
+  }
+  .btn:hover {
+    background: #e2bb66;
+  }
+</style>

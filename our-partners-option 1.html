@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Partners — Beauty &amp; Wellness Alliance | Aimze Studio</title>
+    <meta name="description"
+        content="Aimze Studio partners with MuscleEase Therapy Clinic to deliver massage therapy, chiropractic care, physiotherapy, and aesthetics—an integrated, modern experience for beauty and wellness.">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --gold: #B99247;
+            /* brand gold */
+            --plum: #412259;
+            /* brand plum */
+            --berry: #512441;
+            /* brand berry */
+            --ink: #1b1b1f;
+            --muted: #5f6270;
+            --panel: #ffffff;
+            --bg: #faf9fb;
+            --radius: 22px;
+            --shadow: 0 14px 36px rgba(12, 5, 22, .12);
+            --ring: 0 0 0 4px rgba(185, 146, 71, .18);
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--ink)
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        /* ===== Page wrapper (you can place your site header above) ===== */
+        .page-wrap {
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column
+        }
+
+        /* ===== Partners Section (reusable block) ===== */
+        #partners-alliance {
+            margin: 60px auto;
+            /* requested top/bottom spacing */
+            padding: 0 22px;
+            max-width: 1140px;
+            font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        }
+
+        /* Gradient band */
+        .alliance-band {
+            border-radius: 28px;
+            overflow: hidden;
+            padding: 42px 24px;
+            background:
+                radial-gradient(1200px 480px at 100% -10%, rgba(185, 146, 71, .24), transparent 60%),
+                radial-gradient(900px 440px at 0% -15%, rgba(81, 36, 65, .24), transparent 55%),
+                linear-gradient(135deg, var(--plum), var(--berry));
+            color: #fff;
+            box-shadow: var(--shadow);
+        }
+
+        .band-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            gap: 26px;
+            grid-template-columns: repeat(12, 1fr);
+            align-items: center
+        }
+
+        /* Top chips with logos */
+        .topline {
+            grid-column: 1/-1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, .1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, .25);
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-family: "IBM Plex Sans";
+            font-weight: 700
+        }
+
+        .chip img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            border-radius: 4px
+        }
+
+        /* content card */
+        .content-card {
+            grid-column: 1/-1;
+            background: var(--panel);
+            color: var(--ink);
+            border-radius: 24px;
+            padding: 30px 26px;
+            border: 1px solid rgba(31, 17, 40, .06);
+            box-shadow: var(--shadow);
+        }
+
+        /* Title/lede */
+        .lede {
+            font-family: "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            font-weight: 800;
+            letter-spacing: .2px;
+            line-height: 1.15;
+            font-size: clamp(26px, 3.8vw, 40px);
+            color: var(--plum);
+            margin: 0 0 12px
+        }
+
+        .tagline {
+            display: inline-block;
+            background: var(--gold);
+            color: #3a250d;
+            font-family: "IBM Plex Sans";
+            font-weight: 800;
+            padding: 10px 14px;
+            border-radius: 12px;
+            margin: 2px 0 18px;
+            box-shadow: var(--ring)
+        }
+
+        /* Nicely spaced two-column layout */
+        .content-grid {
+            display: grid;
+            gap: 26px;
+            grid-template-columns: repeat(12, 1fr)
+        }
+
+        .col-copy {
+            grid-column: span 12
+        }
+
+        .col-feats {
+            grid-column: span 12
+        }
+
+        @media(min-width:960px) {
+            .col-copy {
+                grid-column: span 7
+            }
+
+            .col-feats {
+                grid-column: span 5
+            }
+        }
+
+        p {
+            margin: 0 0 14px
+        }
+
+        .h3 {
+            font-family: "IBM Plex Sans";
+            font-weight: 800;
+            color: var(--berry);
+            margin: 16px 0 10px
+        }
+
+        /* Separators */
+        .separator {
+            position: relative;
+            height: 20px;
+            margin: 22px 0 10px;
+        }
+
+        .separator::before {
+            content: "";
+            position: absolute;
+            inset: auto 0 9px 0;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(185, 146, 71, .0), rgba(185, 146, 71, .7), rgba(185, 146, 71, .0));
+            border-radius: 6px;
+        }
+
+        .separator::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 72px;
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(81, 36, 65, .12);
+        }
+
+        /* Feature list (spacious) */
+        .feat-list {
+            display: grid;
+            gap: 14px
+        }
+
+        .feat {
+            background: #fff;
+            border: 1.5px dashed rgba(185, 146, 71, .65);
+            border-radius: 18px;
+            padding: 14px 14px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start
+        }
+
+        .feat svg {
+            flex: 0 0 26px
+        }
+
+        .feat b {
+            font-family: "IBM Plex Sans";
+            color: var(--berry)
+        }
+
+        .feat p {
+            margin: 2px 0 0;
+            color: var(--muted);
+            font-size: .98rem
+        }
+
+        /* CTA row */
+        .cta {
+            margin: 20px 0 0;
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            align-items: center
+        }
+
+        .btn {
+            background: #fff;
+            color: var(--berry);
+            border: none;
+            border-radius: 999px;
+            padding: 12px 18px;
+            font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: "IBM Plex Sans";
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .12)
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px
+        }
+
+        .btn.ghost {
+            background: transparent;
+            color: var(--plum);
+            border: 1.5px solid var(--plum)
+        }
+
+        /* subtle footer band inside card */
+        .mini-logos {
+            margin-top: 22px;
+            padding-top: 16px;
+            border-top: 1px dashed rgba(185, 146, 71, .55);
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center
+        }
+
+        .mini-logos img {
+            height: 30px;
+            width: auto;
+            object-fit: contain
+        }
+
+        .mini-logos span {
+            font-family: "IBM Plex Sans";
+            font-weight: 700;
+            color: var(--muted)
+        }
+
+        /* Increase overall breathing space on large screens */
+        @media(min-width:1200px) {
+            .alliance-band {
+                padding: 56px 38px
+            }
+
+            .content-card {
+                padding: 38px 34px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrap">
+        <!-- Your site header/nav lives above this -->
+
+        <!-- ===== OUR PARTNERS (reusable) ===== -->
+        <section id="partners-alliance" aria-label="Our Partners">
+            <div class="alliance-band">
+                <div class="band-inner">
+
+                    <!-- Logos & name chips (looks great, but easy to remove if your header repeats logos) -->
+                    <div class="topline">
+                        <span class="chip">
+                            <img src="https://www.aimzestudio.com/wp-content/uploads/2025/09/Aimze-Studio-Transparent-Logo-Work.png"
+                                alt="Aimze Studio logo">
+                            Aimze Studio
+                        </span>
+                        <span class="chip">
+                            <img src="https://www.aimzestudio.com/wp-content/uploads/2025/09/MuscleEase.jpeg"
+                                alt="MuscleEase Therapy Clinic logo">
+                            MuscleEase Therapy Clinic
+                        </span>
+                        <span style="opacity:.9">Beauty &amp; Wellness Alliance</span>
+                    </div>
+
+                    <!-- Main content card -->
+                    <div class="content-card">
+                        <h2 class="lede">“Beauty and Wellness, All Under One Roof”</h2>
+                        <div class="tagline">Aimze Studio × MuscleEase Therapy Clinic</div>
+
+                        <div class="content-grid">
+                            <!-- Copy -->
+                            <div class="col-copy">
+                                <p>
+                                    Aimze Studio, in partnership with MuscleEase Therapy Clinic, brings you expert
+                                    massage therapy,
+                                    chiropractic care, physiotherapy, and aesthetic treatments—a seamless, holistic
+                                    experience for your
+                                    body and mind.
+                                </p>
+
+                                <div class="separator" aria-hidden="true"></div>
+
+                                <p class="h3">Collaboration with MuscleEase Therapy Clinic</p>
+                                <p>
+                                    Aimze Studio is proud to partner with MuscleEase Therapy Clinic to offer a complete
+                                    range of beauty,
+                                    aesthetics, and wellness services under one roof. Clients can now access registered
+                                    massage therapy,
+                                    chiropractic care, and physiotherapy, delivered by qualified professionals in a
+                                    modern, integrated
+                                    environment. This collaboration ensures a seamless and holistic experience,
+                                    supporting both personal
+                                    well-being and confidence in your appearance—where beauty and wellness truly come
+                                    together.
+                                </p>
+
+                                <div class="cta" aria-label="Quick actions">
+                                    <a class="btn" href="tel:19058635955">Call 905-863-5955</a>
+                                    <a class="btn ghost" href="mailto:aimzestudio@gmail.com">Email Us</a>
+                                    <a class="btn"
+                                        href="https://www.aimzestudio.com/services-and-pricing/#massage-therapy"
+                                        target="_blank" rel="noopener">
+                                        Explore Massage Therapy
+                                    </a>
+                                </div>
+
+                                <div class="mini-logos">
+                                    <img src="https://www.aimzestudio.com/wp-content/uploads/2025/09/Aimze-Studio-Transparent-Logo-Work.png"
+                                        alt="Aimze Studio">
+                                    <img src="https://www.aimzestudio.com/wp-content/uploads/2025/09/MuscleEase.jpeg"
+                                        alt="MuscleEase Therapy Clinic">
+                                    <span>Partnered for integrated care</span>
+                                </div>
+                            </div>
+
+                            <!-- Feature list (spacious with icons) -->
+                            <aside class="col-feats" aria-label="Key services">
+                                <div class="feat-list">
+
+                                    <div class="feat">
+                                        <!-- massage icon -->
+                                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path d="M4 18c3-3 6-3 8-1s5 2 8-1" stroke="#512441" stroke-width="1.8"
+                                                stroke-linecap="round" />
+                                            <path d="M5 14c2-2 4-3 7-2" stroke="#B99247" stroke-width="1.8"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                        <div>
+                                            <b>Registered Massage Therapy</b>
+                                            <p>RMT sessions designed for recovery, relaxation, and mobility.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feat">
+                                        <!-- chiropractic icon -->
+                                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path d="M12 3v18M9 6h6M8 9h8M9 12h6M8 15h8M9 18h6" stroke="#412259"
+                                                stroke-width="1.8" stroke-linecap="round" />
+                                        </svg>
+                                        <div>
+                                            <b>Chiropractic Care</b>
+                                            <p>Evidence-based adjustments to support posture and spinal health.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feat">
+                                        <!-- physiotherapy icon -->
+                                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <circle cx="8" cy="5" r="2.2" stroke="#512441" stroke-width="1.8" />
+                                            <path d="M8 7v4l-3 5M8 11l3 3 5 2" stroke="#B99247" stroke-width="1.8"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                        <div>
+                                            <b>Physiotherapy</b>
+                                            <p>Personalized programs for strength, balance, and pain management.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feat">
+                                        <!-- aesthetics icon -->
+                                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path d="M5 19c6-2 10-6 12-12" stroke="#412259" stroke-width="1.8"
+                                                stroke-linecap="round" />
+                                            <circle cx="17" cy="5" r="2.6" fill="#B99247" />
+                                        </svg>
+                                        <div>
+                                            <b>Aesthetic Treatments</b>
+                                            <p>Professional facials, laser, nails, and personalized beauty care.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Your site footer below -->
+    </div>
+</body>
+
+</html>
