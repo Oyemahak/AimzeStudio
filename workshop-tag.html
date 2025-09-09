@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aimze Studio Workshops</title>
+
+    <style>
+        :root {
+            --plum: #6b157a;
+            --gold: #d4af37;
+            --ink: #000;
+            --muted: #000;
+            --bg: #fffaf7;
+            --card: #ffffff;
+            --ring: rgba(212, 175, 55, .45);
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #000;
+            line-height: 28px;
+            background: var(--bg)
+        }
+
+        .section {
+            max-width: 1200px
+        }
+
+        h2 {
+            color: var(--plum);
+            margin: 18px 0 8px
+        }
+
+        .badge {
+            display: inline-block;
+            background: #f4eaff;
+            color: var(--plum);
+            border: 1px solid #e6d8ff;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: .92rem;
+            margin: 8px 0 18px;
+            text-align: center;
+        }
+
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0
+        }
+
+        .badge.whatsapp-badge {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: #fff;
+            border: 1px solid rgba(18, 140, 126, .3);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 18px;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 6px 16px rgba(18, 140, 126, .28);
+            transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+            animation: pulseGlow 1.6s ease-in-out infinite;
+            will-change: transform, box-shadow;
+        }
+
+        .badge.whatsapp-badge:hover {
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 10px 22px rgba(18, 140, 126, .38);
+            filter: saturate(1.15)
+        }
+
+        .badge.whatsapp-badge:active {
+            transform: translateY(0) scale(.98)
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 10px rgba(37, 211, 102, .55), 0 0 18px rgba(18, 140, 126, .35)
+            }
+
+            50% {
+                box-shadow: 0 0 18px rgba(37, 211, 102, .85), 0 0 28px rgba(18, 140, 126, .55)
+            }
+
+            100% {
+                box-shadow: 0 0 10px rgba(37, 211, 102, .55), 0 0 18px rgba(18, 140, 126, .35)
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+            .badge.whatsapp-badge {
+                animation: none
+            }
+        }
+
+        .subnote {
+            color: #000;
+            margin: 0 0 12px;
+            font-size: .98rem
+        }
+
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 24px
+        }
+
+        @media (max-width:980px) {
+            .workshop-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media (max-width:640px) {
+            .workshop-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .workshop-card {
+            position: relative;
+            background: linear-gradient(180deg, #fff 0%, #fff8f3 100%);
+            border: 1px solid #eadcf5;
+            border-radius: 16px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, .06);
+            padding: 18px 16px;
+            text-align: center;
+            transition: border-color .25s ease, box-shadow .25s ease, transform .2s ease;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .workshop-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            pointer-events: none;
+            border-left: 4px solid var(--plum)
+        }
+
+        .workshop-card:hover {
+            transform: translateY(-3px);
+            border-color: #d4af37;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, .12);
+            background: linear-gradient(180deg, #fff 0%, #fff6ea 100%)
+        }
+
+        .workshop-card:focus-visible {
+            box-shadow: 0 0 0 6px var(--ring)
+        }
+
+        /* Unified pill for cards & tables */
+        .pill {
+            display: inline-block;
+            margin-left: 8px;
+            /* sits nicely after titles in tables */
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            /* small + tidy */
+            font-weight: 600;
+            border-radius: 999px;
+            vertical-align: middle;
+        }
+
+        .pill.popular {
+            background: #fff4da;
+            border: 1px solid #f1d17a;
+            color: #000;
+        }
+
+        .pill.popular::before {
+            content: "★ ";
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        .compliance-header {
+            color: #6b157a;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 6px 0 6px
+        }
+
+        .workshop-card p {
+            margin: 0 auto;
+            color: #000;
+            font-size: .98rem
+        }
+
+        .workshop-table-wrapper {
+            overflow: hidden;
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid #B58E41;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+            margin-bottom: 32px;
+            background: #fff
+        }
+
+        .workshop-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0
+        }
+
+        .workshop-table th {
+            background: #f9f5ff;
+            color: var(--plum);
+            padding: 1rem;
+            text-align: left;
+            font-size: 1.15rem;
+            font-weight: 700
+        }
+
+        .workshop-table td {
+            padding: 1rem;
+            text-align: left;
+            font-size: 0.95rem;
+            color: #000
+        }
+
+        .workshop-table tr:hover td {
+            background-color: #fff8fb
+        }
+
+        .workshop-table td strong {
+            color: var(--plum)
+        }
+
+        .compliance {
+            background: #fff;
+            border: 1px solid #B58E41;
+            padding: 1.5rem;
+            margin-top: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .05)
+        }
+
+        .compliance-text {
+            font-style: italic;
+            color: #000
+        }
+
+        @media (min-width:768px) {
+            .desktop-only {
+                display: block
+            }
+
+            .mobile-only {
+                display: none
+            }
+        }
+
+        @media (max-width:767px) {
+            h2 {
+                font-size: 1.35rem
+            }
+
+            .desktop-only {
+                display: none
+            }
+
+            .mobile-only {
+                display: block
+            }
+
+            .section {
+                padding: 0 14px
+            }
+
+            .workshop-grid {
+                grid-template-columns: 1fr;
+                row-gap: 20px;
+                column-gap: 16px;
+                padding-bottom: 10px
+            }
+
+            .workshop-card {
+                padding: 20px 16px
+            }
+
+            .workshop-card+.workshop-card {
+                margin-top: 16px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+
+        <!-- ================= AESTHETICS ================= -->
+        <h2>Aesthetics Certificate Workshops</h2>
+        <p class="subnote">Hands-on beauty training in Brampton, Ontario. Beginner-friendly certificate modules taught
+            with professional products and clinic-style standards.</p>
+
+        <!-- Mobile cards (reordered; merged/renamed items) -->
+        <div class="workshop-grid mobile-only">
+            <!-- Most Popular 1 -->
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill popular">Most Popular</span>
+                <div class="compliance-header">Waxing &amp; Threading</div>
+                <p>Complete face &amp; body hair removal with precise brow mapping and threading, hygienic practice, and
+                    soothing aftercare.</p>
+            </div>
+            <!-- 2 -->
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Makeup &amp; Art</span>
+                <div class="compliance-header">Make-Up &amp; Mehendi</div>
+                <p>Party &amp; bridal makeup with prep and lashes, paired with traditional henna artistry and client
+                    aftercare.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Skin</span>
+                <div class="compliance-header">Skin Care</div>
+                <p>Certificate training in cleansing, exfoliation, masking, moisturising and skin analysis to prepare
+                    for spa/clinic roles.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Nails</span>
+                <div class="compliance-header">Nail Care</div>
+                <p>Professional manicure &amp; pedicure hygiene, shaping, polishing and client sanitation for
+                    salon-ready service.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Facial</span>
+                <div class="compliance-header">Photo Facial</div>
+                <p>Intro to photo-facial protocols, consultation, safety and post-care best practices.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Laser</span>
+                <div class="compliance-header">Laser Hair Removal</div>
+                <p>Overview of laser hair removal theory, Fitzpatrick scale, contraindications, client consultation and
+                    care.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Hydra</span>
+                <div class="compliance-header">Hydra Facial</div>
+                <p>Multi-step hydra facial techniques—cleanse, extract, infuse &amp; hydrate—using professional devices.
+                </p>
+            </div>
+        </div>
+
+        <!-- Desktop table (same items/order) -->
+        <div class="workshop-table-wrapper desktop-only">
+            <table class="workshop-table" aria-label="Aesthetics Certificate Workshops">
+                <thead>
+                    <tr>
+                        <th class="compliance-header" style="width:32%">Program</th>
+                        <th class="compliance-header">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Waxing &amp; Threading</strong><span class="pill popular">Most Popular</span></td>
+                        <td>Complete face &amp; body hair removal with precise <em>brow mapping &amp; threading</em>,
+                            hygiene, and calming aftercare.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Make-Up &amp; Mehendi</strong></td>
+                        <td>Party &amp; bridal <em>makeup</em> with skin prep and lash application, plus traditional
+                            <em>henna</em> design and aftercare.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Skin Care</strong></td>
+                        <td>Certificate training in cleansing, exfoliation, masking, moisturising and <em>skin
+                                analysis</em> to prepare for spa/clinic roles.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nail Care</strong></td>
+                        <td>Professional <em>manicure &amp; pedicure</em> hygiene, shaping, polishing and client
+                            sanitation for salon-ready service.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Photo Facial</strong></td>
+                        <td>Intro to <em>photo-facial</em> protocols, consultation, safety and post-care best practices.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Laser Hair Removal</strong></td>
+                        <td>Overview of <em>laser hair removal</em> theory, Fitzpatrick scale, contraindications, client
+                            consultation and care.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hydra Facial</strong></td>
+                        <td>Multi-step <em>hydra facial</em> techniques—cleanse, extract, infuse &amp; hydrate—using
+                            professional devices.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ================= HAIRDRESSING ================= -->
+        <h2>Hairdressing Certificate</h2>
+        <p class="subnote">Salon-standard hair education: cutting, styling and colour modules designed to build real
+            service confidence.</p>
+
+        <!-- Mobile cards -->
+        <div class="workshop-grid mobile-only">
+            <!-- Put Ombre/Lamination first as requested -->
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill popular">Most Popular</span>
+                <div class="compliance-header">Eyebrow Ombre / Lamination</div>
+                <p>Set, tint and shape brows for a fuller ombré or laminated look with mapping and aftercare.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill popular">Most Popular</span>
+                <div class="compliance-header">Styling &amp; Hair Updos</div>
+                <p>Blow-dry and heat-tool finishing combined with secure bridal/party up-styles, balance and pinning.
+                </p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Cut</span>
+                <div class="compliance-header">Cutting</div>
+                <p>Foundations of sectioning, elevation, layering and precision lines for modern haircuts.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Barber</span>
+                <div class="compliance-header">Barber Cut</div>
+                <p>Clipper-over-comb, fades, tapers and clean line work, including beard finishing basics.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Colour</span>
+                <div class="compliance-header">Colouring</div>
+                <p>Formulation, developer ratios, all-over color, foils and highlights/balayage basics.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Repair</span>
+                <div class="compliance-header">Hair Treatments</div>
+                <p>Scalp therapy, deep conditioning and bond-building rituals for healthier hair.</p>
+            </div>
+        </div>
+
+        <!-- Desktop table -->
+        <div class="workshop-table-wrapper desktop-only">
+            <table class="workshop-table" aria-label="Hairdressing Certificate">
+                <thead>
+                    <tr>
+                        <th class="compliance-header" style="width:32%">Program</th>
+                        <th class="compliance-header">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Eyebrow Ombre / Lamination</strong><span class="pill popular">Most Popular</span>
+                        </td>
+                        <td>Set, tint and shape brows for a fuller <em>ombré/laminated</em> look with proper mapping and
+                            aftercare.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Styling &amp; Hair Updos</strong><span class="pill popular">Most Popular</span></td>
+                        <td>Blow-dry, heat tools and finishing paired with secure <em>bridal/party up-styles</em>,
+                            balance and pinning.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cutting</strong></td>
+                        <td>Foundations of sectioning, elevation, layering and precision lines for modern
+                            <em>haircuts</em>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Barber Cut</strong></td>
+                        <td>Clipper-over-comb, fades, tapers and clean line work, including <em>beard</em> finishing
+                            basics.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Colouring</strong></td>
+                        <td>Formulation, developer ratios, all-over color, foils and <em>highlights/balayage</em>
+                            basics.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hair Treatments</strong></td>
+                        <td>Scalp therapy, deep conditioning and <em>bond-building</em> rituals for healthier hair.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ================= BUSINESS BASICS ================= -->
+        <h2>Business Basics &amp; Exam Prep Courses</h2>
+        <p class="subnote">Career-ready skills to support your beauty or salon business—customer service, admin and exam
+            preparation.</p>
+
+        <!-- Mobile cards -->
+        <div class="workshop-grid mobile-only">
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill popular">Most Popular</span>
+                <div class="compliance-header">Hair License Exam Preparation</div>
+                <p>Theory refresh and practical checklists for provincial licensing requirements.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Exam</span>
+                <div class="compliance-header">LLOP License Exam Preparation</div>
+                <p>Structured review, practice questions and exam tips to help you pass your license exam with
+                    confidence.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Real Estate</span>
+                <div class="compliance-header">Real Estate Exam Preparation</div>
+                <p>High-yield concepts, mock tests and study plans to boost your real estate exam score.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Finance</span>
+                <div class="compliance-header">Intro to Bookkeeping</div>
+                <p>Income/expense tracking, ledgers and simple reporting for small salon businesses.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Front Desk</span>
+                <div class="compliance-header">Front Desk Skills &amp; Phone Etiquette</div>
+                <p>Professional customer service, booking management and call handling that converts inquiries to
+                    bookings.</p>
+            </div>
+            <div class="workshop-card" tabindex="0" role="button">
+                <span class="pill">Experience</span>
+                <div class="compliance-header">Work Experience in Multiple Industries</div>
+                <p>Guided placements to build real-world confidence and a stronger resume.</p>
+            </div>
+        </div>
+
+        <!-- Desktop table -->
+        <div class="workshop-table-wrapper desktop-only">
+            <table class="workshop-table" aria-label="Business Basics & Exam Prep">
+                <thead>
+                    <tr>
+                        <th class="compliance-header" style="width:38%">Program</th>
+                        <th class="compliance-header">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hair License Exam Preparation</strong><span class="pill popular">Most Popular</span>
+                        </td>
+                        <td>Theory refresh and <em>practical checklists</em> for provincial licensing requirements.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LLOP License Exam Preparation</strong></td>
+                        <td>Structured review, practice questions and exam tips to help you pass your <em>license
+                                exam</em> with confidence.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Real Estate Exam Preparation</strong></td>
+                        <td>High-yield concepts, mock tests and study plans to boost your <em>real estate exam</em>
+                            score.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intro to Bookkeeping</strong></td>
+                        <td>Income/expense tracking, ledgers and simple reporting for <em>small salon businesses</em>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Front Desk Skills &amp; Phone Etiquette</strong></td>
+                        <td>Professional <em>customer service</em>, booking management and call handling that converts
+                            inquiries to bookings.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Work Experience in Multiple Industries</strong></td>
+                        <td>Guided placements to build <em>real-world confidence</em> and a stronger resume.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ================= COMPLIANCE + CTA ================= -->
+        <div class="compliance">
+            <div class="compliance-header">Important Compliance Notice</div>
+            <div class="compliance-text">
+                These workshops are for personal interest and skill enhancement only. They are not vocational programs
+                under the
+                Private Career Colleges Act, 2005.
+            </div>
+        </div>
+
+        <div class="badge-container">
+            <a href="https://wa.me/19058635955?text=Hi%20Aimze%20Studio!%20I%27d%20like%20to%20book%20an%20appointment."
+                class="badge whatsapp-badge" target="_blank" rel="noopener noreferrer">
+                Inquire for upcoming classes
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>
