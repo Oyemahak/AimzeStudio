@@ -1,0 +1,101 @@
+/* === OUR BLOGS (archive) — exact container you showed in DevTools === */
+/* Mobile (default) */
+.blog #primary.ast-blog-layout-6-grid #main.site-main>.ast-row {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    row-gap: 28px !important;
+    /* vertical gap between rows */
+    column-gap: 16px !important;
+    /* gap between columns (flex-gap supported) */
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .blog #primary.ast-blog-layout-6-grid #main.site-main>.ast-row {
+        padding-left: 36px !important;
+        padding-right: 36px !important;
+        row-gap: 32px !important;
+        column-gap: 20px !important;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .blog #primary.ast-blog-layout-6-grid #main.site-main>.ast-row {
+        padding-left: 64px !important;
+        /* this is the 64px you toggled in DevTools */
+        padding-right: 64px !important;
+        row-gap: 36px !important;
+        column-gap: 24px !important;
+    }
+}
+
+/* Make sure the archive is full width with no sidebar */
+.blog #secondary {
+    display: none !important;
+}
+
+.blog .site-content .content-area {
+    width: 100% !important;
+}
+
+/* Optional: consistent thumbnail look + nicer card spacing */
+.blog .post-thumb img,
+.blog .post-thumb-img-content img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .08);
+}
+
+.blog .entry-title {
+    margin-top: 10px !important;
+}
+
+.blog .entry-summary {
+    margin-top: 6px !important;
+}
+
+/* Archive title spacing so it doesn't crash the sticky header */
+.blog .ast-archive-title,
+.blog .ast-archive-description {
+    margin-top: 120px !important;
+}
+
+@media (min-width: 768px) {
+
+    .blog .ast-archive-title,
+    .blog .ast-archive-description {
+        margin-top: 80px !important;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .blog .ast-archive-title,
+    .blog .ast-archive-description {
+        margin-top: 40px !important;
+    }
+}
+
+/* Archive title font sizes per your spec */
+.blog .ast-archive-title {
+    font-size: 28px !important;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #512441;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .blog .ast-archive-title {
+        font-size: 32px !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    .blog .ast-archive-title {
+        font-size: 40px !important;
+    }
+}
