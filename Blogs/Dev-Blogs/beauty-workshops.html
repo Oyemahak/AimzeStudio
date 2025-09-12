@@ -5,16 +5,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ====== SEO (edit per blog) ====== -->
   <title>Beauty Workshops & Training in Brampton – Elevate Your Skills | Aimze Studio</title>
   <link rel="canonical" href="https://www.aimzestudio.com/beauty-workshops-training-in-brampton/" />
   <meta name="description"
-    content="Explore Aimze Studio’s hands-on beauty workshops and certificate programs in Brampton: aesthetics, hairdressing, nail care, laser, and business basics. Boost your skills and career with expert-led, practical training." />
+    content="Hands-on beauty workshops in Brampton: aesthetics, hairdressing, nail care, laser and salon business basics. Learn job-ready skills with Aimze Studio’s expert-led certificate training." />
   <meta name="robots" content="index,follow" />
   <meta name="keywords"
-    content="beauty workshops Brampton, aesthetics certificate Brampton, hairdressing training Brampton, nail care certificate Brampton, laser hair removal training, business basics for salons, exam prep Brampton" />
+    content="beauty workshops Brampton, aesthetics certificate Brampton, hairdressing training Brampton, nail care certificate Brampton, laser hair removal training, photo facial course, salon business basics, exam prep, front desk training, bookkeeping for salons" />
 
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Beauty Workshops & Training in Brampton – Elevate Your Skills | Aimze Studio" />
   <meta property="og:description"
@@ -29,7 +28,7 @@
     "@context":"https://schema.org",
     "@type":"Article",
     "headline":"Beauty Workshops & Training in Brampton – Elevate Your Skills",
-    "description":"Explore Aimze Studio’s hands-on beauty workshops and certificates in Brampton: aesthetics, hairdressing, nail care, laser, and business basics.",
+    "description":"Hands-on beauty workshops and certificate programs at Aimze Studio, Brampton.",
     "author":{"@type":"Organization","name":"Aimze Studio"},
     "publisher":{"@type":"Organization","name":"Aimze Studio"},
     "inLanguage":"en-CA",
@@ -50,114 +49,81 @@
   }
   </script>
 
-  <!-- ====== COMMON BLOG STYLES (re-use for all blogs) ====== -->
   <style>
     :root {
       --ink: #231F20;
       --muted: #5b5566;
       --purple: #3e1b56;
       --gold: #d4af37;
-      --lilac: #f2f0fe;
-      /* safe top band */
-      --blue: #dbeafe;
-      /* thin blue strip above lilac on mobile */
+      --lilac: #f6f3ff;
       --bg: #ffffff;
       --panel: #ffffff;
       --border: #eadcfb;
       --max: 1000px;
       --radius: 14px;
-      --shadow: 0 10px 28px rgba(0, 0, 0, .06);
+      --shadow: 0 10px 24px rgba(0, 0, 0, .06);
+      --tocw: 280px;
+
+      /* spacing scale */
+      --s1: 12px;
+      --s2: 16px;
+      --s3: 20px;
+      --s4: 24px;
+      --s5: 28px;
+      --s6: 36px;
+    }
+
+    html {
+      scroll-behavior: smooth
     }
 
     html,
     body {
       margin: 0;
-      padding: 0;
       background: var(--bg);
       color: var(--ink);
       font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height: 1.7
+      line-height: 1.75;
+      font-size: 16px;
     }
 
     .wrap {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 24px 16px
+      padding: var(--s5) var(--s3)
     }
 
-    @media (min-width:768px) {
+    @media (max-width:767px) {
       .wrap {
-        padding: 40px 24px
+        padding: var(--s4) var(--s3)
       }
     }
 
-    @media (min-width:1025px) {
-      .wrap {
-        padding: 56px 32px
-      }
-    }
-
-    /* ====== Typography (no H tags; use roles) ====== */
-    .t-hero {
-      font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
-      line-height: 1.22;
+    /* p-based headings */
+    .t-hero,
+    .t-h2,
+    .t-h3 {
       font-weight: 800;
+      line-height: 1.2;
       margin: 0
     }
 
-    .t-h2,
-    .t-h3 {
-      font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
-      line-height: 1.25;
-      font-weight: 800;
-      margin: 0 0 .6em
-    }
-
     .t-hero {
-      font-size: 2rem
-    }
-
-    @media (max-width:767px) {
-      .t-hero {
-        font-size: 26px
-      }
+      font-size: clamp(26px, 5vw, 40px)
     }
 
     .t-h2 {
-      font-size: 28px
+      font-size: clamp(20px, 2.2vw, 24px)
     }
 
     .t-h3 {
-      font-size: 22px
+      font-size: clamp(18px, 1.9vw, 20px)
     }
 
-    @media (max-width:767px) {
-      .t-h2 {
-        font-size: 22px
-      }
-
-      .t-h3 {
-        font-size: 20px
-      }
-    }
-
-    p {
-      margin: .7em 0
-    }
-
-    ul {
-      padding-left: 1.1em;
-      margin: .5em 0
-    }
-
-    li {
-      margin: .35em 0
-    }
-
-    /* ====== Breadcrumbs ====== */
+    /* Breadcrumbs */
     .crumbs {
       font-size: .95rem;
-      opacity: .9
+      opacity: .95
     }
 
     .crumbs a {
@@ -174,80 +140,79 @@
       margin: 0 .35rem
     }
 
-    /* ====== HERO ====== */
+    /* FULL-WIDTH HERO */
     .hero {
       position: relative;
       color: #fff;
       text-align: center;
-      background:
-        linear-gradient(135deg, rgba(62, 27, 86, .94), rgba(62, 27, 86, .78)),
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      background: linear-gradient(135deg, rgba(62, 27, 86, .94), rgba(62, 27, 86, .78)),
         url("https://www.aimzestudio.com/wp-content/uploads/2025/08/1-scaled.png") center/cover no-repeat;
-      border-bottom: 4px solid var(--gold);
-    }
-
-    .hero::before,
-    .hero::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      display: none
-    }
-
-    @media (max-width:767px) {
-      .hero::after {
-        top: -170px;
-        height: 40px;
-        background: var(--blue);
-        display: block
-      }
-
-      .hero::before {
-        top: -130px;
-        height: 130px;
-        background: var(--lilac);
-        display: block
-      }
+      border-bottom: 3px solid var(--gold);
+      padding: var(--s6) var(--s3);
     }
 
     .hero .inner {
       max-width: var(--max);
-      margin: 0 auto;
-      padding: 48px 16px 54px
+      margin: 0 auto
     }
 
     .hero .kicker {
-      margin: .25em 0 0;
+      margin: .35em 0 0;
       font-weight: 700;
       letter-spacing: .02em;
       opacity: .95
     }
 
     .hero .muted {
-      opacity: .85
+      opacity: .86
     }
 
     .hero .t-hero {
       color: #fff;
-      text-shadow: 0 3px 16px rgba(0, 0, 0, .3)
+      text-shadow: 0 2px 12px rgba(0, 0, 0, .28)
     }
 
-    /* ====== Section pattern: left label + body ====== */
+    /* Decorative divider */
+    .divider {
+      height: 10px;
+      background: linear-gradient(90deg, rgba(81, 36, 65, .08), rgba(212, 175, 55, .45), rgba(81, 36, 65, .08))
+    }
+
+    /* Page layout */
+    .layout {
+      display: grid;
+      gap: var(--s4)
+    }
+
+    @media (min-width:1100px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr) var(--tocw)
+      }
+    }
+
+    /* Content sections */
     .sec {
       display: grid;
-      gap: 14px;
+      gap: var(--s3);
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 18px;
-      margin: 18px 0
+      padding: var(--s4);
+      margin: var(--s3) 0;
     }
 
     @media (min-width:920px) {
       .sec {
         grid-template-columns: 220px 1fr
       }
+    }
+
+    .sec+.sec {
+      margin-top: var(--s3)
     }
 
     .sec-label {
@@ -265,82 +230,114 @@
       margin-top: 0
     }
 
-    /* subhead inside body */
-    .eyebrow {
-      font-size: .9rem;
-      font-weight: 800;
-      color: #7a5c8f;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      margin: 0 0 .3rem
+    .sec-body ul {
+      margin: .3rem 0 .2rem 1rem
     }
 
-    /* note */
     .note {
       background: linear-gradient(to right, #fff7e6, #f7f0ff);
       border: 2px solid var(--gold);
       border-radius: 10px;
-      padding: 14px 16px;
-      margin: 18px 0;
+      padding: 12px 14px;
+      margin: 14px 0;
       font-weight: 600
     }
 
-    /* tag pills */
-    .taglist a {
-      display: inline-block;
-      margin: .2rem .35rem .2rem 0;
-      padding: .25rem .6rem;
-      border-radius: 999px;
-      background: #f7f4ff;
-      border: 1px solid #e8defe;
-      color: #5a3d83;
-      text-decoration: none;
-      font-size: .92rem
+    /* TOC desktop */
+    .toc {
+      display: none
     }
 
-    .taglist a:hover {
-      filter: brightness(.98)
+    @media (min-width:1100px) {
+      .toc {
+        display: block;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        padding: 12px;
+        position: sticky;
+        top: 20px;
+        height: max-content
+      }
+
+      .toc .title {
+        font-weight: 800;
+        color: #7a5c8f;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        margin: 2px 0 8px
+      }
+
+      .toc nav a {
+        display: block;
+        padding: 8px 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #3d2c58;
+        font-weight: 700;
+        font-size: .98rem
+      }
+
+      .toc nav a:hover {
+        background: #f7f4ff
+      }
+
+      .toc nav a.active {
+        background: #efe8ff;
+        border: 1px solid #decdff
+      }
     }
 
-    /* full-width CTA */
-    .cta {
-      width: 100vw;
-      margin-left: calc(50% - 50vw);
-      margin-right: calc(50% - 50vw);
-      background: var(--purple);
-      color: #fff;
-      border-top: 3px solid var(--gold);
-      border-bottom: 3px solid var(--gold);
-      margin-top: 34px
+    /* TOC mobile (collapsible) */
+    .toc-mobile {
+      display: block;
+      margin: var(--s3) 0
     }
 
-    .cta .inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 28px 16px 36px;
-      text-align: center
+    @media (min-width:1100px) {
+      .toc-mobile {
+        display: none
+      }
     }
 
-    .cta .btn {
-      display: inline-block;
-      background: var(--gold);
-      color: #2b1640;
-      text-decoration: none;
+    details.toc-mobile {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 8px
+    }
+
+    details.toc-mobile summary {
+      cursor: pointer;
       font-weight: 800;
-      padding: 14px 22px;
+      color: #7a5c8f;
+      list-style: none
+    }
+
+    details.toc-mobile summary::-webkit-details-marker {
+      display: none
+    }
+
+    .toc-mobile a {
+      display: block;
+      padding: 8px 10px;
       border-radius: 10px;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, .18)
+      text-decoration: none;
+      color: #3d2c58;
+      font-weight: 700
     }
 
-    .cta .btn:hover {
-      filter: brightness(.97)
+    .toc-mobile a:hover {
+      background: #f7f4ff
     }
 
-    /* prev / next */
+    /* Prev/Next */
     .post-nav {
       display: grid;
-      gap: 12px;
-      margin: 26px 0 6px
+      gap: var(--s3);
+      margin: var(--s4) 0 var(--s3)
     }
 
     @media (min-width:768px) {
@@ -354,7 +351,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       box-shadow: var(--shadow);
-      padding: 16px 18px
+      padding: 14px 16px
     }
 
     .nav-card small {
@@ -363,7 +360,7 @@
       letter-spacing: .04em;
       text-transform: uppercase;
       color: #7a5c8f;
-      margin-bottom: 4px
+      margin-bottom: 2px
     }
 
     .nav-card a {
@@ -375,12 +372,50 @@
     .nav-card a:hover {
       text-decoration: underline
     }
+
+    /* CTA full width */
+    .cta {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      background: var(--purple);
+      color: #fff;
+      border-top: 3px solid var(--gold);
+      border-bottom: 3px solid var(--gold);
+      margin-top: var(--s5)
+    }
+
+    .cta .inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: var(--s5) var(--s3) var(--s6);
+      text-align: center
+    }
+
+    .cta .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #2b1640;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 12px 18px;
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, .18)
+    }
+
+    .cta .btn:hover {
+      filter: brightness(.97)
+    }
+
+    .muted {
+      opacity: .86
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- ====== BREADCRUMBS ====== -->
+  <!-- Breadcrumbs -->
   <nav class="wrap crumbs" aria-label="Breadcrumb">
     <a href="https://www.aimzestudio.com/">Home</a>
     <span class="sep">›</span>
@@ -389,164 +424,183 @@
     <span>Beauty Workshops &amp; Training in Brampton – Elevate Your Skills</span>
   </nav>
 
-  <!-- ====== HERO ====== -->
+  <!-- FULL-WIDTH HERO -->
   <header class="hero" role="banner" aria-label="Aimze Studio Workshops">
     <div class="inner">
-      <p class="kicker">Workshops • Brampton</p>
+      <p class="kicker">workshops • brampton</p>
       <p class="t-hero" id="post-title" role="heading" aria-level="1">Beauty Workshops &amp; Training in Brampton –
         Elevate Your Skills</p>
       <p class="kicker muted">Hands-on certificates in Aesthetics, Hairdressing, Nails, Laser &amp; Business Basics</p>
     </div>
   </header>
 
-  <!-- ====== ARTICLE ====== -->
-  <main id="content" class="wrap" role="main" aria-labelledby="post-title">
+  <div class="divider" aria-hidden="true"></div>
 
-    <!-- Overview -->
-    <section id="overview" class="sec" aria-labelledby="sec-overview">
-      <div class="sec-label">
-        <p id="sec-overview" class="t-h2" role="heading" aria-level="2">Overview</p>
-      </div>
-      <div class="sec-body">
-        <p>At <strong>Aimze Studio in Brampton</strong>, we don’t just offer great services—we help you build a career.
-          Our <strong>workshops and certificate programs</strong> are designed for beginners, aspiring pros, and salon
-          owners who want to expand their expertise. You’ll learn with <strong>industry-standard tools</strong> and
-          leave with skills you can use immediately.</p>
-        <ul>
-          <li>Beauty workshops Brampton</li>
-          <li>Aesthetics certificate Brampton</li>
-          <li>Hairdressing training</li>
-          <li>Nail care certificate</li>
-          <li>Laser hair removal training</li>
-          <li>Makeup &amp; bridal styling</li>
-        </ul>
-      </div>
-    </section>
+  <!-- MOBILE TOC -->
+  <div class="wrap">
+    <details class="toc-mobile" aria-label="On this page">
+      <summary>On this page</summary>
+      <nav>
+        <a href="#overview">Overview</a>
+        <a href="#aesthetics-certificate">Aesthetics Certificate</a>
+        <a href="#hairdressing-certificate">Hairdressing Certificate</a>
+        <a href="#nail-care">Nail Care Certificate</a>
+        <a href="#laser-advanced-skincare">Laser &amp; Advanced</a>
+        <a href="#business-basics-exam">Business Basics &amp; Exam Prep</a>
+        <a href="#why-choose-aimze-studio-studio">Why Choose Aimze Studio</a>
+      </nav>
+    </details>
+  </div>
 
-    <!-- Aesthetics Certificate -->
-    <section id="aesthetics-certificate" class="sec" aria-labelledby="sec-aesthetics">
-      <div class="sec-label">
-        <p id="sec-aesthetics" class="t-h2" role="heading" aria-level="2">Aesthetics Certificate</p>
-      </div>
-      <div class="sec-body">
-        <ul>
-          <li><strong>Waxing &amp; Threading:</strong> Full-body &amp; facial hair removal, brow mapping, hygiene,
-            soothing aftercare.</li>
-          <li><strong>Make-Up &amp; Mehendi:</strong> Bridal &amp; party looks, lash application, traditional henna
-            artistry.</li>
-          <li><strong>Skin Care:</strong> Cleansing, masking, facials, skin analysis, and client consultation basics.
-          </li>
-        </ul>
-        <p class="note">All modules emphasize <strong>hands-on practice</strong> so you can deliver confident,
-          consistent results.</p>
-      </div>
-    </section>
+  <!-- MAIN -->
+  <main id="content" class="wrap layout" role="main" aria-labelledby="post-title">
+    <div id="article">
 
-    <!-- Hairdressing Certificate -->
-    <section id="hairdressing-certificate" class="sec" aria-labelledby="sec-hair">
-      <div class="sec-label">
-        <p id="sec-hair" class="t-h2" role="heading" aria-level="2">Hairdressing Certificate</p>
-      </div>
-      <div class="sec-body">
-        <ul>
-          <li><strong>Cutting:</strong> Sectioning, elevation, layering, precision lines.</li>
-          <li><strong>Styling &amp; Hair Updos:</strong> Bridal, party and event styling with balance and secure
-            pinning.</li>
-          <li><strong>Colouring:</strong> Formulation, developer ratios, foils, balayage and all-over colour.</li>
-          <li><strong>Barber Cuts:</strong> Fades, tapers, clipper-over-comb, beard finishing.</li>
-          <li><strong>Hair Treatments:</strong> Scalp therapy, deep conditioning and bond-building rituals.</li>
-        </ul>
-      </div>
-    </section>
+      <section id="overview" class="sec" aria-labelledby="sec-overview">
+        <div class="sec-label">
+          <p id="sec-overview" class="t-h2" role="heading" aria-level="2">Overview</p>
+        </div>
+        <div class="sec-body">
+          <p>At <strong>Aimze Studio, Brampton</strong>, we help you turn passion into a profession. Our <strong>beauty
+              workshops and certificate programs</strong> are beginner-friendly and taught with
+            <strong>industry-standard tools</strong> so you leave with job-ready skills you can use right away.</p>
+          <ul>
+            <li>Beauty workshops Brampton</li>
+            <li>Aesthetics certificate Brampton</li>
+            <li>Hairdressing training</li>
+            <li>Nail care certificate</li>
+            <li>Laser hair removal training</li>
+            <li>Makeup &amp; bridal styling</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- Nail Care -->
-    <section id="nail-care" class="sec" aria-labelledby="sec-nails">
-      <div class="sec-label">
-        <p id="sec-nails" class="t-h2" role="heading" aria-level="2">Nail Care Certificate</p>
-      </div>
-      <div class="sec-body">
-        <p>Master professional manicure &amp; pedicure hygiene, shaping, polishing and client sanitation. Leave with
-          <strong>salon-ready nail care</strong> skills that are always in demand.</p>
-      </div>
-    </section>
+      <section id="aesthetics-certificate" class="sec" aria-labelledby="sec-aesthetics">
+        <div class="sec-label">
+          <p id="sec-aesthetics" class="t-h2" role="heading" aria-level="2">Aesthetics Certificate</p>
+        </div>
+        <div class="sec-body">
+          <ul>
+            <li><strong>Waxing &amp; Threading:</strong> full-body &amp; facial hair removal, brow mapping, hygiene,
+              soothing aftercare.</li>
+            <li><strong>Make-Up &amp; Mehendi:</strong> bridal &amp; party looks, lash application, traditional henna
+              artistry.</li>
+            <li><strong>Skin Care:</strong> cleansing, masking, facials, skin analysis, client consultation basics.</li>
+          </ul>
+          <p class="note">All modules emphasize <strong>hands-on practice</strong> for consistent, confident service.
+          </p>
+        </div>
+      </section>
 
-    <!-- Laser & Advanced -->
-    <section id="laser-advanced-skincare" class="sec" aria-labelledby="sec-laser">
-      <div class="sec-label">
-        <p id="sec-laser" class="t-h2" role="heading" aria-level="2">Laser &amp; Advanced Skincare</p>
-      </div>
-      <div class="sec-body">
-        <ul>
-          <li><strong>Laser Hair Removal Training:</strong> Theory, safety, Fitzpatrick scale, contraindications,
-            consultation &amp; care.</li>
-          <li><strong>Photo Facial:</strong> Rejuvenation protocols, client assessment and best-practice aftercare.</li>
-        </ul>
-      </div>
-    </section>
+      <section id="hairdressing-certificate" class="sec" aria-labelledby="sec-hair">
+        <div class="sec-label">
+          <p id="sec-hair" class="t-h2" role="heading" aria-level="2">Hairdressing Certificate</p>
+        </div>
+        <div class="sec-body">
+          <ul>
+            <li><strong>Cutting:</strong> sectioning, elevation, layering, precision lines.</li>
+            <li><strong>Styling &amp; Updos:</strong> bridal, party and event styling with balance and secure pinning.
+            </li>
+            <li><strong>Colouring:</strong> formulation, developer ratios, foils, balayage, all-over colour.</li>
+            <li><strong>Barber Cuts:</strong> fades, tapers, clipper-over-comb, beard finishing.</li>
+            <li><strong>Hair Treatments:</strong> scalp therapy, deep conditioning, bond-building rituals.</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- Business Basics -->
-    <section id="business-basics-exam" class="sec" aria-labelledby="sec-business">
-      <div class="sec-label">
-        <p id="sec-business" class="t-h2" role="heading" aria-level="2">Business Basics &amp; Exam Prep</p>
-      </div>
-      <div class="sec-body">
-        <ul>
-          <li><strong>Hair License Exam Preparation</strong> – theory refresh &amp; practical checklists.</li>
-          <li><strong>LLOP License Exam Prep</strong> – structured reviews, practice questions &amp; mock exams.</li>
-          <li><strong>Front Desk &amp; Phone Etiquette</strong> – convert inquiries into bookings with pro
-            communication.</li>
-          <li><strong>Intro to Bookkeeping</strong> – track income/expenses and simple reporting for small salons.</li>
-        </ul>
-        <p class="note">These workshops are for personal interest and skill enhancement. They’re not vocational programs
-          under the Private Career Colleges Act, 2005.</p>
-      </div>
-    </section>
+      <section id="nail-care" class="sec" aria-labelledby="sec-nails">
+        <div class="sec-label">
+          <p id="sec-nails" class="t-h2" role="heading" aria-level="2">Nail Care Certificate</p>
+        </div>
+        <div class="sec-body">
+          <p>Master professional manicure &amp; pedicure hygiene, shaping, polishing and client sanitation. Graduate
+            with <strong>salon-ready nail care</strong> skills that are always in demand.</p>
+        </div>
+      </section>
 
-    <!-- Why Choose -->
-    <section id="why-choose-aimze" class="sec" aria-labelledby="sec-why">
-      <div class="sec-label">
-        <p id="sec-why" class="t-h2" role="heading" aria-level="2">Why Choose Aimze</p>
-      </div>
-      <div class="sec-body">
-        <ul>
-          <li>Hands-on training in Brampton with experienced instructors.</li>
-          <li>Beginner-friendly certificates that <strong>boost employability</strong>.</li>
-          <li>Practical modules across aesthetics, hair, nails, laser &amp; business.</li>
-          <li>Flexible scheduling and industry-standard tools/products.</li>
-        </ul>
+      <section id="laser-advanced-skincare" class="sec" aria-labelledby="sec-laser">
+        <div class="sec-label">
+          <p id="sec-laser" class="t-h2" role="heading" aria-level="2">Laser &amp; Advanced Skincare</p>
+        </div>
+        <div class="sec-body">
+          <ul>
+            <li><strong>Laser Hair Removal Training:</strong> theory, safety, Fitzpatrick scale, contraindications,
+              consultation &amp; care.</li>
+            <li><strong>Photo Facial:</strong> rejuvenation protocols, client assessment and best-practice aftercare.
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <!-- Tags (point these to your tag pages if you like) -->
-        <p class="eyebrow">Tags</p>
-        <p class="taglist">
-          <a href="/tag/beauty-workshops-brampton/">Beauty Workshops Brampton</a>
-          <a href="/tag/aesthetics-certificate-brampton/">Aesthetics Certificate Brampton</a>
-          <a href="/tag/laser-hair-removal-training/">Laser Hair Removal Training</a>
-          <a href="/tag/hairdressing-training-brampton/">Hairdressing Training Brampton</a>
-        </p>
-      </div>
-    </section>
+      <section id="business-basics-exam" class="sec" aria-labelledby="sec-business">
+        <div class="sec-label">
+          <p id="sec-business" class="t-h2" role="heading" aria-level="2">Business Basics &amp; Exam Prep</p>
+        </div>
+        <div class="sec-body">
+          <ul>
+            <li><strong>Hair License Exam Preparation</strong> — theory refresh &amp; practical checklists.</li>
+            <li><strong>LLOP License Exam Prep</strong> — structured reviews, practice questions &amp; mock exams.</li>
+            <li><strong>Front Desk &amp; Phone Etiquette</strong> — convert inquiries into bookings with pro
+              communication.</li>
+            <li><strong>Intro to Bookkeeping</strong> — track income/expenses and simple reporting for small salons.
+            </li>
+          </ul>
+          <p class="note">These workshops are for personal interest and skill enhancement. They’re not vocational
+            programs under the Private Career Colleges Act, 2005.</p>
+        </div>
+      </section>
 
-    <!-- Prev/Next -->
-    <nav class="post-nav" aria-label="Blog navigation">
-      <div class="nav-card">
-        <small>Previous</small>
-        <a href="https://www.aimzestudio.com/real-client-stories/" rel="prev">Real Client Stories: Why Aimze Studio Is
-          Brampton’s Trusted Spa &amp; Beauty Destination</a>
-      </div>
-      <div class="nav-card">
-        <small>Next</small>
-        <a href="https://www.aimzestudio.com/your-complete-spa-beauty-guide-in-brampton/" rel="next">Your Complete Spa
-          &amp; Beauty Guide in Brampton</a>
-      </div>
-    </nav>
+      <section id="why-choose-aimze-studio" class="sec" aria-labelledby="sec-why">
+        <div class="sec-label">
+          <p id="sec-why" class="t-h2" role="heading" aria-level="2">Why Choose Aimze Studio</p>
+        </div>
+        <div class="sec-body">
+          <ul>
+            <li>Experienced instructors and small class sizes for faster learning.</li>
+            <li>Beginner-friendly certificates that <strong>boost employability</strong>.</li>
+            <li>Practical, modern modules across aesthetics, hair, nails, laser &amp; business.</li>
+            <li>Convenient Brampton location with <strong>free parking</strong>.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Prev / Next -->
+      <nav class="post-nav" aria-label="Blog navigation">
+        <div class="nav-card">
+          <small>Previous</small>
+          <a href="https://www.aimzestudio.com/real-client-stories/" rel="prev">Real Client Stories: Why Aimze Studio Is
+            Brampton’s Trusted Spa &amp; Beauty Destination</a>
+        </div>
+        <div class="nav-card">
+          <small>Next</small>
+          <a href="https://www.aimzestudio.com/your-complete-spa-beauty-guide-in-brampton/" rel="next">Your Complete Spa
+            &amp; Beauty Guide in Brampton</a>
+        </div>
+      </nav>
+
+    </div>
+
+    <!-- DESKTOP STICKY TOC -->
+    <aside class="toc" aria-label="On this page">
+      <p class="title">On this page</p>
+      <nav id="toc-nav">
+        <a href="#overview">Overview</a>
+        <a href="#aesthetics-certificate">Aesthetics Certificate</a>
+        <a href="#hairdressing-certificate">Hairdressing Certificate</a>
+        <a href="#nail-care">Nail Care Certificate</a>
+        <a href="#laser-advanced-skincare">Laser &amp; Advanced</a>
+        <a href="#business-basics-exam">Business Basics &amp; Exam Prep</a>
+        <a href="#why-choose-aimze-studio">Why Choose Aimze Studio</a>
+      </nav>
+    </aside>
   </main>
 
-  <!-- ====== PAGE CTA ====== -->
+  <!-- PAGE CTA -->
   <aside class="cta" role="region" aria-label="Book a workshop">
     <div class="inner">
       <p class="t-h2" role="heading" aria-level="2" style="color:#fff;margin:0 0 .6em">Ready to book your workshop in
         Brampton?</p>
-      <p class="muted">Limited seats available — we recommend early booking.</p>
+      <p class="muted">Limited seats available — early booking recommended.</p>
       <p><a class="btn"
           href="https://wa.me/19058635955?text=Hi%20Aimze%20Studio!%20I%E2%80%99d%20like%20to%20book%20a%20workshop."
           target="_blank" rel="noopener">Book via WhatsApp</a></p>
@@ -554,6 +608,23 @@
     </div>
   </aside>
 
+  <!-- Active section highlighter -->
+  <script>
+    (function () {
+      const links = Array.from(document.querySelectorAll('#toc-nav a, details.toc-mobile nav a'));
+      const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+      if (!('IntersectionObserver' in window) || !sections.length) return;
+
+      function setActive(id) {
+        links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+      }, { rootMargin: '-45% 0px -50% 0px', threshold: 0.01 });
+
+      sections.forEach(sec => io.observe(sec));
+    })();
+  </script>
 </body>
 
 </html>
