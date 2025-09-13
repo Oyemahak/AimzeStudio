@@ -6,38 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Most Searched Beauty Treatments in Brampton – 2025 | Aimze Studio</title>
+    <link rel="canonical" href="https://www.aimzestudio.com/most-searched-beauty-treatments-in-brampton/" />
     <meta name="description"
-        content="Discover the most searched spa & beauty treatments in Brampton for 2025. From facials and waxing to laser hair removal and bridal makeup—find out why Aimze Studio is the #1 choice." />
-    <link rel="canonical" href="https://www.aimzestudio.com/blog/most-searched-beauty-treatments-brampton-2025" />
+        content="Explore Brampton’s most searched beauty treatments for 2025: facials, waxing & threading, laser hair removal, bridal makeup, and hair styling & color. See why locals choose Aimze Studio." />
+    <meta name="robots" content="index,follow" />
+    <meta name="keywords"
+        content="most searched beauty treatments Brampton 2025, facials Brampton, waxing Brampton, threading Brampton, laser hair removal Brampton, bridal makeup Brampton, hair salon Brampton, keratin treatment Brampton, HydraFacial Brampton" />
 
-    <!-- Social -->
+    <!-- Open Graph -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Most Searched Beauty Treatments in Brampton – 2025 | Aimze Studio" />
     <meta property="og:description"
-        content="Brampton’s most searched spa & beauty services in 2025: facials, waxing, threading, laser hair removal, hair styling & bridal makeup. See why Aimze Studio leads." />
-    <meta property="og:image" content="https://www.aimzestudio.com/wp-content/uploads/aimze-treatments.jpg" />
-    <meta property="og:url" content="https://www.aimzestudio.com/blog/most-searched-beauty-treatments-brampton-2025" />
-
+        content="Top 2025 searches in Brampton: facials, waxing & threading, laser hair removal, bridal makeup, hair styling & color. Book at Aimze Studio." />
+    <meta property="og:url" content="https://www.aimzestudio.com/most-searched-beauty-treatments-in-brampton/" />
+    <meta property="og:image" content="https://www.aimzestudio.com/wp-content/uploads/beauty-trends-2025.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Most Searched Beauty Treatments in Brampton – 2025" />
-    <meta name="twitter:description"
-        content="From facials to laser hair removal, see the most popular beauty treatments in Brampton for 2025." />
-    <meta name="twitter:image" content="https://www.aimzestudio.com/wp-content/uploads/aimze-treatments.jpg" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
-        rel="stylesheet" />
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Most Searched Beauty Treatments in Brampton – 2025",
+    "description":"Brampton’s top-searched beauty treatments for 2025: facials, waxing & threading, laser hair removal, bridal makeup, and hair styling & color.",
+    "author":{"@type":"Organization","name":"Aimze Studio"},
+    "publisher":{"@type":"Organization","name":"Aimze Studio"},
+    "inLanguage":"en-CA",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.aimzestudio.com/most-searched-beauty-treatments-in-brampton/"}
+  }
+  </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.aimzestudio.com/"},
+      {"@type":"ListItem","position":2,"name":"Our Blogs","item":"https://www.aimzestudio.com/our-blogs/"},
+      {"@type":"ListItem","position":3,"name":"Most Searched Beauty Treatments in Brampton – 2025"}
+    ]
+  }
+  </script>
+
     <style>
+        /* Shared system (same as Blog #1) */
         :root {
-            --ink: #1f1b24;
-            --muted: #5a5667;
-            --brand1: #512441;
-            --brand2: #412259;
-            --gold: #b99247;
+            --ink: #231F20;
+            --muted: #5b5566;
+            --purple: #3e1b56;
+            --gold: #d4af37;
+            --bg: #ffffff;
             --panel: #ffffff;
-            --bg: #faf8fb;
-            --border: #ece6f5;
-            --radius: 16px;
-            --shadow: 0 14px 34px rgba(0, 0, 0, .08);
+            --border: #eadcfb;
+            --max: 1000px;
+            --radius: 14px;
+            --shadow: 0 10px 24px rgba(0, 0, 0, .06);
+            --tocw: 280px;
+            --s1: 12px;
+            --s2: 16px;
+            --s3: 20px;
+            --s4: 24px;
+            --s5: 28px;
+            --s6: 36px
+        }
+
+        html {
+            scroll-behavior: smooth
         }
 
         html,
@@ -45,102 +80,165 @@
             margin: 0;
             background: var(--bg);
             color: var(--ink);
-            font-family: "Open Sans", system-ui, Arial, sans-serif;
-            line-height: 1.75
+            font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            line-height: 1.75;
+            font-size: 16px
         }
 
         .wrap {
-            max-width: 1200px;
+            max-width: var(--max);
             margin: 0 auto;
-            padding: 0
+            padding: var(--s5) var(--s3)
         }
 
-        .post-hero {
-            background:
-                radial-gradient(1000px 380px at 10% 0%, rgba(185, 146, 71, .10), transparent 70%),
-                radial-gradient(1000px 420px at 95% 0%, rgba(81, 36, 65, .10), transparent 70%),
-                var(--panel);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            border-radius: 24px;
-            padding: 22px 18px;
-            margin: 120px 0 18px;
+        @media(max-width:767px) {
+            .wrap {
+                padding: var(--s4) var(--s3)
+            }
         }
 
-        .eyebrow {
-            color: var(--gold);
+        /* p-based headings */
+        .t-hero,
+        .t-h2 {
             font-weight: 800;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-            font-size: .9rem;
-            margin: 0 0 6px
-        }
-
-        h1 {
-            font-weight: 800;
-            color: var(--brand1);
             line-height: 1.2;
-            margin: .25rem 0 .6rem;
-            font-size: 28px
-        }
-
-        .lead {
-            font-size: 1.05rem;
-            color: var(--muted);
             margin: 0
         }
 
-        .promo {
-            margin: 14px 0 0;
-            padding: 12px 14px;
-            border-radius: 14px;
-            background: linear-gradient(180deg, #fff8ef, #fff);
-            border: 2px dashed var(--gold);
-            font-weight: 700;
-            color: #3a2c47
+        .t-hero {
+            font-size: clamp(26px, 5vw, 40px)
         }
 
-        section.block {
+        .t-h2 {
+            font-size: clamp(20px, 2.2vw, 24px)
+        }
+
+        /* Breadcrumbs */
+        .crumbs {
+            font-size: .95rem;
+            opacity: .95
+        }
+
+        .crumbs a {
+            color: #5a3d83;
+            text-decoration: none
+        }
+
+        .crumbs a:hover {
+            text-decoration: underline
+        }
+
+        .crumbs .sep {
+            opacity: .6;
+            margin: 0 .35rem
+        }
+
+        /* FULL-WIDTH HERO */
+        .hero {
+            color: #fff;
+            text-align: center;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            background: linear-gradient(135deg, rgba(62, 27, 86, .94), rgba(62, 27, 86, .78)),
+                url("https://www.aimzestudio.com/wp-content/uploads/beauty-trends-2025.jpg") center/cover no-repeat;
+            border-bottom: 3px solid var(--gold);
+            padding: var(--s6) var(--s3)
+        }
+
+        .hero .inner {
+            max-width: var(--max);
+            margin: 0 auto
+        }
+
+        .hero .kicker {
+            margin: .35em 0 0;
+            font-weight: 700;
+            letter-spacing: .02em;
+            opacity: .95
+        }
+
+        .hero .muted {
+            opacity: .86
+        }
+
+        .hero .t-hero {
+            color: #fff;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, .28)
+        }
+
+        /* Decorative divider */
+        .divider {
+            height: 10px;
+            background: linear-gradient(90deg, rgba(81, 36, 65, .08), rgba(212, 175, 55, .45), rgba(81, 36, 65, .08))
+        }
+
+        /* Layout */
+        .layout {
+            display: grid;
+            gap: var(--s4)
+        }
+
+        @media(min-width:1100px) {
+            .layout {
+                grid-template-columns: minmax(0, 1fr) var(--tocw)
+            }
+        }
+
+        /* Section cards */
+        .sec {
+            display: grid;
+            gap: var(--s3);
             background: var(--panel);
             border: 1px solid var(--border);
-            border-radius: 24px;
+            border-radius: var(--radius);
             box-shadow: var(--shadow);
-            padding: 18px;
-            margin: 18px 0
+            padding: var(--s4);
+            margin: var(--s3) 0
         }
 
-        .sep {
-            height: 14px;
-            background: linear-gradient(90deg, rgba(81, 36, 65, .08), rgba(185, 146, 71, .18), rgba(81, 36, 65, .08));
-            border-radius: 999px;
-            margin: 18px 0
+        @media(min-width:920px) {
+            .sec {
+                grid-template-columns: 220px 1fr
+            }
         }
 
-        h2 {
-            color: #2b2232;
-            font-size: 1.25rem;
-            margin: .2rem 0 .6rem
+        .sec+.sec {
+            margin-top: var(--s3)
         }
 
-        h3 {
-            color: #33263c;
-            font-size: 1.08rem;
-            margin: .6rem 0 .35rem
+        .sec-label {
+            color: #7a5c8f;
+            font-weight: 900;
+            letter-spacing: .06em;
+            text-transform: uppercase
         }
 
-        ul.check {
+        .sec-label p {
+            margin: 0
+        }
+
+        .sec-body p:first-child {
+            margin-top: 0
+        }
+
+        .sec-body ul {
+            margin: .3rem 0 .2rem 1rem
+        }
+
+        /* Tick list */
+        .check {
             list-style: none;
-            margin: .2rem 0 0;
-            padding: 0
+            padding-left: 0
         }
 
-        ul.check li {
+        .check li {
             position: relative;
             padding-left: 26px;
-            margin: .35rem 0
+            margin: .4rem 0
         }
 
-        ul.check li::before {
+        .check li::before {
             content: "✓";
             position: absolute;
             left: 0;
@@ -149,119 +247,395 @@
             font-weight: 800
         }
 
-        @media (min-width: 768px) {
-            .post-hero {
-                margin-top: 80px;
-                padding: 26px 22px
+        /* Note */
+        .note {
+            background: linear-gradient(to right, #fff7e6, #f7f0ff);
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin: 14px 0;
+            font-weight: 600
+        }
+
+        /* TOC (desktop only) */
+        .toc {
+            display: none
+        }
+
+        @media(min-width:1100px) {
+            .toc {
+                display: block;
+                background: #fff;
+                border: 1px solid var(--border);
+                border-radius: 12px;
+                box-shadow: var(--shadow);
+                padding: 12px;
+                position: sticky;
+                top: 20px;
+                height: max-content
             }
 
-            h1 {
-                font-size: 32px
+            .toc .title {
+                font-weight: 800;
+                color: #7a5c8f;
+                letter-spacing: .06em;
+                text-transform: uppercase;
+                margin: 2px 0 8px
             }
 
-            section.block {
-                padding: 22px
+            .toc nav a {
+                display: block;
+                padding: 8px 10px;
+                border-radius: 10px;
+                text-decoration: none;
+                color: #3d2c58;
+                font-weight: 700;
+                font-size: .98rem
+            }
+
+            .toc nav a:hover {
+                background: #f7f4ff
+            }
+
+            .toc nav a.active {
+                background: #efe8ff;
+                border: 1px solid #decdff
             }
         }
 
-        @media (min-width: 1025px) {
-            .post-hero {
-                margin-top: 40px;
-                padding: 30px 26px
-            }
+        /* TOC mobile (only below 1100px) */
+        .toc-mobile {
+            display: block;
+            margin: var(--s3) 0
+        }
 
-            h1 {
-                font-size: 40px
+        @media(min-width:1100px) {
+            .toc-mobile {
+                display: none
             }
+        }
 
-            section.block {
-                padding: 26px
+        details.toc-mobile {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 8px
+        }
+
+        details.toc-mobile summary {
+            cursor: pointer;
+            font-weight: 800;
+            color: #7a5c8f;
+            list-style: none
+        }
+
+        details.toc-mobile summary::-webkit-details-marker {
+            display: none
+        }
+
+        .toc-mobile a {
+            display: block;
+            padding: 8px 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #3d2c58;
+            font-weight: 700
+        }
+
+        .toc-mobile a:hover {
+            background: #f7f4ff
+        }
+
+        /* Prev/Next */
+        .post-nav {
+            display: grid;
+            gap: var(--s3);
+            margin: var(--s4) 0 var(--s3)
+        }
+
+        @media(min-width:768px) {
+            .post-nav {
+                grid-template-columns: 1fr 1fr
             }
+        }
+
+        .nav-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 14px 16px
+        }
+
+        .nav-card small {
+            display: block;
+            font-weight: 800;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: #7a5c8f;
+            margin-bottom: 2px
+        }
+
+        .nav-card a {
+            color: var(--purple);
+            text-decoration: none;
+            font-weight: 800
+        }
+
+        .nav-card a:hover {
+            text-decoration: underline
+        }
+
+        /* CTA */
+        .cta {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            background: var(--purple);
+            color: #fff;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            margin-top: var(--s5)
+        }
+
+        .cta .inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: var(--s5) var(--s3) var(--s6);
+            text-align: center
+        }
+
+        .cta .btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #2b1640;
+            text-decoration: none;
+            font-weight: 800;
+            padding: 12px 18px;
+            border-radius: 10px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, .18)
+        }
+
+        .cta .btn:hover {
+            filter: brightness(.97)
+        }
+
+        .muted {
+            opacity: .86
         }
     </style>
 </head>
 
 <body>
-    <article class="wrap" role="article" aria-label="Blog: Most Searched Beauty Treatments in Brampton – 2025">
-        <!-- HERO -->
-        <header class="post-hero">
-            <p class="eyebrow">Brampton • Trending in 2025</p>
-            <h1>Most Searched Beauty Treatments in Brampton – 2025</h1>
-            <p class="lead">
-                Wondering what’s trending in beauty this year? From <strong>facials in Brampton</strong> to
-                <strong>laser hair removal</strong> and <strong>bridal makeup</strong>, locals are searching more than
-                ever for
-                services that deliver results. Here’s a breakdown of the top treatments—and why Aimze Studio is the
-                place to book them.
+
+    <!-- Breadcrumbs -->
+    <nav class="wrap crumbs" aria-label="Breadcrumb">
+        <a href="https://www.aimzestudio.com/">Home</a>
+        <span class="sep">›</span>
+        <a href="https://www.aimzestudio.com/our-blogs/">Our Blogs</a>
+        <span class="sep">›</span>
+        <span>Most Searched Beauty Treatments in Brampton – 2025</span>
+    </nav>
+
+    <!-- FULL-WIDTH HERO -->
+    <header class="hero" role="banner" aria-label="Most Searched Beauty Treatments 2025">
+        <div class="inner">
+            <p class="kicker">trends • brampton</p>
+            <p class="t-hero" id="post-title" role="heading" aria-level="1">Most Searched Beauty Treatments in Brampton
+                – 2025</p>
+            <p class="kicker muted">Facials • Waxing &amp; Threading • Laser Hair Removal • Bridal Makeup • Hair Styling
+                &amp; Colour</p>
+        </div>
+    </header>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- MOBILE TOC (single instance on mobile only) -->
+    <div class="wrap">
+        <details class="toc-mobile" aria-label="On this page">
+            <summary>On this page</summary>
+            <nav>
+                <a href="#overview">Overview</a>
+                <a href="#facials">Facials</a>
+                <a href="#waxing-threading">Waxing &amp; Threading</a>
+                <a href="#laser">Laser Hair Removal</a>
+                <a href="#bridal">Bridal Makeup</a>
+                <a href="#hair-styling">Hair Styling &amp; Colour</a>
+                <a href="#why-aimze">Why Aimze Studio</a>
+            </nav>
+        </details>
+    </div>
+
+    <!-- MAIN -->
+    <main id="content" class="wrap layout" role="main" aria-labelledby="post-title">
+        <div id="article">
+
+            <section id="overview" class="sec" aria-labelledby="sec-overview">
+                <div class="sec-label">
+                    <p id="sec-overview" class="t-h2" role="heading" aria-level="2">Overview</p>
+                </div>
+                <div class="sec-body">
+                    <p>What are people in Brampton searching for in 2025? Short answer: <strong>fast, effective, and
+                            confidence-boosting beauty services</strong>. These are the five most searched
+                        treatments—and why guests book them at Aimze Studio.</p>
+                    <ul class="check">
+                        <li>Facials for glow and hydration (HydraFacial, deep cleansing, anti-acne)</li>
+                        <li>Waxing &amp; precise eyebrow <strong>threading</strong></li>
+                        <li>Long-term smoothness with <strong>laser hair removal</strong></li>
+                        <li>Timeless, photo-ready <strong>bridal makeup</strong></li>
+                        <li>Face-framing <strong>hair styling &amp; colour</strong></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="facials" class="sec" aria-labelledby="sec-facials">
+                <div class="sec-label">
+                    <p id="sec-facials" class="t-h2" role="heading" aria-level="2">Facials</p>
+                </div>
+                <div class="sec-body">
+                    <p><strong>Facials in Brampton</strong> top the 2025 list. From <em>HydraFacial</em> to acne-care
+                        and brightening, guests want visible results with zero downtime.</p>
+                    <ul class="check">
+                        <li>Deep cleanse + hydration boost</li>
+                        <li>Great before events or monthly maintenance</li>
+                        <li>Customized to skin goals and sensitivity</li>
+                    </ul>
+                    <p class="note">Popular searches: “HydraFacial Brampton”, “best facial near me”.</p>
+                </div>
+            </section>
+
+            <section id="waxing-threading" class="sec" aria-labelledby="sec-wax">
+                <div class="sec-label">
+                    <p id="sec-wax" class="t-h2" role="heading" aria-level="2">Waxing &amp; Threading</p>
+                </div>
+                <div class="sec-body">
+                    <p>Smooth, precise and budget-friendly. <strong>Threading</strong> gives clean brow lines;
+                        <strong>waxing</strong> keeps skin fresh longer than shaving.</p>
+                    <ul class="check">
+                        <li>Eyebrow threading &amp; shaping</li>
+                        <li>Full face, arms, legs &amp; Brazilian waxing</li>
+                        <li>Hygienic techniques and soothing aftercare</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="laser" class="sec" aria-labelledby="sec-laser">
+                <div class="sec-label">
+                    <p id="sec-laser" class="t-h2" role="heading" aria-level="2">Laser Hair Removal</p>
+                </div>
+                <div class="sec-body">
+                    <p>Searches for <strong>laser hair removal Brampton</strong> keep rising—clients love the long-term
+                        smoothness and time savings.</p>
+                    <ul class="check">
+                        <li>Popular areas: underarms, legs, Brazilian, face &amp; neck</li>
+                        <li>Consultation, Fitzpatrick assessment &amp; safety-first protocols</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="bridal" class="sec" aria-labelledby="sec-bridal">
+                <div class="sec-label">
+                    <p id="sec-bridal" class="t-h2" role="heading" aria-level="2">Bridal Makeup</p>
+                </div>
+                <div class="sec-body">
+                    <p><strong>Bridal makeup in Brampton</strong> is a year-round favourite. Trials, timing plans and
+                        long-wear products keep you photo-ready from first look to last dance.</p>
+                </div>
+            </section>
+
+            <section id="hair-styling" class="sec" aria-labelledby="sec-hair">
+                <div class="sec-label">
+                    <p id="sec-hair" class="t-h2" role="heading" aria-level="2">Hair Styling &amp; Colour</p>
+                </div>
+                <div class="sec-body">
+                    <p>From layered cuts to balayage, locals search for a reliable <strong>hair salon in
+                            Brampton</strong> that delivers shine and shape that lasts.</p>
+                    <ul class="check">
+                        <li>Precision cuts, blowouts &amp; occasion styling</li>
+                        <li>Highlights, balayage, colour correction</li>
+                        <li>Keratin &amp; smoothing treatments</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="why-aimze" class="sec" aria-labelledby="sec-why">
+                <div class="sec-label">
+                    <p id="sec-why" class="t-h2" role="heading" aria-level="2">Why Aimze Studio</p>
+                </div>
+                <div class="sec-body">
+                    <ul class="check">
+                        <li>Convenient mall location with <strong>free parking</strong></li>
+                        <li>Experienced team across facials, hair, waxing/threading, laser &amp; bridal</li>
+                        <li>Clean, family-friendly studio and transparent pricing</li>
+                        <li>Grand Opening specials &amp; seasonal offers</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Prev / Next -->
+            <nav class="post-nav" aria-label="Blog navigation">
+                <div class="nav-card">
+                    <small>Previous</small>
+                    <a href="https://www.aimzestudio.com/your-complete-spa-beauty-guide-in-brampton/" rel="prev">
+                        Your Complete Spa &amp; Beauty Guide in Brampton
+                    </a>
+                </div>
+                <div class="nav-card">
+                    <small>Next</small>
+                    <a href="https://www.aimzestudio.com/best-spa-and-beauty-place-in-brampton/" rel="next">
+                        Best Spa &amp; Beauty Place in Brampton
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+
+        <!-- DESKTOP STICKY TOC (only desktop; won’t duplicate on mobile) -->
+        <aside class="toc" aria-label="On this page">
+            <p class="title">On this page</p>
+            <nav id="toc-nav">
+                <a href="#overview">Overview</a>
+                <a href="#facials">Facials</a>
+                <a href="#waxing-threading">Waxing &amp; Threading</a>
+                <a href="#laser">Laser Hair Removal</a>
+                <a href="#bridal">Bridal Makeup</a>
+                <a href="#hair-styling">Hair Styling &amp; Colour</a>
+                <a href="#why-aimze">Why Aimze Studio</a>
+            </nav>
+        </aside>
+    </main>
+
+    <!-- CTA -->
+    <aside class="cta" role="region" aria-label="Book a treatment">
+        <div class="inner">
+            <p class="t-h2" role="heading" aria-level="2" style="color:#fff;margin:0 0 .6em">
+                Want to try 2025’s most-searched treatments?
             </p>
-            <div class="promo">🌟 2025 is all about self-care. Book your favorite treatment at Aimze Studio and enjoy
-                <strong>20% OFF Grand Opening</strong> specials.</div>
-        </header>
-
-        <div class="sep" aria-hidden="true"></div>
-
-        <!-- TOP TREATMENTS -->
-        <section class="block">
-            <h2>Top 5 Beauty Treatments People in Brampton Search For</h2>
-
-            <h3>1. Facials in Brampton</h3>
-            <p>
-                Hydration, glow, and acne-care facials continue to top the charts. People want
-                <em>affordable facials near me</em> that refresh skin and provide visible results. At Aimze Studio, our
-                facials combine science with relaxation.
+            <p class="muted">Book your facial, threading, laser, bridal or hair appointment at Aimze Studio, Brampton.
             </p>
+            <p><a class="btn"
+                    href="https://wa.me/19058635955?text=Hi%20Aimze%20Studio!%20I’d%20like%20to%20book%20a%20treatment."
+                    target="_blank" rel="noopener">Book via WhatsApp</a></p>
+        </div>
+    </aside>
 
-            <h3>2. Waxing & Threading</h3>
-            <p>
-                Smooth skin is always in. Searches for <strong>waxing near me</strong> and
-                <strong>threading Brampton</strong> remain strong. Our precise techniques ensure minimal discomfort and
-                long-lasting results.
-            </p>
+    <!-- Active section highlighter (keeps TOC in sync; no duplicates) -->
+    <script>
+        (function () {
+            const links = Array.from(document.querySelectorAll('#toc-nav a, details.toc-mobile nav a'));
+            const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+            if (!('IntersectionObserver' in window) || !sections.length) return;
+            function setActive(id) {
+                links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+            }, { rootMargin: '-45% 0px -50% 0px', threshold: 0.01 });
+            sections.forEach(sec => io.observe(sec));
+        })();
+    </script>
 
-            <h3>3. Laser Hair Removal</h3>
-            <p>
-                More clients are investing in long-term solutions, with <strong>laser hair removal Brampton</strong>
-                becoming a highly searched phrase. Aimze Studio offers safe, effective laser treatments at competitive
-                prices.
-            </p>
-
-            <h3>4. Bridal Makeup</h3>
-            <p>
-                With weddings back in full swing, <strong>bridal makeup Brampton</strong> is in high demand. Our artists
-                create timeless looks that photograph beautifully and last through your special day.
-            </p>
-
-            <h3>5. Hair Styling & Color</h3>
-            <p>
-                From subtle balayage to bold transformations, searches for a trusted <strong>hair salon in
-                    Brampton</strong> are rising. At Aimze Studio, our stylists are trained to give you a cut and color
-                that enhances your personality.
-            </p>
-        </section>
-
-        <!-- WHY CHOOSE US -->
-        <section class="block">
-            <h2>Why Aimze Studio Tops the Search Results</h2>
-            <ul class="check">
-                <li>Located in a mall with <strong>free parking</strong> for easy visits</li>
-                <li>Experienced team with 10+ years in beauty, spa, and hair care</li>
-                <li>Honest pricing and seasonal offers</li>
-                <li>A clean, comfortable space trusted by families</li>
-            </ul>
-        </section>
-
-        <!-- CALL TO ACTION -->
-        <section class="block" style="text-align:center">
-            <h2>Book Your 2025 Beauty Treatment Today</h2>
-            <p>
-                Whether it’s a <em>facial</em>, <em>waxing</em>, <em>laser hair removal</em>, or <em>bridal makeup</em>,
-                we’re here to make sure you look and feel your best. Experience why locals call us the
-                <strong>best spa in Brampton</strong>.
-            </p>
-            <a class="btn primary" href="https://www.aimzestudio.com/services-pricing/">View Services & Pricing</a>
-            <a class="btn alt" href="https://www.aimzestudio.com/special-offers/">Claim 20% OFF</a>
-        </section>
-    </article>
 </body>
 
 </html>

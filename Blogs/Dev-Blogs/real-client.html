@@ -1,228 +1,618 @@
-<section id="aimze-blog5" class="aimze-blog">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Real Client Stories – Why Aimze Studio Is Brampton’s Trusted Spa & Beauty Destination</title>
+    <link rel="canonical" href="https://www.aimzestudio.com/real-client-stories/" />
+    <meta name="description"
+        content="Read real client stories and reviews of Aimze Studio in Brampton—Hydra facials, eyebrow threading, waxing, laser hair removal, nails, haircuts & styling. Clean studio, free parking, expert team." />
+    <meta name="robots" content="index,follow" />
+    <meta name="keywords"
+        content="real client reviews Aimze Studio, Hydra facial Brampton review, eyebrow threading Brampton review, best haircut Brampton, manicure pedicure Brampton, laser hair removal Brampton reviews, best spa Brampton" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title"
+        content="Real Client Stories – Why Aimze Studio Is Brampton’s Trusted Spa & Beauty Destination" />
+    <meta property="og:description"
+        content="Hydra facials, threading, nails, haircuts & styling, waxing, and laser—see what real clients say about Aimze Studio in Brampton." />
+    <meta property="og:url" content="https://www.aimzestudio.com/real-client-stories/" />
+    <meta property="og:image" content="https://www.aimzestudio.com/wp-content/uploads/2025/08/1-scaled.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Real Client Stories – Why Aimze Studio Is Brampton’s Trusted Spa & Beauty Destination",
+    "description":"Hydra facials, threading, nails, haircuts & styling, waxing, and laser—see what real clients say about Aimze Studio in Brampton.",
+    "author":{"@type":"Organization","name":"Aimze Studio"},
+    "publisher":{"@type":"Organization","name":"Aimze Studio"},
+    "inLanguage":"en-CA",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.aimzestudio.com/real-client-stories/"}
+  }
+  </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.aimzestudio.com/"},
+      {"@type":"ListItem","position":2,"name":"Our Blogs","item":"https://www.aimzestudio.com/our-blogs/"},
+      {"@type":"ListItem","position":3,"name":"Real Client Stories – Why Aimze Studio Is Brampton’s Trusted Spa & Beauty Destination"}
+    ]
+  }
+  </script>
+
     <style>
-        /* Scoped to this block only */
-        #aimze-blog5 {
-            max-width: 1200px;
+        /* === Shared system (matches your approved style) === */
+        :root {
+            --ink: #231F20;
+            --muted: #5b5566;
+            --purple: #3e1b56;
+            --gold: #d4af37;
+            --bg: #ffffff;
+            --panel: #ffffff;
+            --border: #eadcfb;
+            --max: 1000px;
+            --radius: 14px;
+            --shadow: 0 10px 24px rgba(0, 0, 0, .06);
+            --tocw: 280px;
+            --s1: 12px;
+            --s2: 16px;
+            --s3: 20px;
+            --s4: 24px;
+            --s5: 28px;
+            --s6: 36px
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        html,
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            line-height: 1.75;
+            font-size: 16px
+        }
+
+        .wrap {
+            max-width: var(--max);
             margin: 0 auto;
-            padding: 16px
+            padding: var(--s5) var(--s3)
         }
 
-        #aimze-blog5 * {
-            box-sizing: border-box
+        @media(max-width:767px) {
+            .wrap {
+                padding: var(--s4) var(--s3)
+            }
         }
 
-        #aimze-blog5 h1 {
-            font-size: clamp(26px, 4.2vw, 40px);
+        /* p-based headings */
+        .t-hero,
+        .t-h2 {
+            font-weight: 800;
             line-height: 1.2;
-            margin: 0 0 12px
+            margin: 0
         }
 
-        #aimze-blog5 h2 {
-            font-size: clamp(22px, 3.4vw, 30px);
-            line-height: 1.25;
-            margin: 28px 0 10px
+        .t-hero {
+            font-size: clamp(26px, 5vw, 40px)
         }
 
-        #aimze-blog5 p {
-            margin: 10px 0;
-            line-height: 1.7
+        .t-h2 {
+            font-size: clamp(20px, 2.2vw, 24px)
         }
 
-        #aimze-blog5 .lead {
-            font-size: 1.05rem;
+        /* Breadcrumbs */
+        .crumbs {
+            font-size: .95rem;
             opacity: .95
         }
 
-        #aimze-blog5 .card {
-            background: #fff;
-            border: 1px solid #eee;
-            border-radius: 14px;
-            padding: 18px 16px;
-            margin: 14px 0;
-            box-shadow: 0 10px 22px rgba(0, 0, 0, .05)
+        .crumbs a {
+            color: #5a3d83;
+            text-decoration: none
         }
 
-        #aimze-blog5 .quote {
-            border-left: 4px solid #b99247;
-            padding-left: 14px;
-            font-style: italic
+        .crumbs a:hover {
+            text-decoration: underline
         }
 
-        #aimze-blog5 .grid {
+        .crumbs .sep {
+            opacity: .6;
+            margin: 0 .35rem
+        }
+
+        /* FULL-WIDTH HERO */
+        .hero {
+            color: #fff;
+            text-align: center;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            background: linear-gradient(135deg, rgba(62, 27, 86, .94), rgba(62, 27, 86, .78)),
+                url("https://www.aimzestudio.com/wp-content/uploads/2025/08/1-scaled.png") center/cover no-repeat;
+            border-bottom: 3px solid var(--gold);
+            padding: var(--s6) var(--s3)
+        }
+
+        .hero .inner {
+            max-width: var(--max);
+            margin: 0 auto
+        }
+
+        .hero .kicker {
+            margin: .35em 0 0;
+            font-weight: 700;
+            letter-spacing: .02em;
+            opacity: .95
+        }
+
+        .hero .muted {
+            opacity: .86
+        }
+
+        .hero .t-hero {
+            color: #fff;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, .28)
+        }
+
+        /* Decorative divider */
+        .divider {
+            height: 10px;
+            background: linear-gradient(90deg, rgba(81, 36, 65, .08), rgba(212, 175, 55, .45), rgba(81, 36, 65, .08))
+        }
+
+        /* Layout */
+        .layout {
             display: grid;
-            gap: 16px
+            gap: var(--s4)
+        }
+
+        @media(min-width:1100px) {
+            .layout {
+                grid-template-columns: minmax(0, 1fr) var(--tocw)
+            }
+        }
+
+        /* Section cards */
+        .sec {
+            display: grid;
+            gap: var(--s3);
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: var(--s4);
+            margin: var(--s3) 0
+        }
+
+        @media(min-width:920px) {
+            .sec {
+                grid-template-columns: 220px 1fr
+            }
+        }
+
+        .sec+.sec {
+            margin-top: var(--s3)
+        }
+
+        .sec-label {
+            color: #7a5c8f;
+            font-weight: 900;
+            letter-spacing: .06em;
+            text-transform: uppercase
+        }
+
+        .sec-label p {
+            margin: 0
+        }
+
+        .sec-body p:first-child {
+            margin-top: 0
+        }
+
+        .sec-body ul {
+            margin: .3rem 0 .2rem 1rem
+        }
+
+        /* Check list */
+        .check {
+            list-style: none;
+            padding-left: 0
+        }
+
+        .check li {
+            position: relative;
+            padding-left: 26px;
+            margin: .4rem 0
+        }
+
+        .check li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--gold);
+            font-weight: 800
+        }
+
+        /* Quote card look inside text */
+        .quote {
+            border-left: 4px solid var(--gold);
+            padding-left: 14px;
+            font-style: italic;
+            margin: .5rem 0
+        }
+
+        /* TOC desktop */
+        .toc {
+            display: none
+        }
+
+        @media(min-width:1100px) {
+            .toc {
+                display: block;
+                background: #fff;
+                border: 1px solid var(--border);
+                border-radius: 12px;
+                box-shadow: var(--shadow);
+                padding: 12px;
+                position: sticky;
+                top: 20px;
+                height: max-content
+            }
+
+            .toc .title {
+                font-weight: 800;
+                color: #7a5c8f;
+                letter-spacing: .06em;
+                text-transform: uppercase;
+                margin: 2px 0 8px
+            }
+
+            .toc nav a {
+                display: block;
+                padding: 8px 10px;
+                border-radius: 10px;
+                text-decoration: none;
+                color: #3d2c58;
+                font-weight: 700;
+                font-size: .98rem
+            }
+
+            .toc nav a:hover {
+                background: #f7f4ff
+            }
+
+            .toc nav a.active {
+                background: #efe8ff;
+                border: 1px solid #decdff
+            }
+        }
+
+        /* TOC mobile (collapsible) */
+        .toc-mobile {
+            display: block;
+            margin: var(--s3) 0
+        }
+
+        @media(min-width:1100px) {
+            .toc-mobile {
+                display: none
+            }
+        }
+
+        details.toc-mobile {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 8px
+        }
+
+        details.toc-mobile summary {
+            cursor: pointer;
+            font-weight: 800;
+            color: #7a5c8f;
+            list-style: none
+        }
+
+        details.toc-mobile summary::-webkit-details-marker {
+            display: none
+        }
+
+        .toc-mobile a {
+            display: block;
+            padding: 8px 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #3d2c58;
+            font-weight: 700
+        }
+
+        .toc-mobile a:hover {
+            background: #f7f4ff
+        }
+
+        /* Prev/Next */
+        .post-nav {
+            display: grid;
+            gap: var(--s3);
+            margin: var(--s4) 0 var(--s3)
         }
 
         @media(min-width:768px) {
-            #aimze-blog5 .grid-2 {
+            .post-nav {
                 grid-template-columns: 1fr 1fr
             }
         }
 
-        #aimze-blog5 .pill {
-            display: inline-block;
-            background: #f2f0fe;
-            border: 1px solid #e6defa;
-            padding: 6px 10px;
-            border-radius: 999px;
-            font-size: .9rem;
-            margin: 4px 6px 0 0
+        .nav-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 14px 16px
+        }
+
+        .nav-card small {
+            display: block;
+            font-weight: 800;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: #7a5c8f;
+            margin-bottom: 2px
+        }
+
+        .nav-card a {
+            color: var(--purple);
+            text-decoration: none;
+            font-weight: 800
+        }
+
+        .nav-card a:hover {
+            text-decoration: underline
         }
 
         /* CTA */
-        #aimze-blog5 .cta {
-            margin: 28px 0 8px;
-            background: #3e1b56;
+        .cta {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            background: var(--purple);
             color: #fff;
-            border-top: 3px solid #b99247;
-            border-bottom: 3px solid #b99247;
-            border-radius: 12px
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            margin-top: var(--s5)
         }
 
-        #aimze-blog5 .cta-inner {
-            padding: 22px 16px;
+        .cta .inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: var(--s5) var(--s3) var(--s6);
             text-align: center
         }
 
-        #aimze-blog5 .cta h2 {
-            color: #fff;
-            margin: 0 0 12px
-        }
-
-        #aimze-blog5 .btn {
+        .cta .btn {
             display: inline-block;
-            background: #d4af37;
+            background: var(--gold);
             color: #2b1640;
             text-decoration: none;
             font-weight: 800;
-            padding: 14px 22px;
+            padding: 12px 18px;
             border-radius: 10px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, .18)
+            box-shadow: 0 8px 18px rgba(0, 0, 0, .18)
         }
 
-        #aimze-blog5 .kws {
-            margin-top: 8px;
-            font-size: .9rem;
-            color: #5c5468
+        .cta .btn:hover {
+            filter: brightness(.97)
+        }
+
+        .muted {
+            opacity: .86
         }
     </style>
+</head>
 
-    <!-- H1 -->
-    <header>
-        <h2>Real Client Stories: Why Aimze Studio Is Brampton’s Trusted Spa &amp; Beauty Destination</h2>
-        <p class="lead">
-            Choosing a spa or salon in Brampton is easier when you can hear from real clients.
-            At Aimze Studio, guests trust us for facials, eyebrow threading, waxing, laser hair removal, haircuts &amp;
-            styling, nails, and relaxing treatments—delivered by certified professionals in a calm, hygienic space.
-        </p>
+<body>
+
+    <!-- Breadcrumbs -->
+    <nav class="wrap crumbs" aria-label="Breadcrumb">
+        <a href="https://www.aimzestudio.com/">Home</a>
+        <span class="sep">›</span>
+        <a href="https://www.aimzestudio.com/our-blogs/">Our Blogs</a>
+        <span class="sep">›</span>
+        <span>Real Client Stories – Why Aimze Studio Is Brampton’s Trusted Spa &amp; Beauty Destination</span>
+    </nav>
+
+    <!-- FULL-WIDTH HERO -->
+    <header class="hero" role="banner" aria-label="Real Client Stories">
+        <div class="inner">
+            <p class="kicker">testimonials • brampton</p>
+            <p class="t-hero" id="post-title" role="heading" aria-level="1">Real Client Stories: Why Aimze Studio Is
+                Brampton’s Trusted Spa &amp; Beauty Destination</p>
+            <p class="kicker muted">Hydra Facials • Eyebrow Threading • Nails • Haircuts &amp; Styling • Waxing • Laser
+            </p>
+        </div>
     </header>
 
-    <!-- Testimonials / Services -->
-    <section class="grid grid-2">
-        <article class="card">
-            <h2>Hydra Spa Facial Reviews in Brampton</h2>
-            <p class="quote">“I booked a Hydra Spa Facial and my skin felt refreshed and glowing. The whole experience
-                was relaxing from start to finish. I immediately rebooked!” — <strong>Ninder</strong></p>
-            <p>
-                Our <strong>Hydra Spa Facial</strong> is one of the most searched facials in Brampton—deep cleansing,
-                hydration and instant radiance in one session. Perfect before events or as a monthly skin reset.
-            </p>
-            <div>
-                <span class="pill">hydra facial brampton</span>
-                <span class="pill">best facial near me</span>
-                <span class="pill">glowing skin treatment</span>
-            </div>
-        </article>
+    <div class="divider" aria-hidden="true"></div>
 
-        <article class="card">
-            <h2>Nails &amp; Hair Styling: Confidence, Corrected</h2>
-            <p class="quote">“Param corrected my color, refreshed my cut and styled my hair beautifully. I left feeling
-                confident and happy—completely transformed.” — <strong>Noor</strong></p>
-            <p>
-                From precision haircuts and trending styles to professional manicure &amp; pedicure care, our stylists
-                and nail techs deliver clean, polished results that last.
-            </p>
-            <div>
-                <span class="pill">hair stylist brampton</span>
-                <span class="pill">hair color correction</span>
-                <span class="pill">manicure pedicure brampton</span>
-            </div>
-        </article>
+    <!-- MOBILE TOC -->
+    <div class="wrap">
+        <details class="toc-mobile" aria-label="On this page">
+            <summary>On this page</summary>
+            <nav>
+                <a href="#hydra-facial">Hydra Facial Reviews</a>
+                <a href="#nails-hair">Nails &amp; Hair Styling</a>
+                <a href="#threading">Eyebrow Threading</a>
+                <a href="#haircuts">Haircuts &amp; Styling</a>
+                <a href="#why-aimze">Why Clients Choose Us</a>
+            </nav>
+        </details>
+    </div>
 
-        <article class="card">
-            <h2>Eyebrow Threading Experts</h2>
-            <p class="quote">“Param shaped my brows perfectly with threading. I recommend Aimze Studio to all my
-                friends!” — <strong>Arshia</strong></p>
-            <p>
-                <strong>Eyebrow threading</strong> is quick, precise and gentle—ideal for sensitive skin. Clean lines,
-                natural shape, and long-lasting definition.
-            </p>
-            <div>
-                <span class="pill">eyebrow threading brampton</span>
-                <span class="pill">brow shaping</span>
-                <span class="pill">best threading near me</span>
-            </div>
-        </article>
+    <!-- MAIN -->
+    <main id="content" class="wrap layout" role="main" aria-labelledby="post-title">
+        <div id="article">
 
-        <article class="card">
-            <h2>Haircuts &amp; Styling—Trending Looks</h2>
-            <p class="quote">“My butterfly haircut is perfect—great shape and movement. I feel so stylish and
-                confident.” — <strong>Zarish</strong></p>
-            <p>
-                We cut and style to your hair texture and lifestyle: butterfly layers, bobs, blowouts, up-dos, and
-                more—finished with salon-grade care for shine and longevity.
-            </p>
-            <div>
-                <span class="pill">best haircut brampton</span>
-                <span class="pill">butterfly haircut</span>
-                <span class="pill">women’s haircut near me</span>
-            </div>
-        </article>
-    </section>
+            <section id="hydra-facial" class="sec" aria-labelledby="sec-hydra">
+                <div class="sec-label">
+                    <p id="sec-hydra" class="t-h2" role="heading" aria-level="2">Hydra Facial Reviews</p>
+                </div>
+                <div class="sec-body">
+                    <p class="quote">“I booked a Hydra Spa Facial and my skin felt refreshed and glowing. The whole
+                        experience was relaxing from start to finish. I immediately rebooked!” — <strong>Ninder</strong>
+                    </p>
+                    <p>Our <strong>Hydra Facial in Brampton</strong> is a favourite for deep cleansing, hydration and
+                        instant radiance. It’s ideal before events or as a monthly skin reset.</p>
+                    <ul class="check">
+                        <li>Deep cleanse + hydration boost</li>
+                        <li>Customised for your skin goals</li>
+                        <li>Great “glow-up” for special occasions</li>
+                    </ul>
+                </div>
+            </section>
 
-    <!-- Why Aimze -->
-    <section class="card">
-        <h2>Why Clients Choose Aimze Studio</h2>
-        <ul>
-            <li>Wide range of services: facials, nails, threading, waxing, laser hair removal, hair styling, massages
-                &amp; more</li>
-            <li>Clean, relaxing studio with certified aestheticians and professional stylists</li>
-            <li>Transparent pricing and <strong>special offers</strong> for Brampton clients</li>
-            <li>Located in a convenient mall with <strong>free parking</strong></li>
-        </ul>
-        <p class="kws">
-            Keywords: best spa in Brampton, beauty salon Brampton, facial &amp; threading Brampton, laser hair removal
-            Brampton, hair stylist Brampton, manicure pedicure Brampton.
-        </p>
-    </section>
+            <section id="nails-hair" class="sec" aria-labelledby="sec-nails-hair">
+                <div class="sec-label">
+                    <p id="sec-nails-hair" class="t-h2" role="heading" aria-level="2">Nails &amp; Hair Styling</p>
+                </div>
+                <div class="sec-body">
+                    <p class="quote">“Param corrected my colour, refreshed my cut and styled my hair beautifully. I left
+                        feeling confident and happy—completely transformed.” — <strong>Noor</strong></p>
+                    <p>From professional manicure &amp; pedicure care to colour correction and blowouts, our team
+                        delivers clean, polished results that last.</p>
+                    <ul class="check">
+                        <li>Manicure &amp; pedicure hygiene and finish</li>
+                        <li>Colour correction, shine &amp; tone balance</li>
+                        <li>Event-ready styling and updos</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="threading" class="sec" aria-labelledby="sec-threading">
+                <div class="sec-label">
+                    <p id="sec-threading" class="t-h2" role="heading" aria-level="2">Eyebrow Threading</p>
+                </div>
+                <div class="sec-body">
+                    <p class="quote">“Param shaped my brows perfectly with threading. I recommend Aimze Studio to all my
+                        friends!” — <strong>Arshia</strong></p>
+                    <p><strong>Eyebrow threading in Brampton</strong> is quick, precise and gentle—perfect for sensitive
+                        skin. Expect clean lines, a natural shape and long-lasting definition.</p>
+                    <ul class="check">
+                        <li>Precision brow mapping &amp; shaping</li>
+                        <li>Minimal redness with soothing aftercare</li>
+                        <li>Great value for regular maintenance</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="haircuts" class="sec" aria-labelledby="sec-haircuts">
+                <div class="sec-label">
+                    <p id="sec-haircuts" class="t-h2" role="heading" aria-level="2">Haircuts &amp; Styling</p>
+                </div>
+                <div class="sec-body">
+                    <p class="quote">“My butterfly haircut is perfect—great shape and movement. I feel so stylish and
+                        confident.” — <strong>Zarish</strong></p>
+                    <p>We tailor every cut and style to your hair texture and lifestyle: butterfly layers, bobs,
+                        blowouts, up-dos and more—finished with salon-grade care for shine and longevity.</p>
+                    <ul class="check">
+                        <li>Face-framing cuts &amp; layers</li>
+                        <li>Blowouts, curls and occasion styling</li>
+                        <li>Keratin &amp; smoothing treatments</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="why-aimze" class="sec" aria-labelledby="sec-why">
+                <div class="sec-label">
+                    <p id="sec-why" class="t-h2" role="heading" aria-level="2">Why Clients Choose Us</p>
+                </div>
+                <div class="sec-body">
+                    <ul class="check">
+                        <li>Wide range of services: facials, nails, threading, waxing, laser, hair &amp; more</li>
+                        <li>Clean, relaxing studio with certified professionals</li>
+                        <li>Transparent pricing and seasonal <strong>special offers</strong></li>
+                        <li>Convenient mall location with <strong>free parking</strong></li>
+                    </ul>
+                    <p><em>Popular searches:</em> best spa in Brampton, beauty salon Brampton, laser hair removal
+                        Brampton, eyebrow threading Brampton, manicure pedicure Brampton, hair stylist Brampton.</p>
+                </div>
+            </section>
+
+            <!-- Prev / Next -->
+            <nav class="post-nav" aria-label="Blog navigation">
+                <div class="nav-card">
+                    <small>Previous</small>
+                    <a href="https://www.aimzestudio.com/best-spa-and-beauty-place-in-brampton/" rel="prev">
+                        Best Spa &amp; Beauty Place in Brampton
+                    </a>
+                </div>
+                <div class="nav-card">
+                    <small>Next</small>
+                    <a href="https://www.aimzestudio.com/beauty-workshops-training-in-brampton/" rel="next">
+                        Beauty Workshops &amp; Training in Brampton
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+
+        <!-- DESKTOP STICKY TOC -->
+        <aside class="toc" aria-label="On this page">
+            <p class="title">On this page</p>
+            <nav id="toc-nav">
+                <a href="#hydra-facial">Hydra Facial Reviews</a>
+                <a href="#nails-hair">Nails &amp; Hair Styling</a>
+                <a href="#threading">Eyebrow Threading</a>
+                <a href="#haircuts">Haircuts &amp; Styling</a>
+                <a href="#why-aimze">Why Clients Choose Us</a>
+            </nav>
+        </aside>
+    </main>
 
     <!-- CTA -->
-    <section class="cta" aria-label="Book appointment">
-        <div class="cta-inner">
-            <h2>Ready to Love Your Look?</h2>
-            <p class="lead">Book your facial, threading, hair, nails or laser session at Aimze Studio today.</p>
-            <a class="btn"
-                href="https://wa.me/19058635955?text=Hi%20Aimze%20Studio!%20I%E2%80%99d%20like%20to%20book%20an%20appointment."
-                target="_blank" rel="noopener">Book Appointment on WhatsApp</a>
+    <aside class="cta" role="region" aria-label="Book an appointment">
+        <div class="inner">
+            <p class="t-h2" role="heading" aria-level="2" style="color:#fff;margin:0 0 .6em">
+                Ready to love your look?
+            </p>
+            <p class="muted">Book your facial, threading, hair, nails or laser session at Aimze Studio today.</p>
+            <p><a class="btn"
+                    href="https://wa.me/19058635955?text=Hi%20Aimze%20Studio!%20I%E2%80%99d%20like%20to%20book%20an%20appointment."
+                    target="_blank" rel="noopener">Book via WhatsApp</a></p>
         </div>
-    </section>
+    </aside>
 
-    <!-- SEO schema -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Real Client Stories: Why Aimze Studio Is Brampton’s Trusted Spa & Beauty Destination",
-    "description": "Read real client reviews of Aimze Studio in Brampton—Hydra facials, eyebrow threading, nails, haircuts, styling and more. Trusted spa and beauty studio with certified professionals.",
-    "author": {"@type": "Organization","name": "Aimze Studio"},
-    "publisher": {"@type": "Organization","name": "Aimze Studio"},
-    "mainEntityOfPage": {"@type": "WebPage","@id": "https://www.aimzestudio.com/our-blogs/"},
-    "articleSection": "Beauty, Spa, Salon, Testimonials",
-    "keywords": [
-      "best spa in Brampton","beauty salon Brampton","Hydra facial Brampton",
-      "eyebrow threading Brampton","hair stylist Brampton","laser hair removal Brampton",
-      "manicure pedicure Brampton","haircut near me Brampton"
-    ]
-  }
-  </script>
-</section>
+    <!-- Active section highlighter -->
+    <script>
+        (function () {
+            const links = Array.from(document.querySelectorAll('#toc-nav a, details.toc-mobile nav a'));
+            const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+            if (!('IntersectionObserver' in window) || !sections.length) return;
+            function setActive(id) {
+                links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+            }, { rootMargin: '-45% 0px -50% 0px', threshold: 0.01 });
+            sections.forEach(sec => io.observe(sec));
+        })();
+    </script>
+
+</body>
+
+</html>
