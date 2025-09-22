@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>For Amalie 💙</title>
+    <style>
+        :root {
+            --bg: #0a0f22;
+            --bg2: #0b1330;
+            --card: #0f1836;
+            --accent: #7dd3fc;
+            --accent2: #fbcfe8;
+            --text: #eaf2ff;
+            --muted: #adc1ec
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial
+        }
+
+        body {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--text);
+            background:
+                radial-gradient(1600px 800px at 80% -10%, #20307a33, transparent 60%),
+                radial-gradient(1200px 700px at -10% 30%, #7dd3fc22, transparent 60%),
+                linear-gradient(180deg, var(--bg), var(--bg2));
+            overflow-x: hidden
+        }
+
+        /* floating emojis (bottom-up) */
+        .float-emojis {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0
+        }
+
+        .float-emojis span {
+            position: absolute;
+            font-size: 22px;
+            opacity: .25;
+            filter: drop-shadow(0 2px 6px #0007);
+            animation: drift 16s linear infinite
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0)
+            }
+
+            100% {
+                transform: translateY(-20vh) translateX(-40px) rotate(360deg)
+            }
+        }
+
+        .wrap {
+            position: relative;
+            z-index: 1;
+            width: min(1100px, 92%);
+            margin: 56px auto;
+            padding: 26px 26px 30px;
+            background: linear-gradient(180deg, #0e1632cc, #0b122ccc);
+            border: 1px solid #2b3a66;
+            border-radius: 28px;
+            box-shadow: 0 18px 60px #000b, inset 0 0 0 1px #ffffff08
+        }
+
+        .stars {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: .35
+        }
+
+        .stars i {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: .15;
+                transform: scale(1)
+            }
+
+            50% {
+                opacity: .9;
+                transform: scale(1.8)
+            }
+        }
+
+        h1 {
+            margin: 6px 0 8px;
+            font-weight: 800;
+            letter-spacing: .2px;
+            font-size: 34px
+        }
+
+        .heart-tag {
+            font-size: 22px;
+            margin-left: 6px
+        }
+
+        .sub {
+            color: var(--muted);
+            margin-bottom: 22px
+        }
+
+        .grid {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: repeat(4, minmax(0, 1fr))
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid #243360;
+            border-radius: 24px;
+            padding: 20px;
+            aspect-ratio: 1/1.05;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            transition: .18s transform, .18s box-shadow, .18s border-color, .18s filter;
+            box-shadow: 0 14px 34px #0009, inset 0 0 0 1px #ffffff07
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            inset: -3px;
+            border-radius: 26px;
+            box-shadow: 0 0 0 0 rgba(134, 178, 255, 0);
+            transition: .25s box-shadow
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #405aa6;
+            filter: drop-shadow(0 8px 24px rgba(134, 178, 255, .18))
+        }
+
+        .card:hover::after {
+            box-shadow: 0 0 18px 3px rgba(134, 178, 255, .35), inset 0 0 0 1px rgba(255, 255, 255, .04)
+        }
+
+        .card[data-open="1"] {
+            border-color: #6fa3ff;
+            filter: drop-shadow(0 10px 28px rgba(134, 178, 255, .25))
+        }
+
+        .badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 12px;
+            background: #ffffff16;
+            border: 1px solid #ffffff1f;
+            color: #d7e7ff;
+            padding: 6px 10px;
+            border-radius: 999px
+        }
+
+        .shape {
+            width: 92%;
+            height: 92%;
+            filter: drop-shadow(0 6px 16px #0007)
+        }
+
+        .shape svg {
+            width: 100%;
+            height: 100%
+        }
+
+        .stroke {
+            stroke-width: 5;
+            stroke-linecap: round;
+            stroke-linejoin: round
+        }
+
+        .s1 {
+            stroke: #8cc1ff;
+            fill: #8cc1ff1a
+        }
+
+        .s2 {
+            stroke: #f5b7e6;
+            fill: #f5b7e614
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+            color: #cfe0ffcc
+        }
+
+        .chances {
+            font-weight: 800;
+            color: #b9ccff
+        }
+
+        .btn {
+            appearance: none;
+            border: 1px solid #334785;
+            background: #142358;
+            color: var(--text);
+            padding: 12px 16px;
+            border-radius: 14px;
+            cursor: pointer;
+            font-weight: 800;
+            transition: .18s transform, .2s background, .2s border-color;
+            font-size: 16px
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: #1a2d6d;
+            border-color: #4765c3
+        }
+
+        .btn.secondary {
+            background: #221a33;
+            border-color: #3a2f57
+        }
+
+        .btn.secondary:hover {
+            background: #2a2040;
+            border-color: #58438a
+        }
+
+        /* modal */
+        .modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 22px;
+            z-index: 50;
+            background: #0008
+        }
+
+        .modal.show {
+            display: flex
+        }
+
+        .sheet {
+            width: min(680px, 100%);
+            background: #0e1738;
+            border: 1px solid #2d3a66;
+            border-radius: 24px;
+            padding: 26px 26px 24px;
+            box-shadow: 0 30px 80px #000c
+        }
+
+        .sheet h2 {
+            margin: 0 0 16px;
+            font-size: 26px;
+            letter-spacing: .2px
+        }
+
+        #body {
+            max-width: 58ch
+        }
+
+        /* keep lines readable */
+        .sheet p {
+            margin: 14px 0 0
+        }
+
+        /* more air between paragraphs */
+        .msg {
+            background: linear-gradient(135deg, #0e244f, #111c3a 60%);
+            border: 1px dashed #3c4f86;
+            color: #eaf1ff;
+            padding: 16px 18px;
+            border-radius: 16px;
+            font-size: 19px;
+            line-height: 1.85;
+            margin: 14px 0
+                /* add outer spacing */
+        }
+
+        .actions {
+            margin-top: 18px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        /* confetti */
+        .confetti {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 60
+        }
+
+        .piece {
+            position: absolute;
+            width: 10px;
+            height: 16px;
+            background: var(--accent);
+            opacity: .95;
+            border-radius: 3px;
+            animation: fall 2s linear forwards
+        }
+
+        .piece:nth-child(odd) {
+            background: var(--accent2)
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(720deg);
+                opacity: 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- floating emojis (bottom-up) -->
+    <div class="float-emojis" id="emojiField"></div>
+
+    <div class="wrap">
+        <div class="stars" id="stars"></div>
+
+        <h1>Hey, Amalie <span class="heart-tag">❤️</span></h1>
+        <div class="sub">Pick <b>any two</b> shapes. If you hit a surprise, the game ends right there 😉</div>
+
+        <div class="grid" id="grid">
+            <div class="card" data-idx="0">
+                <div class="badge">1</div>
+                <div class="shape" aria-label="Circle">
+                    <svg viewBox="0 0 100 100">
+                        <circle class="stroke s1" cx="50" cy="50" r="41" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="card" data-idx="1">
+                <div class="badge">2</div>
+                <div class="shape" aria-label="Rounded Square">
+                    <svg viewBox="0 0 100 100">
+                        <rect class="stroke s2" x="12" y="12" width="76" height="76" rx="16" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="card" data-idx="2">
+                <div class="badge">3</div>
+                <div class="shape" aria-label="Triangle">
+                    <svg viewBox="0 0 100 100">
+                        <polygon class="stroke s1" points="50,12 90,86 10,86" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="card" data-idx="3">
+                <div class="badge">4</div>
+                <div class="shape" aria-label="Heart">
+                    <svg viewBox="0 0 100 100">
+                        <path class="stroke s2"
+                            d="M50 84 C 20 62, 10 50, 18 34 C 24 22, 40 20, 50 32 C 60 20, 76 22, 82 34 C 90 50, 80 62, 50 84 Z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div>Chances left: <span class="chances" id="left">2</span></div>
+            <div><button class="btn secondary" id="reset" title="Shuffle and start again">Shuffle</button></div>
+        </footer>
+    </div>
+
+    <!-- modal -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="ttl">
+        <div class="sheet">
+            <h2 id="ttl">A little note for you 💌</h2>
+            <div id="body"></div>
+            <div class="actions">
+                <button class="btn" id="ok">Close</button>
+                <button class="btn" id="yes" style="display:none">let’s go!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="confetti" id="confetti"></div>
+
+    <script>
+        /* stars */
+        const stars = document.getElementById('stars');
+        for (let i = 0; i < 120; i++) {
+            const s = document.createElement('i');
+            s.style.left = Math.random() * 100 + '%';
+            s.style.top = Math.random() * 100 + '%';
+            s.style.animationDelay = (Math.random() * 3) + 's';
+            stars.appendChild(s);
+        }
+
+        /* floating bottom emojis */
+        const emojiField = document.getElementById('emojiField');
+        const emojiSet = ["❤️", "♡", "💖", "🤍", "💜", "🩵"];
+        for (let i = 0; i < 40; i++) {
+            const e = document.createElement('span');
+            e.textContent = emojiSet[Math.floor(Math.random() * emojiSet.length)];
+            e.style.left = Math.random() * 100 + '%';
+            e.style.animationDelay = (Math.random() * 16) + 's';
+            e.style.animationDuration = (14 + Math.random() * 10) + 's';
+            emojiField.appendChild(e);
+        }
+
+        const leftEl = document.getElementById('left');
+        const modal = document.getElementById('modal');
+        const bodyEl = document.getElementById('body');
+        const btnOk = document.getElementById('ok');
+        const btnYes = document.getElementById('yes');
+        const confetti = document.getElementById('confetti');
+
+        /* >>> INVITE MESSAGES (with nicer spacing-ready copy) <<< */
+        const invites = [
+            {
+                type: 'invite',
+                html: `
+          <div class="msg">
+            <strong>Arboretum <em>right now</em>?</strong> 🌌✨<br/>
+            Super crazy, adventurous and unforgettable — trust me, when you get home this memory will still be glowing.
+          </div>
+          <p>And hey… both our laptops are charged — how about a calm study session on the hilltop after? You love exploring new things, so why not now?</p>
+          <p>Mechanical engineer + IT engineer, hand in hand — maybe we complete each other's missing piece.</p>
+          <div class="msg">You’ve got a lot on your plate, I’ve got nothing on mine… let’s balance it out tonight. 💙</div>
+        `
+            },
+            {
+                type: 'invite',
+                html: `
+          <div class="msg">
+            A little wild arboretum walk <em>right now</em>? 🌿💫<br/>
+            Adventure, laughter, and hand-holding — I bet it becomes your favourite memory.
+          </div>
+          <p>I’ll keep you safe and pampered. Think: mechanical genius + IT guy — perfect system integration 😉</p>
+          <p>And hey… both our laptops are charged — how about a calm study session on the hilltop after?
+             Bring your food if you want — we’ll make it cozy. ✨</p>
+        `
+            },
+            { type: 'empty', html: `Empty 😅 You still have one more shot — trust your Viking luck 👀` },
+            { type: 'empty', html: `Blank again… but I’m still here grinning at you 😌` }
+        ];
+
+        let boxes = [], picks = 0, gameOver = false, total = 2;
+
+        function shuffleGame() {
+            boxes = [...invites].sort(() => Math.random() - 0.5);
+            document.querySelectorAll('.card').forEach(c => {
+                c.dataset.open = '0'; c.style.borderColor = '#243360'; c.style.transform = '';
+            });
+            picks = 0; gameOver = false; leftEl.textContent = total;
+        }
+        shuffleGame();
+
+        document.getElementById('grid').addEventListener('click', e => {
+            if (gameOver) return;
+            const card = e.target.closest('.card'); if (!card) return;
+            if (card.dataset.open === '1') return;
+
+            const payload = boxes[+card.dataset.idx];
+            card.dataset.open = '1';
+            card.style.borderColor = '#6fa3ff';
+            card.style.transform = 'translateY(-3px) scale(1.01)';
+
+            // count pick
+            picks++; const remaining = total - picks;
+
+            // show modal
+            showModal(payload);
+
+            // end immediately if invite found; otherwise after second blank
+            if (payload.type === 'invite') { gameOver = true; leftEl.textContent = '0'; }
+            else {
+                leftEl.textContent = remaining < 0 ? '0' : String(remaining);
+                if (remaining <= 0) { gameOver = true; }
+            }
+        });
+
+        function showModal(data) {
+            btnYes.style.display = data.type === 'invite' ? '' : 'none';
+            bodyEl.innerHTML = data.html;
+            modal.classList.add('show');
+            btnYes.onclick = () => {
+                modal.classList.remove('show');
+                tossConfetti();
+                setTimeout(() => { alert("Let’s go ✨ Trail safety rule: hand-holding is mandatory 😌"); }, 160);
+            };
+        }
+        btnOk.onclick = () => modal.classList.remove('show');
+        document.getElementById('reset').onclick = shuffleGame;
+
+        /* confetti */
+        function tossConfetti() {
+            for (let i = 0; i < 90; i++) {
+                const p = document.createElement('div'); p.className = 'piece';
+                p.style.left = Math.random() * 100 + '%'; p.style.top = '-10vh';
+                p.style.transform = `translateY(0) rotate(${Math.random() * 360}deg)`;
+                p.style.animationDelay = (Math.random() * 0.6) + 's';
+                confetti.appendChild(p); setTimeout(() => p.remove(), 2300);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -6,180 +6,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Best Spa & Beauty Place in Brampton | Aimze Studio</title>
+    <link rel="canonical" href="https://www.aimzestudio.com/best-spa-and-beauty-place-in-brampton/" />
     <meta name="description"
-        content="Discover Aimze Studio—Brampton’s best spa & beauty salon in a mall with free parking. Facials, threading, waxing, hair & bridal. Grand Opening: 20% OFF all services." />
-    <link rel="canonical" href="https://www.aimzestudio.com/blog/best-spa-beauty-brampton" />
+        content="Discover Aimze Studio—Brampton’s best spa & beauty salon with free parking. Facials, threading, waxing, hair, bridal makeup, and relaxing treatments. Grand Opening: 20% OFF all services." />
+    <meta name="robots" content="index,follow" />
+    <meta name="keywords"
+        content="best spa Brampton, beauty salon Brampton, facial Brampton, threading Brampton, waxing Brampton, hair salon Brampton, bridal makeup Brampton, manicure pedicure Brampton, spa near me Brampton, free parking spa Brampton" />
 
-    <!-- Social -->
+    <!-- Open Graph -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Best Spa & Beauty Place in Brampton | Aimze Studio" />
     <meta property="og:description"
-        content="Grand Opening: 20% OFF all services. Free parking at our mall location in Brampton. Facials, threading, waxing, hair & bridal." />
+        content="Brampton’s favorite spa & beauty salon with free parking. Facials, threading, waxing, hair & bridal. 20% OFF grand opening." />
+    <meta property="og:url" content="https://www.aimzestudio.com/best-spa-and-beauty-place-in-brampton/" />
     <meta property="og:image" content="https://www.aimzestudio.com/wp-content/uploads/aimze-cover.jpg" />
-    <meta property="og:url" content="https://www.aimzestudio.com/blog/best-spa-beauty-brampton" />
-
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Best Spa & Beauty Place in Brampton | Aimze Studio" />
-    <meta name="twitter:description"
-        content="Brampton’s favorite spa & beauty salon with free parking. 20% OFF grand opening." />
-    <meta name="twitter:image" content="https://www.aimzestudio.com/wp-content/uploads/aimze-cover.jpg" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
-        rel="stylesheet" />
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Best Spa & Beauty Place in Brampton — Aimze Studio",
+    "description":"Aimze Studio is Brampton’s trusted spa & beauty salon for facials, threading, waxing, hair styling and bridal makeup — with free parking and grand-opening offers.",
+    "author":{"@type":"Organization","name":"Aimze Studio"},
+    "publisher":{"@type":"Organization","name":"Aimze Studio"},
+    "inLanguage":"en-CA",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.aimzestudio.com/best-spa-and-beauty-place-in-brampton/"}
+  }
+  </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.aimzestudio.com/"},
+      {"@type":"ListItem","position":2,"name":"Our Blogs","item":"https://www.aimzestudio.com/our-blogs/"},
+      {"@type":"ListItem","position":3,"name":"Best Spa & Beauty Place in Brampton"}
+    ]
+  }
+  </script>
+
     <style>
         :root {
-            --ink: #1f1b24;
-            --muted: #5a5667;
-            --brand1: #512441;
-            /* wine */
-            --brand2: #412259;
-            /* purple */
-            --gold: #b99247;
-            /* soft gold */
+            --ink: #231F20;
+            --muted: #5b5566;
+            --purple: #3e1b56;
+            --gold: #d4af37;
+            --lilac: #f6f3ff;
+            --bg: #ffffff;
             --panel: #ffffff;
-            --bg: #faf8fb;
-            --border: #ece6f5;
-            --radius: 16px;
-            --shadow: 0 14px 34px rgba(0, 0, 0, .08);
+            --border: #eadcfb;
+            --max: 1200px;
+            --radius: 14px;
+            --shadow: 0 10px 24px rgba(0, 0, 0, .06);
+            --tocw: 280px;
+            --s1: 12px;
+            --s2: 16px;
+            --s3: 20px;
+            --s4: 24px;
+            --s5: 28px;
+            --s6: 36px;
         }
 
-        /* Wrapper with ZERO left/right margin/padding (per request) */
-        .wrap {
+        html {
+            scroll-behavior: smooth
+        }
+
+        html,
+        body {
             margin: 0;
             background: var(--bg);
             color: var(--ink);
-            font-family: "Open Sans", system-ui, Arial, sans-serif;
+            font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
             line-height: 1.75;
-            max-width: 1200px;
+            font-size: 16px
         }
 
-        /* Hero card always has its own inner padding so text doesn't touch edges */
-        .post-hero {
-            background:
-                radial-gradient(1000px 380px at 10% 0%, rgba(185, 146, 71, .10), transparent 70%),
-                radial-gradient(1000px 420px at 95% 0%, rgba(81, 36, 65, .10), transparent 70%),
-                var(--panel);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            border-radius: 24px;
-            padding: 22px 18px;
-            /* top margin avoids sticky header on mobile */
+        .wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: var(--s5) var(--s3)
         }
 
-        .eyebrow {
-            color: var(--gold);
+        @media (max-width:767px) {
+            .wrap {
+                padding: var(--s4) var(--s3)
+            }
+        }
+
+        /* p-based headings */
+        .t-hero,
+        .t-h2,
+        .t-h3 {
             font-weight: 800;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-            font-size: .9rem;
-            margin: 0 0 6px
-        }
-
-        h1 {
-            font-weight: 800;
-            color: var(--brand1);
             line-height: 1.2;
-            margin: .25rem 0 .6rem;
-            font-size: 28px
-        }
-
-        .lead {
-            font-size: 1.05rem;
-            color: var(--muted);
             margin: 0
         }
 
-        .promo {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin: 14px 0 0;
-            padding: 12px 14px;
-            border-radius: 14px;
-            background: linear-gradient(180deg, #fff8ef, #fff);
-            border: 2px dashed var(--gold);
-            font-weight: 700;
-            color: #3a2c47
+        .t-hero {
+            font-size: clamp(26px, 5vw, 40px)
         }
 
-        .cta-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 14px
+        .t-h2 {
+            font-size: clamp(20px, 2.2vw, 24px)
         }
 
-        .btn {
-            appearance: none;
-            border: 0;
-            border-radius: 12px;
-            padding: 12px 16px;
-            font-weight: 800;
-            text-decoration: none;
-            display: inline-block
+        .t-h3 {
+            font-size: clamp(18px, 1.9vw, 20px)
         }
 
-        .btn.primary {
-            background: linear-gradient(135deg, var(--brand1), var(--brand2));
+        /* Breadcrumbs */
+        .crumbs {
+            font-size: .95rem;
+            opacity: .95
+        }
+
+        .crumbs a {
+            color: #5a3d83;
+            text-decoration: none
+        }
+
+        .crumbs a:hover {
+            text-decoration: underline
+        }
+
+        .crumbs .sep {
+            opacity: .6;
+            margin: 0 .35rem
+        }
+
+        /* FULL-WIDTH HERO */
+        .hero {
             color: #fff;
-            box-shadow: 0 10px 22px rgba(81, 36, 65, .25)
+            text-align: center;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            background: linear-gradient(135deg, rgba(62, 27, 86, .94), rgba(62, 27, 86, .78)),
+                url("https://www.aimzestudio.com/wp-content/uploads/aimze-cover.jpg") center/cover no-repeat;
+            border-bottom: 3px solid var(--gold);
+            padding: var(--s6) var(--s3);
         }
 
-        .btn.alt {
-            background: #fff;
-            color: var(--brand1);
-            border: 1px solid var(--border)
+        .hero .inner {
+            max-width: var(--max);
+            margin: 0 auto
         }
 
-        .btn.ghost {
-            background: transparent;
-            color: var(--brand2);
-            border: 1px solid #d9cfe6
+        .hero .kicker {
+            margin: .35em 0 0;
+            font-weight: 700;
+            letter-spacing: .02em;
+            opacity: .95
         }
 
-        /* Content sections */
-        section.block {
+        .hero .muted {
+            opacity: .86
+        }
+
+        .hero .t-hero {
+            color: #fff;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, .28)
+        }
+
+        .divider {
+            height: 10px;
+            background: linear-gradient(90deg, rgba(81, 36, 65, .08), rgba(212, 175, 55, .45), rgba(81, 36, 65, .08))
+        }
+
+        /* Layout */
+        .layout {
+            display: grid;
+            gap: var(--s4)
+        }
+
+        @media (min-width:1100px) {
+            .layout {
+                grid-template-columns: minmax(0, 1fr) var(--tocw)
+            }
+        }
+
+        /* Sections */
+        .sec {
+            display: grid;
+            gap: var(--s3);
             background: var(--panel);
             border: 1px solid var(--border);
-            border-radius: 24px;
+            border-radius: var(--radius);
             box-shadow: var(--shadow);
-            padding: 18px;
-            margin: 18px 0
+            padding: var(--s4);
+            margin: var(--s3) 0;
         }
 
-        .sep {
-            height: 14px;
-            background:
-                linear-gradient(90deg, rgba(81, 36, 65, .08), rgba(185, 146, 71, .18), rgba(81, 36, 65, .08));
-            border-radius: 999px;
-            margin: 18px 0
+        @media (min-width:920px) {
+            .sec {
+                grid-template-columns: 220px 1fr
+            }
         }
 
-        h2 {
-            color: #2b2232;
-            font-size: 1.25rem;
-            margin: .2rem 0 .6rem
+        .sec+.sec {
+            margin-top: var(--s3)
         }
 
-        h3 {
-            color: #33263c;
-            font-size: 1.08rem;
-            margin: .6rem 0 .35rem
+        .sec-label {
+            color: #7a5c8f;
+            font-weight: 900;
+            letter-spacing: .06em;
+            text-transform: uppercase
         }
 
-        ul.check {
+        .sec-label p {
+            margin: 0
+        }
+
+        .sec-body p:first-child {
+            margin-top: 0
+        }
+
+        .sec-body ul {
+            margin: .3rem 0 .2rem 1rem
+        }
+
+        .check {
             list-style: none;
-            margin: .2rem 0 0;
-            padding: 0
+            padding-left: 0;
+            margin: .3rem 0 0
         }
 
-        ul.check li {
+        .check li {
             position: relative;
             padding-left: 26px;
             margin: .35rem 0
         }
 
-        ul.check li::before {
+        .check li::before {
             content: "✓";
             position: absolute;
             left: 0;
@@ -188,148 +251,367 @@
             font-weight: 800
         }
 
-        /* Responsive typography + spacing */
-        @media (min-width: 768px) {
-            .post-hero {
-                margin-top: 80px;
-                padding: 26px 22px
+        .note {
+            background: linear-gradient(to right, #fff7e6, #f7f0ff);
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin: 14px 0;
+            font-weight: 600
+        }
+
+        /* TOC desktop */
+        .toc {
+            display: none
+        }
+
+        @media (min-width:1100px) {
+            .toc {
+                display: block;
+                background: #fff;
+                border: 1px solid var(--border);
+                border-radius: 12px;
+                box-shadow: var(--shadow);
+                padding: 12px;
+                position: sticky;
+                top: 20px;
+                height: max-content
             }
 
-            h1 {
-                font-size: 32px
+            .toc .title {
+                font-weight: 800;
+                color: #7a5c8f;
+                letter-spacing: .06em;
+                text-transform: uppercase;
+                margin: 2px 0 8px
             }
 
-            section.block {
-                padding: 22px
+            .toc nav a {
+                display: block;
+                padding: 8px 10px;
+                border-radius: 10px;
+                text-decoration: none;
+                color: #3d2c58;
+                font-weight: 700;
+                font-size: .98rem
+            }
+
+            .toc nav a:hover {
+                background: #f7f4ff
+            }
+
+            .toc nav a.active {
+                background: #efe8ff;
+                border: 1px solid #decdff
             }
         }
 
-        @media (min-width: 1025px) {
-            .post-hero {
-                margin-top: 40px;
-                padding: 30px 26px
-            }
+        /* TOC mobile */
+        .toc-mobile {
+            display: block;
+            margin: var(--s3) 0
+        }
 
-            h1 {
-                font-size: 40px
+        @media (min-width:1100px) {
+            .toc-mobile {
+                display: none
             }
+        }
 
-            section.block {
-                padding: 26px
+        details.toc-mobile {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 8px
+        }
+
+        details.toc-mobile summary {
+            cursor: pointer;
+            font-weight: 800;
+            color: #7a5c8f;
+            list-style: none
+        }
+
+        details.toc-mobile summary::-webkit-details-marker {
+            display: none
+        }
+
+        .toc-mobile a {
+            display: block;
+            padding: 8px 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #3d2c58;
+            font-weight: 700
+        }
+
+        .toc-mobile a:hover {
+            background: #f7f4ff
+        }
+
+        /* Prev/Next */
+        .post-nav {
+            display: grid;
+            gap: var(--s3);
+            margin: var(--s4) 0 var(--s3)
+        }
+
+        @media (min-width:768px) {
+            .post-nav {
+                grid-template-columns: 1fr 1fr
             }
+        }
+
+        .nav-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 14px 16px
+        }
+
+        .nav-card small {
+            display: block;
+            font-weight: 800;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: #7a5c8f;
+            margin-bottom: 2px
+        }
+
+        .nav-card a {
+            color: var(--purple);
+            text-decoration: none;
+            font-weight: 800
+        }
+
+        .nav-card a:hover {
+            text-decoration: underline
+        }
+
+        /* CTA */
+        .cta {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            background: var(--purple);
+            color: #fff;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            margin-top: var(--s5)
+        }
+
+        .cta .inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: var(--s5) var(--s3) var(--s6);
+            text-align: center
+        }
+
+        .cta .btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #2b1640;
+            text-decoration: none;
+            font-weight: 800;
+            padding: 12px 18px;
+            border-radius: 10px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, .18)
+        }
+
+        .cta .btn:hover {
+            filter: brightness(.97)
+        }
+
+        .muted {
+            opacity: .86
         }
     </style>
 </head>
 
 <body>
-    <article class="wrap" role="article" aria-label="Blog: Best Spa & Beauty Place in Brampton">
-        <!-- HERO -->
-        <header class="post-hero">
-            <p class="eyebrow">Brampton • Spa & Beauty</p>
-            <h1>Best Spa &amp; Beauty Place in Brampton — Aimze Studio</h1>
-            <p class="lead">
-                Planning a self-care day with the family? Visit <strong>Aimze Studio</strong>, your one-stop
-                <em>spa and beauty salon in Brampton</em>, located in the mall with <strong>free parking</strong>.
-                Enjoy expert <strong>threading</strong>, <strong>waxing</strong>, <strong>facials</strong>, professional
-                <strong>hair styling</strong>, and <strong>bridal makeup</strong> in a clean, calming space.
+
+    <!-- Breadcrumbs -->
+    <nav class="wrap crumbs" aria-label="Breadcrumb">
+        <a href="https://www.aimzestudio.com/">Home</a>
+        <span class="sep">›</span>
+        <a href="https://www.aimzestudio.com/our-blogs/">Our Blogs</a>
+        <span class="sep">›</span>
+        <span>Best Spa &amp; Beauty Place in Brampton</span>
+    </nav>
+
+    <!-- FULL-WIDTH HERO -->
+    <header class="hero" role="banner" aria-label="Aimze Studio Brampton">
+        <div class="inner">
+            <p class="kicker">brampton • spa &amp; beauty</p>
+            <p class="t-hero" id="post-title" role="heading" aria-level="1">Best Spa &amp; Beauty Place in Brampton —
+                Aimze Studio</p>
+            <p class="kicker muted">Facials, threading, waxing, hair styling &amp; bridal — with free parking</p>
+        </div>
+    </header>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- MOBILE TOC -->
+    <div class="wrap">
+        <details class="toc-mobile" aria-label="On this page">
+            <summary>On this page</summary>
+            <nav>
+                <a href="#why-aimze">Why Brampton Loves Aimze Studio</a>
+                <a href="#services">What We Do Best</a>
+                <a href="#visit">Your Perfect Spa Day</a>
+                <a href="#faq">Quick Answers (FAQ)</a>
+                <a href="#footer-cta">Feel Your Best</a>
+            </nav>
+        </details>
+    </div>
+
+    <!-- MAIN -->
+    <main id="content" class="wrap layout" role="main" aria-labelledby="post-title">
+        <div id="article">
+
+            <!-- WHY AIMZE -->
+            <section id="why-aimze" class="sec" aria-labelledby="sec-why">
+                <div class="sec-label">
+                    <p id="sec-why" class="t-h2" role="heading" aria-level="2">Why Brampton Loves Aimze Studio</p>
+                </div>
+                <div class="sec-body">
+                    <p>Guests choose <strong>Aimze Studio</strong> because we’re easy to reach, kind to your time, and
+                        serious about hygiene. Our convenient <strong>mall location with free parking</strong> makes
+                        visits simple, and with more than a decade in spa, hair and skincare, we deliver natural-looking
+                        results that last.</p>
+                    <ul class="check">
+                        <li>Convenient mall location with <strong>free parking</strong></li>
+                        <li>Experienced team for <strong>facials, threading, waxing</strong>, hair &amp; bridal</li>
+                        <li>Clear pricing, seasonal offers, and honest recommendations</li>
+                        <li>Comfortable, family-friendly environment</li>
+                    </ul>
+                    <p class="note">Grand Opening: <strong>20% OFF</strong> all services — limited time.</p>
+                </div>
+            </section>
+
+            <!-- SERVICES -->
+            <section id="services" class="sec" aria-labelledby="sec-services">
+                <div class="sec-label">
+                    <p id="sec-services" class="t-h2" role="heading" aria-level="2">What We Do Best</p>
+                </div>
+                <div class="sec-body">
+                    <p class="t-h3" role="heading" aria-level="3" style="margin-bottom:.3rem">Threading &amp; Waxing</p>
+                    <p>Precise eyebrow shaping and smooth, gentle hair removal. If you’ve searched for <em>threading
+                            Brampton</em> or <em>waxing near me</em>, you’ll feel right at home here.</p>
+
+                    <p class="t-h3" role="heading" aria-level="3" style="margin-top:1rem;margin-bottom:.3rem">Facials
+                        &amp; Skincare</p>
+                    <p>Hydration, brightening, and acne-care facials customized to your skin goals. Our <strong>facials
+                            in Brampton</strong> help you glow for events — or maintain healthy skin month after month.
+                    </p>
+
+                    <p class="t-h3" role="heading" aria-level="3" style="margin-top:1rem;margin-bottom:.3rem">Hair Salon
+                        &amp; Styling</p>
+                    <p>Fresh cuts, dimensional colour, and occasion styling that fits your face shape and lifestyle.
+                        Searching for a reliable <strong>hair salon in Brampton</strong>? Start here.</p>
+
+                    <p class="t-h3" role="heading" aria-level="3" style="margin-top:1rem;margin-bottom:.3rem">Bridal
+                        Makeup &amp; Party Looks</p>
+                    <p>Photo-ready makeup with trials and timing plans so you can relax and enjoy your day. Our
+                        <strong>bridal makeup in Brampton</strong> keeps you confident from first look to last dance.
+                    </p>
+                </div>
+            </section>
+
+            <!-- VISIT -->
+            <section id="visit" class="sec" aria-labelledby="sec-visit">
+                <div class="sec-label">
+                    <p id="sec-visit" class="t-h2" role="heading" aria-level="2">Your Perfect Spa Day</p>
+                </div>
+                <div class="sec-body">
+                    <p>Come solo, bring a friend, or make it a family day out. Enjoy a treatment, grab a coffee, and
+                        leave with easy after-care tips. With <strong>free parking</strong> and quick bookings, looking
+                        your best fits effortlessly into your week.</p>
+                    <ul class="check">
+                        <li>Easy online booking or WhatsApp</li>
+                        <li>Clean, relaxing studio environment</li>
+                        <li>Packages for events &amp; weddings</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq" class="sec" aria-labelledby="sec-faq">
+                <div class="sec-label">
+                    <p id="sec-faq" class="t-h2" role="heading" aria-level="2">Quick Answers (FAQ)</p>
+                </div>
+                <div class="sec-body">
+                    <ul class="check">
+                        <li><strong>Where are you?</strong> Inside the mall at 50 Kennedy Rd S, Brampton.</li>
+                        <li><strong>Parking?</strong> Yes — free and easy.</li>
+                        <li><strong>Offer?</strong> <em>Grand Opening: 20% OFF all services</em> for a limited time.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Prev / Next -->
+            <nav class="post-nav" aria-label="Blog navigation">
+                <div class="nav-card">
+                    <small>Previous</small>
+                    <a href="https://www.aimzestudio.com/most-searched-beauty-treatments-in-brampton/" rel="prev">Most
+                        Searched Beauty Treatments in Brampton — 2025</a>
+                </div>
+                <div class="nav-card">
+                    <small>Next</small>
+                    <a href="https://www.aimzestudio.com/real-client-stories/" rel="next">Real Client Stories: Why Aimze
+                        Studio Is Brampton’s Trusted Spa &amp; Beauty Destination</a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- DESKTOP STICKY TOC -->
+        <aside class="toc" aria-label="On this page">
+            <p class="title">On this page</p>
+            <nav id="toc-nav">
+                <a href="#why-aimze">Why Brampton Loves Aimze Studio</a>
+                <a href="#services">What We Do Best</a>
+                <a href="#visit">Your Perfect Spa Day</a>
+                <a href="#faq">Quick Answers (FAQ)</a>
+                <a href="#footer-cta">Feel Your Best</a>
+            </nav>
+        </aside>
+    </main>
+
+    <!-- PAGE CTA -->
+    <aside class="cta" id="footer-cta" role="region" aria-label="Feel your best">
+        <div class="inner">
+            <p class="t-h2" role="heading" aria-level="2" style="color:#fff;margin:0 0 .6em">Ready to Feel Your Best?
             </p>
-            <div class="promo">🎉 Grand Opening: <strong>20% OFF</strong> all services — limited time. Try us once and
-                become a regular!</div>
-            <div class="cta-row">
-                <a class="btn primary" href="https://www.aimzestudio.com/services-pricing/">View Services & Pricing</a>
-                <a class="btn alt" href="https://www.aimzestudio.com/special-offers/">Claim 20% OFF</a>
-                <a class="btn ghost"
-                    href="https://wa.me/19058635955?text=Hi%20Aimze%20Studio!%20I’d%20like%20to%20book%20an%20appointment.">Book
-                    via WhatsApp</a>
-            </div>
-        </header>
-
-        <div class="sep" aria-hidden="true"></div>
-
-        <!-- WHY AIMZE -->
-        <section class="block" id="why-aimze">
-            <h2>Why Brampton Loves Aimze Studio</h2>
-            <p>
-                Guests choose us because we’re easy to reach, kind to your time, and serious about hygiene.
-                Our **mall location** makes it simple to combine your appointment with errands or a family outing,
-                and <strong>free parking</strong> keeps the day stress-free. With more than a decade in spa, hair, and
-                skincare,
-                we deliver results that look natural and last.
-            </p>
-            <ul class="check">
-                <li>Convenient mall location with **free parking**</li>
-                <li>Experienced team for <strong>facials, threading, waxing</strong>, hair &amp; bridal</li>
-                <li>Clear pricing and honest recommendations</li>
-                <li>Comfortable, family-friendly environment</li>
-            </ul>
-        </section>
-
-        <!-- SERVICES OVERVIEW -->
-        <section class="block" id="services">
-            <h2>What We Do Best</h2>
-
-            <h3>Threading &amp; Waxing</h3>
-            <p>
-                Precise eyebrow shaping and smooth, gentle hair removal.
-                If you’ve searched for <em>threading Brampton</em> or <em>waxing near me</em>, you’ll feel right at home
-                here.
-            </p>
-
-            <h3>Facials &amp; Skincare</h3>
-            <p>
-                Hydration, brightening, and acne-care facials customized to your skin goals.
-                Our <strong>facials in Brampton</strong> help you glow for events—or maintain healthy skin month after
-                month.
-            </p>
-
-            <h3>Hair Salon &amp; Styling</h3>
-            <p>
-                Fresh cuts, dimensional color, and occasion styling that fits your face shape and lifestyle.
-                Searching for a reliable <strong>hair salon in Brampton</strong>? Start here.
-            </p>
-
-            <h3>Bridal Makeup &amp; Party Looks</h3>
-            <p>
-                Long-lasting, photo-ready makeup with trials and timing plans so you can relax and enjoy your day.
-                Our <strong>bridal makeup in Brampton</strong> keeps you confident from first look to last dance.
-            </p>
-        </section>
-
-        <section class="block" id="visit">
-            <h2>Your Perfect Spa Day—Made Simple</h2>
-            <p>
-                Come solo, bring a friend, or make it a family day out. Enjoy a treatment, grab a coffee,
-                and leave with easy after-care tips. With <strong>free parking</strong> and quick bookings,
-                looking your best fits effortlessly into your week.
-            </p>
-            <div class="cta-row">
-                <a class="btn primary" href="https://www.aimzestudio.com/contact/">Book Your Appointment</a>
-                <a class="btn alt" href="https://www.aimzestudio.com/workshops/">Explore Workshops</a>
-            </div>
-        </section>
-
-        <div class="sep" aria-hidden="true"></div>
-
-        <!-- MICRO FAQ (for users, not a bulky list) -->
-        <section class="block" id="faq">
-            <h2>Quick Answers</h2>
-            <ul class="check">
-                <li><strong>Where are you?</strong> Inside the mall at 50 Kennedy Rd S, Brampton.</li>
-                <li><strong>Parking?</strong> Yes—free and easy.</li>
-                <li><strong>Offer?</strong> <em>Grand Opening: 20% OFF all services</em> for a limited time.</li>
-            </ul>
-        </section>
-
-        <section class="block" id="footer-cta" style="text-align:center">
-            <h2>Ready to Feel Your Best?</h2>
-            <p>Book today and experience why guests call us the <strong>best spa &amp; beauty place in
+            <p class="muted">Book today and see why guests call us the <strong>best spa &amp; beauty place in
                     Brampton</strong>.</p>
-            <div class="cta-row" style="justify-content:center">
-                <a class="btn primary" href="https://www.aimzestudio.com/services-pricing/">See Services & Pricing</a>
-                <a class="btn alt" href="https://www.aimzestudio.com/special-offers/">Claim 20% OFF</a>
-            </div>
-        </section>
-    </article>
+            <p><a class="btn" href="https://www.aimzestudio.com/services-pricing/" target="_blank" rel="noopener">See
+                    Services & Pricing</a></p>
+            <p class="muted">Or message us directly on <a class="btn"
+                    href="https://wa.me/19058635955?text=Hi%20Aimze%20Studio!%20I’d%20like%20to%20book%20an%20appointment."
+                    target="_blank" rel="noopener" style="display:inline-block;margin-top:.4rem">WhatsApp</a></p>
+        </div>
+    </aside>
+
+    <!-- Active section highlighter -->
+    <script>
+        (function () {
+            const links = Array.from(document.querySelectorAll('#toc-nav a, details.toc-mobile nav a'));
+            const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+            if (!('IntersectionObserver' in window) || !sections.length) return;
+
+            function setActive(id) {
+                links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+            }, { rootMargin: '-45% 0px -50% 0px', threshold: 0.01 });
+
+            sections.forEach(sec => io.observe(sec));
+        })();
+    </script>
 </body>
 
 </html>
