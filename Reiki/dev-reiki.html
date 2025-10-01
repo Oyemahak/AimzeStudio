@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Reiki Healing in Brampton | Universal Life Energy | Aimze Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Reiki in Brampton at Aimze Studio: gentle, non-invasive energy healing to reduce stress, restore balance, and promote deep relaxation. Learn Reiki or book a session with our Reiki Grand Master." />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --gold: #B99247;
+            --plum: #412259;
+            --berry: #512441;
+            --ink: #000;
+            --muted: #5d5d66;
+            --panel: #ffffff;
+            --bg: #faf9fb;
+            --radius: 18px;
+            --shadow: 0 10px 30px rgba(12, 5, 22, .12)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        img,
+        iframe {
+            max-width: 100%;
+            display: block
+        }
+
+        #reiki-page {
+            margin: 60px auto;
+            padding: 0 18px;
+            max-width: 1200px;
+            color: var(--ink);
+            font-size: 18px;
+            line-height: 1.8
+        }
+
+        .title {
+            font-family: "IBM Plex Sans";
+            font-weight: 800;
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.12;
+            margin: 0 0 14px;
+            color: var(--plum)
+        }
+
+        .eyebrow {
+            display: inline-block;
+            background: var(--gold);
+            color: #3a250d;
+            font-family: "IBM Plex Sans";
+            font-weight: 800;
+            padding: 16px 24px;
+            border-radius: 24px;
+            margin: 0 0 32px
+        }
+
+        .sep {
+            height: 20px;
+            position: relative;
+            margin: 16px 0 8px
+        }
+
+        .sep::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 9px;
+            height: 2px;
+            border-radius: 6px;
+            background: linear-gradient(90deg, rgba(185, 146, 71, 0), rgba(185, 146, 71, .9), rgba(185, 146, 71, 0))
+        }
+
+        .sep::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 80px;
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(81, 36, 65, .12)
+        }
+
+        .chips {
+            display: grid;
+            gap: 16px;
+            margin: 12px 0 4px
+        }
+
+        .chip {
+            background: #fff;
+            border: 2px dashed rgba(185, 146, 71, .6);
+            border-radius: 24px;
+            padding: 16px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            transition: .25s
+        }
+
+        .chip:hover {
+            box-shadow: 0 12px 28px rgba(12, 5, 22, .10);
+            transform: translateY(-2px)
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--gold);
+            margin-top: 9px;
+            flex: 0 0 9px
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 32px 0;
+            font-family: "IBM Plex Sans";
+            font-weight: 800;
+            color: var(--plum)
+        }
+
+        .section-title::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            background: var(--gold);
+            box-shadow: 0 0 0 3px rgba(185, 146, 71, .18)
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid rgba(31, 17, 40, .08);
+            border-radius: 24px;
+            padding: 18px
+        }
+
+        .grid-2 {
+            display: block;
+        }
+
+        .grid-2>* {
+            margin-bottom: 18px;
+        }
+
+        .grid-2>*:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq {
+            margin-top: 16px
+        }
+
+        .qa {
+            background: #fff;
+            border: 1px solid rgba(31, 17, 40, .08);
+            border-radius: 24px;
+            padding: 14px;
+            margin-top: 16px
+        }
+
+        .q {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--berry);
+            user-select: none
+        }
+
+        .q svg {
+            flex: 0 0 22px
+        }
+
+        .chev {
+            margin-left: auto;
+            transition: transform .25s
+        }
+
+        .qa.open .chev {
+            transform: rotate(180deg)
+        }
+
+        .a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .32s ease;
+            color: var(--muted)
+        }
+
+        .qa.open .a {
+            max-height: 700px;
+            margin-top: 8px
+        }
+
+        .links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 24px
+        }
+
+        .pill {
+            font-family: "IBM Plex Sans";
+            font-weight: 800;
+            color: var(--ink);
+            text-decoration: none;
+            background: #DDB264;
+            border: 1px solid rgba(31, 17, 40, .08);
+            border-radius: 999px;
+            padding: 10px 14px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+            transition: transform .2s, box-shadow .2s
+        }
+
+        .pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, .12)
+        }
+
+        .cta {
+            margin: 34px 0 0;
+            border-radius: 24px;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--berry), var(--plum));
+            color: #fff;
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center
+        }
+
+        .cta b {
+            white-space: nowrap;
+            font-family: "IBM Plex Sans"
+        }
+
+        .btn {
+            background: #fff;
+            color: var(--berry);
+            border: none;
+            border-radius: 999px;
+            padding: 12px 18px;
+            font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+            font-family: "IBM Plex Sans";
+            transition: transform .2s, box-shadow .2s
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, .16)
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px
+        }
+
+        /* Mobile typography */
+        @media (max-width: 767px) {
+
+            #reiki-page,
+            #yoga-page {
+                font-size: 16px;
+                line-height: 1.75;
+            }
+
+            .title {
+                font-size: clamp(28px, 6vw, 36px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="reiki-page" aria-label="Reiki: Universal Life Energy Healing">
+        <span class="eyebrow">Energy Healing • Stress Relief • Balance</span>
+        <h1 class="title">Reiki: Universal Life Energy Healing</h1>
+
+        <div class="grid-2">
+            <div>
+                <h3 class="section-title" style="margin-top:0">What is Reiki?</h3>
+                <div class="card">
+                    <p><strong>Reiki</strong> (pronounced <em>Ray-Key</em>) is a Japanese word that means “universal
+                        life energy.” It refers to a gentle, holistic healing method that works by channeling this
+                        energy through the hands. Rediscovered by <strong>Dr. Mikao Usui</strong> in the early 20th
+                        century, Reiki supports the body’s natural ability to heal by restoring energetic balance. It
+                        works on all levels—<strong>physical, emotional, mental, and spiritual</strong>—to promote deep
+                        relaxation, reduce stress, and enhance overall well-being.</p>
+                    <p>Reiki helps harmonize the body's Yin and Yang energies, gently releasing tension and restoring a
+                        sense of calm and clarity. It’s a natural, non-invasive way to support healing and personal
+                        growth.</p>
+                </div>
+
+                <div class="sep" aria-hidden="true"></div>
+
+                <h3 class="section-title">Benefits of Reiki</h3>
+                <div class="chips" aria-label="Benefits">
+                    <div class="chip"><span class="dot"></span>
+                        <div>Activates the body’s <strong>self-healing</strong> processes</div>
+                    </div>
+                    <div class="chip"><span class="dot"></span>
+                        <div>Reduces <strong>stress and anxiety</strong></div>
+                    </div>
+                    <div class="chip"><span class="dot"></span>
+                        <div>Balances <strong>emotional and mental</strong> energy</div>
+                    </div>
+                    <div class="chip"><span class="dot"></span>
+                        <div>Encourages deep <strong>relaxation</strong> and inner peace</div>
+                    </div>
+                    <div class="chip"><span class="dot"></span>
+                        <div>Supports <strong>physical recovery</strong> and wellness</div>
+                    </div>
+                    <div class="chip"><span class="dot"></span>
+                        <div>Enhances personal growth and <strong>emotional clarity</strong></div>
+                    </div>
+                    <div class="chip"><span class="dot"></span>
+                        <div>Boosts <strong>self-confidence, resilience,</strong> and vitality</div>
+                    </div>
+                </div>
+
+                <h3 class="section-title">Who Can Learn Reiki?</h3>
+                <div class="card">
+                    <p><strong>Anyone can learn Reiki.</strong> It doesn’t require any special background, belief
+                        system, or spiritual practice. Reiki is not affiliated with any religion—instead, it helps
+                        deepen your personal connection to yourself, your beliefs, and your loved ones.</p>
+                    <p>No special lifestyle, meditation, or exercise routine is required. If you’re open to learning,
+                        Reiki is available to you.</p>
+                </div>
+
+                <h3 class="section-title">How to Learn Reiki</h3>
+                <div class="card">
+                    <p>Reiki is taught through a <strong>Master-Student</strong> relationship, guided by a certified
+                        Reiki Master or Teacher. Learning Reiki involves a series of
+                        <strong>attunements</strong>—special energetic initiations that enable you to channel Reiki
+                        energy for yourself and others.
+                    </p>
+                    <p>This personal, hands-on teaching method makes Reiki a deeply transformative experience, often
+                        leading to lasting changes in well-being, perspective, and inner peace.</p>
+                </div>
+
+                <h3 class="section-title">Ready to Begin?</h3>
+                <div class="card">
+                    <p>Whether you’re curious about Reiki sessions or feel called to learn this healing art for
+                        yourself, you’re welcome here. Explore the power of universal life energy—and discover the
+                        healing that begins from within.</p>
+                </div>
+            </div>
+
+            <aside>
+                <h3 class="section-title" style="margin-top:0">Meet Our Reiki Grand Master: Kamal Jit</h3>
+                <div class="card">
+                    <p><strong>A Journey of Healing, Wisdom, and Devotion</strong></p>
+                    <p>In 2006, <strong>Kamal Jit</strong> began her journey with Reiki, receiving her First- and
+                        Second-Degree attunements and immediately starting to practice healing—first on herself, then on
+                        those around her. Through this early experience, she discovered not only the profound effects of
+                        Reiki but also a deep calling to go further.</p>
+                    <p>Kamal felt that Reiki was more than just a healing method—it was a path of personal growth,
+                        spiritual connection, and transformation. Guided by her intuition and dedication, she traveled
+                        to India, where she immersed herself fully in the practice.</p>
+                    <p>There, Kamal found her Reiki Master and spent several months training, studying, and practicing
+                        at an advanced level. Through this intense and soulful journey, she achieved her <strong>Reiki
+                            Master and Grand Master</strong> certifications—gaining the skills, wisdom, and energetic
+                        connection needed to teach and guide others.</p>
+                    <p>Since then, Kamal has dedicated her life to healing and teaching Reiki, helping hundreds of
+                        people to heal physically, emotionally, and spiritually. Her approach is compassionate,
+                        grounded, and deeply intuitive. She empowers her students to connect with the universal life
+                        energy and become healers in their own right.</p>
+                    <p>Today, Kamal continues to offer <strong>Reiki healing sessions, workshops, and attunement
+                            training</strong> to anyone who feels called to experience this beautiful energy.</p>
+                    <p><strong>Kamal’s Mission:</strong> To share the gift of Reiki with love, authenticity, and
+                        purpose—supporting others on their journey of healing, balance, and self-discovery.</p>
+                    <p><strong>Contact:</strong><br />
+                        Reiki Grand Master — Kamal Jit<br />
+                        <a href="tel:+16479713660">647 971 3660</a><br />
+                        <a href="mailto:Jitkamal2007@gmail.com">Jitkamal2007@gmail.com</a>
+                    </p>
+                </div>
+
+                <div class="links" aria-label="Quick links">
+                    <a class="pill" href="https://www.aimzestudio.com/services-and-pricing/">Services & Pricing</a>
+                    <a class="pill" href="https://www.aimzestudio.com/special-offers/">Special Offers</a>
+                    <a class="pill"
+                        href="https://wa.me/16479713660?text=Hi%20Kamal%2C%20I%27d%20like%20to%20ask%20about%20Reiki.">WhatsApp
+                        Kamal</a>
+                </div>
+            </aside>
+        </div>
+
+        <h3 class="section-title">FAQs</h3>
+        <div class="faq" id="faq-reiki">
+            <div class="qa">
+                <div class="q" role="button" tabindex="0" aria-expanded="false">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 4c-7 1-12 6-14 13" stroke="#512441" stroke-width="2" stroke-linecap="round" />
+                        <path d="M6 20c4-6 8-10 14-12" stroke="#B99247" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    Is Reiki safe? What will I feel?
+                    <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="#412259" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="a">Reiki is gentle and non-invasive. Many people feel warmth, tingling, or a deep sense of
+                    calm. If you have medical concerns, consult your healthcare provider.</div>
+            </div>
+            <div class="qa">
+                <div class="q" role="button" tabindex="0" aria-expanded="false">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <circle cx="7" cy="7" r="3" stroke="#512441" stroke-width="2" />
+                        <circle cx="17" cy="12" r="3" stroke="#B99247" stroke-width="2" />
+                        <circle cx="9" cy="17" r="3" stroke="#512441" stroke-width="2" />
+                    </svg>
+                    How many sessions do I need?
+                    <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="#412259" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="a">You may feel lighter after one session. For stress relief, consider 3 sessions over 3–4
+                    weeks, then monthly maintenance.</div>
+            </div>
+            <div class="qa">
+                <div class="q" role="button" tabindex="0" aria-expanded="false">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 18c3-3 6-3 8-1s5 2 8-1" stroke="#512441" stroke-width="2" stroke-linecap="round" />
+                        <path d="M5 14c2-2 4-3 7-2" stroke="#B99247" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    Can I learn Reiki at Aimze Studio?
+                    <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="#412259" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="a">Yes. We offer First-Degree, Second-Degree, and Master-level attunements and mentoring
+                    with Kamal Jit. Message us for dates.</div>
+            </div>
+            <div class="qa">
+                <div class="q" role="button" tabindex="0" aria-expanded="false">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 3v18M9 6h6M8 9h8M9 12h6M8 15h8M9 18h6" stroke="#412259" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                    How do I prepare and what about after-care?
+                    <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="#412259" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="a">Wear comfortable clothing and arrive hydrated. After your session, rest if possible,
+                    drink water, and notice changes in mood, sleep, and clarity.</div>
+            </div>
+        </div>
+
+        <div class="cta" aria-label="Book Reiki">
+            <div><b>Ready to begin?</b> Book a Reiki session or ask about training.</div>
+            <a class="btn"
+                href="https://wa.me/16479713660?text=Hi%20Kamal%2C%20please%20share%20Reiki%20session%20or%20training%20details.">WhatsApp
+                Kamal</a>
+            <a class="btn" href="tel:+16479713660">Call 647-971-3660</a>
+            <a class="btn" href="https://www.aimzestudio.com/services-and-pricing/">See Pricing</a>
+        </div>
+    </section>
+
+    <!-- Schema: Service + Person + FAQ -->
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Reiki Healing",
+  "description":"Gentle, non-invasive Reiki energy healing sessions and attunement training in Brampton.",
+  "areaServed":"Brampton, ON",
+  "provider":{"@type":"Organization","name":"Aimze Studio"}
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Kamal Jit",
+  "jobTitle":"Reiki Grand Master",
+  "telephone":"+1-647-971-3660",
+  "email":"Jitkamal2007@gmail.com",
+  "affiliation":{"@type":"Organization","name":"Aimze Studio"}
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Is Reiki safe? What will I feel?","acceptedAnswer":{"@type":"Answer","text":"Reiki is gentle and non-invasive. Many people feel warmth, tingling, or a deep sense of calm."}},
+    {"@type":"Question","name":"How many sessions do I need?","acceptedAnswer":{"@type":"Answer","text":"For stress relief, try three sessions over three to four weeks, then monthly maintenance."}},
+    {"@type":"Question","name":"Can I learn Reiki at Aimze Studio?","acceptedAnswer":{"@type":"Answer","text":"Yes. We offer First-Degree, Second-Degree, and Master-level attunements and mentoring with Kamal Jit."}},
+    {"@type":"Question","name":"How do I prepare and what about after-care?","acceptedAnswer":{"@type":"Answer","text":"Wear comfortable clothing and arrive hydrated. After, rest if possible, drink water, and notice changes in mood, sleep, and clarity."}}
+  ]
+}
+</script>
+
+    <script>
+        document.querySelectorAll('#faq-reiki .q').forEach(q => {
+            const qa = q.parentElement, a = qa.querySelector('.a');
+            const set = () => a.style.maxHeight = qa.classList.contains('open') ? a.scrollHeight + 'px' : '0px';
+            q.addEventListener('click', () => { qa.classList.toggle('open'); q.setAttribute('aria-expanded', qa.classList.contains('open')); set(); });
+            q.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); q.click(); } });
+            set();
+        });
+    </script>
+</body>
+
+</html>
